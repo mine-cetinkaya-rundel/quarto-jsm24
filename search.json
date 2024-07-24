@@ -1,0 +1,1021 @@
+[
+  {
+    "objectID": "3-presentations/index.html",
+    "href": "3-presentations/index.html",
+    "title": "Presentations",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Modules",
+      "Presentations"
+    ]
+  },
+  {
+    "objectID": "3-presentations/index.html#slides",
+    "href": "3-presentations/index.html#slides",
+    "title": "Presentations",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Modules",
+      "Presentations"
+    ]
+  },
+  {
+    "objectID": "3-presentations/index.html#exercises",
+    "href": "3-presentations/index.html#exercises",
+    "title": "Presentations",
+    "section": "Exercises",
+    "text": "Exercises\n hello-penguins-slides.qmd",
+    "crumbs": [
+      "Modules",
+      "Presentations"
+    ]
+  },
+  {
+    "objectID": "exercises/callout-boxes.html",
+    "href": "exercises/callout-boxes.html",
+    "title": "Callout boxes",
+    "section": "",
+    "text": "Note\n\n\n\nNote that there are five types of callouts, including: note, warning, important, tip, and caution.\n\n\n\n\n\n\n\n\nTip\n\n\n\nThis should be an example of a callout with a caption. So add a caption!\n\n\n\n\n\n\n\n\nExpand To Learn About Collapse\n\n\n\nThis should be an example of a “folded” caution callout that can be expanded by the user. You can use collapse=\"true\" to collapse it by default or collapse=\"false\" to make a collapsible callout that is expanded by default. Try adding these to attributes."
+  },
+  {
+    "objectID": "exercises/tables-figures.html",
+    "href": "exercises/tables-figures.html",
+    "title": "Tables and figures",
+    "section": "",
+    "text": "Create a 3 row x 2 col table, populate with a column for restaurant + column for cuisine, and then add 3 examples. Then, cross reference it from text.\nInclude the R logo and the Quarto logo from the images/ folder as subfigures of a single figure.\nAdd a figure generated from code and cross reference it."
+  },
+  {
+    "objectID": "exercises/hello-penguins-slides.html",
+    "href": "exercises/hello-penguins-slides.html",
+    "title": "Hello, Penguins!",
+    "section": "",
+    "text": "For this analysis we’ll use the penguins dataset from the palmerpenguins package.\n\nlibrary(tidyverse)\nlibrary(ggthemes)\nlibrary(palmerpenguins)\nlibrary(gt)"
+  },
+  {
+    "objectID": "exercises/hello-penguins-slides.html#data",
+    "href": "exercises/hello-penguins-slides.html#data",
+    "title": "Hello, Penguins!",
+    "section": "",
+    "text": "For this analysis we’ll use the penguins dataset from the palmerpenguins package.\n\nlibrary(tidyverse)\nlibrary(ggthemes)\nlibrary(palmerpenguins)\nlibrary(gt)"
+  },
+  {
+    "objectID": "exercises/hello-penguins-slides.html#species",
+    "href": "exercises/hello-penguins-slides.html#species",
+    "title": "Hello, Penguins!",
+    "section": "Species",
+    "text": "Species\nThe figure below is a bar plot of species of penguins.\n\nggplot(\n  penguins,\n  aes(\n    x = bill_length_mm, y = bill_depth_mm,\n    color = species, shape = species\n  )\n) +\n  geom_point() +\n  scale_color_colorblind() +\n  labs(x = \"Bill length (mm)\", y = \"Bill depth (mm)\") +\n  theme_minimal()"
+  },
+  {
+    "objectID": "exercises/hello-penguins-slides.html#penguins",
+    "href": "exercises/hello-penguins-slides.html#penguins",
+    "title": "Hello, Penguins!",
+    "section": "Penguins",
+    "text": "Penguins\nThe table below shows the first 10 penguins from the dataset.\n\npenguins |&gt;\n  slice_head(n = 10) |&gt;\n  select(species, island, bill_length_mm, bill_depth_mm) |&gt;\n  gt()\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n\n\nAdelie\nTorgersen\n39.5\n17.4\n\n\nAdelie\nTorgersen\n40.3\n18.0\n\n\nAdelie\nTorgersen\nNA\nNA\n\n\nAdelie\nTorgersen\n36.7\n19.3\n\n\nAdelie\nTorgersen\n39.3\n20.6\n\n\nAdelie\nTorgersen\n38.9\n17.8\n\n\nAdelie\nTorgersen\n39.2\n19.6\n\n\nAdelie\nTorgersen\n34.1\n18.1\n\n\nAdelie\nTorgersen\n42.0\n20.2"
+  },
+  {
+    "objectID": "4-websites/4-websites.html#quarto-projects",
+    "href": "4-websites/4-websites.html#quarto-projects",
+    "title": "Websites",
+    "section": "Quarto projects",
+    "text": "Quarto projects\n\nQuarto projects have a _quarto.yml file\nThe type field in this file indicates the type of project:\n\ndefault: Collection of documents\nwebsite: Websites (and blogs)\nbooks: Books 😃"
+  },
+  {
+    "objectID": "4-websites/4-websites.html#our-turn",
+    "href": "4-websites/4-websites.html#our-turn",
+    "title": "Websites",
+    "section": "Our turn",
+    "text": "Our turn\n\nLet’s build a website together from all of the documents we’ve created so far and highlight the following features of Quarto websites:\n\n_quarto.yml\nindex.qmd / landing page\nNavigation\nFreeze\nThemes and dark theme toggle\nPublishing\nAn aspect of the workshop webpage that you fancy?"
+  },
+  {
+    "objectID": "4-websites/4-websites.html#your-turn",
+    "href": "4-websites/4-websites.html#your-turn",
+    "title": "Websites",
+    "section": "Your turn",
+    "text": "Your turn\n\nPick up where we left off and\n\nAdd an about page.\nAdd a folder called posts and create a few minimal blog post entries. Then, using the listings feature, create a blog page for your website.\n\n\n\n\n\n−+\n15:00"
+  },
+  {
+    "objectID": "4-websites/4-websites.html#freeze",
+    "href": "4-websites/4-websites.html#freeze",
+    "title": "Websites",
+    "section": "Freeze",
+    "text": "Freeze\n\nThe freeze option controls when/if computational documents be re-rendered during a global project render:\n\nexecute:\n  freeze: true  # never re-render during project render\nexecute:\n  freeze: auto  # re-render only when source changes\nexecute:\n  freeze: false  # always re-render\n\nThe freeze option is typically added to a _metadata.yml file within a specific directory, affecting all files in that directory.\nFor blogs, set feeze in _metadata.yml at the root of the posts directory.\nYou can have it only within specific subdirectories for more complex sites."
+  },
+  {
+    "objectID": "4-websites/4-websites.html#freeze-vs.-cache",
+    "href": "4-websites/4-websites.html#freeze-vs.-cache",
+    "title": "Websites",
+    "section": "Freeze vs. cache",
+    "text": "Freeze vs. cache\n\nCache stores the results of computations for a specific file.\nCache invalidation is triggered by changes in chunk source code (or other cache attributes you’ve defined).\ncache can also be set at the chunk level. Consider using the cache for computationally expensive chunks."
+  },
+  {
+    "objectID": "4-websites/4-websites.html#publishing",
+    "href": "4-websites/4-websites.html#publishing",
+    "title": "Websites",
+    "section": "Publishing",
+    "text": "Publishing\nSee https://quarto.org/docs/publishing for publishing options other than Quarto Pub."
+  },
+  {
+    "objectID": "4-websites/4-websites.html#questions",
+    "href": "4-websites/4-websites.html#questions",
+    "title": "Websites",
+    "section": "Questions",
+    "text": "Questions\n\nAny questions / anything you’d like to review before we wrap up this module?"
+  },
+  {
+    "objectID": "4-websites/4-websites.html#time-permitting",
+    "href": "4-websites/4-websites.html#time-permitting",
+    "title": "Websites",
+    "section": "Time permitting",
+    "text": "Time permitting\n\nDemo journal articles with Quarto with the JASA template!"
+  },
+  {
+    "objectID": "4-websites/4-websites.html#quarto-cli",
+    "href": "4-websites/4-websites.html#quarto-cli",
+    "title": "Websites",
+    "section": "Quarto CLI…",
+    "text": "Quarto CLI…\norchestrates each step of rendering\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
+  },
+  {
+    "objectID": "4-websites/4-websites.html#learning-more",
+    "href": "4-websites/4-websites.html#learning-more",
+    "title": "Websites",
+    "section": "Learning more",
+    "text": "Learning more\nhttps://quarto.org"
+  },
+  {
+    "objectID": "4-websites/4-websites.html#follow-up-with",
+    "href": "4-websites/4-websites.html#follow-up-with",
+    "title": "Websites",
+    "section": "Follow up with…",
+    "text": "Follow up with…\nthe Quarto Blog: https://quarto.org/docs/blog"
+  },
+  {
+    "objectID": "4-websites/4-websites.html#thank-you",
+    "href": "4-websites/4-websites.html#thank-you",
+    "title": "Websites",
+    "section": "Thank you!",
+    "text": "Thank you!\n🐘 https://fosstodon.org/@minecr\n🐦 @minebocek\n\n\n\n\n🔗 mine.quarto.pub/quarto-asa-nebraska"
+  },
+  {
+    "objectID": "2-documents/index.html",
+    "href": "2-documents/index.html",
+    "title": "Documents",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Modules",
+      "Documents"
+    ]
+  },
+  {
+    "objectID": "2-documents/index.html#slides",
+    "href": "2-documents/index.html#slides",
+    "title": "Documents",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Modules",
+      "Documents"
+    ]
+  },
+  {
+    "objectID": "2-documents/index.html#exercises",
+    "href": "2-documents/index.html#exercises",
+    "title": "Documents",
+    "section": "Exercises",
+    "text": "Exercises\n\n hello-penguins.qmd\n markdown-syntax.qmd\n callout-boxes.qmd\n tables-figures.qmd\n\n r-logo.png\n quarto-logo.png",
+    "crumbs": [
+      "Modules",
+      "Documents"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Reproducible publishing with Quarto",
+    "section": "",
+    "text": "Quarto is the next generation of R Markdown for publishing, including dynamic and static documents and multilingual programming language support. With Quarto, you can create documents, manuscripts, books, presentations, blogs, or other online resources. In this workshop, you will learn how to use Quarto for technical communication and computation. We’ll teach you how to get started creating and fully customizing Quarto outputs (HTML, PDF, Presentations) and the use of RStudio’s Visual Editor, which provides a user interface for editing all of Pandoc markdown. We will also touch on authoring scientific manuscripts with embedded computing that adhere to specific journal styles and creating Quarto projects for aggregating many files such as complex websites or entire books.\nThis workshop is designed for those who have some experience with R, RStudio, and R Markdown and who want to learn Quarto. You do not need to be an advanced user of any of these. However, the workshop will assume that you have authored computational documents before. The workshop should also be accessible to those who have experience with Jupyter Notebooks.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#schedule",
+    "href": "index.html#schedule",
+    "title": "Reproducible publishing with Quarto",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\nTime\nModule\n\n\n\n\n09:00 - 10:30\nFrom R Markdown to Quarto\n\n\n10:30 - 11:00\nBreak ☕\n\n\n11:00 - 12:30\nDocuments and slides\n\n\n12:30 - 13:30\nLunch 🍽️ |\n\n\n13:30 - 15:00\nWebsites and books\n\n\n15:00 - 15:30\nBreak ☕\n\n\n15:30 - 17:00\nManuscripts",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#instructors",
+    "href": "index.html#instructors",
+    "title": "Reproducible publishing with Quarto",
+    "section": "Instructors",
+    "text": "Instructors\nDr. Mine Çetinkaya-Rundel (she/her) is Professor of the Practice at Duke University and Developer Educator at Posit. Mine’s work focuses on innovation in statistics and data science pedagogy, with an emphasis on computing, reproducible research, student-centered learning, and open-source education as well as pedagogical approaches for enhancing retention of women and under-represented minorities in STEM. Mine is a Fellow of the ASA and Elected Member of the ISI as well as the winner of the 2021 Robert V. Hogg Award for For Excellence in Teaching Introductory Statistics.\nDr. Charlotte Wickham (she/her) is a Developer Educator at Posit. As part of her job at Posit, Charlotte helps to keep quarto.org—a website about, and also built with, Quarto—up to date. Prior to Posit, she taught Statistics and Data Science at Oregon State University where she received awards for her in-person and online teaching.\n\n This work is licensed under a Creative Commons Attribution 4.0 International License.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "1-hello-quarto/index.html",
+    "href": "1-hello-quarto/index.html",
+    "title": "Hello Quarto",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Modules",
+      "Hello Quarto"
+    ]
+  },
+  {
+    "objectID": "1-hello-quarto/index.html#slides",
+    "href": "1-hello-quarto/index.html#slides",
+    "title": "Hello Quarto",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Modules",
+      "Hello Quarto"
+    ]
+  },
+  {
+    "objectID": "1-hello-quarto/index.html#exercises",
+    "href": "1-hello-quarto/index.html#exercises",
+    "title": "Hello Quarto",
+    "section": "Exercises",
+    "text": "Exercises\n\n hello-penguins.qmd\n my-first-document.qmd",
+    "crumbs": [
+      "Modules",
+      "Hello Quarto"
+    ]
+  },
+  {
+    "objectID": "LICENSE.html#creative-commons-attribution-sharealike-4.0-international-public-license",
+    "href": "LICENSE.html#creative-commons-attribution-sharealike-4.0-international-public-license",
+    "title": "Attribution-ShareAlike 4.0 International",
+    "section": "Creative Commons Attribution-ShareAlike 4.0 International Public License",
+    "text": "Creative Commons Attribution-ShareAlike 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-ShareAlike 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\n\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nBY-SA Compatible License means a license listed at creativecommons.org/compatiblelicenses, approved by Creative Commons as essentially the equivalent of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicense Elements means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution and ShareAlike.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\n\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\nA. reproduce and Share the Licensed Material, in whole or in part; and\nB. produce, reproduce, and Share Adapted Material.\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.\nDownstream recipients.\nA. Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\nB. __Additional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter’s License You apply.\nC. No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\nA. retain the following if it is supplied by the Licensor with the Licensed Material:\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\nB. indicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nC. indicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\n\nShareAlike.\n\nIn addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.\n\nThe Adapter’s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-SA Compatible License.\nYou must include the text of, or the URI or hyperlink to, the Adapter’s License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.\nYou may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter’s License You apply.\n\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\n\n\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUnless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.\nTo the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\n\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\n\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.t stated herein are separate from and independent of the terms and conditions of this Public License.\n\n\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org"
+  },
+  {
+    "objectID": "pre-work.html",
+    "href": "pre-work.html",
+    "title": "Pre-workshop instructions",
+    "section": "",
+    "text": "Prior to the workshop, please complete the following steps:\n\nDownload and install the latest versions of R, RStudio, and Quarto:\n\nR 4.2.3 or above: https://cran.r-project.org\nRStudio 2023.03.0+386 or above: https://posit.co/download/rstudio-desktop\nQuarto 1.3.321: https://quarto.org/docs/get-started\n\nInstall the following packages:\n\n\npkg_list &lt;- c(\n  \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n)\ninstall.packages(pkg_list)\n\n\nDownload exercises.zip at https://mine.quarto.pub/quarto-asa-nebraska/exercises.zip and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio &gt; File &gt; New Project &gt; Existing Directory and navigate to the unzipped exercises folder and create an RStudio project in there and open it.",
+    "crumbs": [
+      "Pre-work"
+    ]
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#while-you-wait-for-the-workshop-to-begin",
+    "href": "1-hello-quarto/1-hello-quarto.html#while-you-wait-for-the-workshop-to-begin",
+    "title": "Hello Quarto",
+    "section": "While you wait for the workshop to begin…",
+    "text": "While you wait for the workshop to begin…\n\nDownload and install the latest versions of R, RStudio, and Quarto:\n\nR: https://cran.r-project.org\nRStudio: https://posit.co/download/rstudio-desktop\nQuarto: https://quarto.org/docs/get-started\n\nInstall the following packages:\n\n\npkg_list &lt;- c(\"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\")\ninstall.packages(pkg_list)\n\n\nDownload exercises.zip at https://mine.quarto.pub/quarto-asa-nebraska/exercises.zip and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio &gt; File &gt; New Project &gt; Existing Directory and navigate to the unzipped exercises folder and create an RStudio project in there and open it."
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#logistics",
+    "href": "1-hello-quarto/1-hello-quarto.html#logistics",
+    "title": "Hello Quarto",
+    "section": "Logistics",
+    "text": "Logistics\n\nWiFi: MedCenter Guest or eduroam\nSli.do:\n\nAnonymous questions to go through at the end of a module / at the end of the day\nUse for not time pressing questions / things you’re curious about beyond what we’re explicitly covering\nGot to https://slido.com and use code: #quarto\nOr use this direct link https://app.sli.do/event/wkQ3fmnKafwzDNKQNXK7FF\n\nExits in the front of the room\nFor restrooms, leave on the right (my right) of the room"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#code-of-conduct",
+    "href": "1-hello-quarto/1-hello-quarto.html#code-of-conduct",
+    "title": "Hello Quarto",
+    "section": "Code of Conduct",
+    "text": "Code of Conduct\n\nThe American Statistical Association (ASA) is committed to providing an atmosphere in which personal respect and intellectual growth are valued and the free expression and exchange of ideas are encouraged. Consistent with this commitment, it is the policy of the ASA that all participants in ASA activities enjoy a welcoming environment free from unlawful discrimination, harassment, and retaliation. We strive to be a community that welcomes and supports people of all backgrounds and identities. This includes, but is not limited to, members of any race, ethnicity, culture, national origin, color, immigration status, social and economic class, educational level, sex, sexual orientation, gender identity and expression, age, size, family status, political belief, religion, and mental and physical ability.\n\n\n\nASA Code of Conduct"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#expected-behavior",
+    "href": "1-hello-quarto/1-hello-quarto.html#expected-behavior",
+    "title": "Hello Quarto",
+    "section": "Expected Behavior",
+    "text": "Expected Behavior\n\nModel and support the norms of respect necessary to promote the conditions for healthy exchange of scientific ideas.\nIn speech or conduct, do not insult or disparage other participants.\nBe conscious of hierarchical structures, specifically the existence of stark power differentials between students, early career statisticians and established career statisticians—noting that fear of retaliation from more established statisticians can make it difficult for students and early career statisticians to express discomfort, rebuff unwelcome advances, and report violations of the conduct policy.\nBe sensitive to indications that may suggest that individuals are feeling unwelcome.\n\n\n\nASA Code of Conduct"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#about-me",
+    "href": "1-hello-quarto/1-hello-quarto.html#about-me",
+    "title": "Hello Quarto",
+    "section": "About me",
+    "text": "About me\n\nProfessor of the Practice, Department of Statistical Science, Duke University\nDeveloper Educator, Posit\nR Markdown user/educator for 10+ years, Quarto user/educator for 1+ years"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#about-you",
+    "href": "1-hello-quarto/1-hello-quarto.html#about-you",
+    "title": "Hello Quarto",
+    "section": "About you",
+    "text": "About you\n\nMeet 1-2 people around you!\n\n\n\n\n−+\n02:00"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#workshop-structure",
+    "href": "1-hello-quarto/1-hello-quarto.html#workshop-structure",
+    "title": "Hello Quarto",
+    "section": "Workshop structure",
+    "text": "Workshop structure\n\nMy turn: Lecture segments + live coding\nOur turn: Live coding + follow along\nYour turn: Exercises"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#getting-help",
+    "href": "1-hello-quarto/1-hello-quarto.html#getting-help",
+    "title": "Hello Quarto",
+    "section": "Getting help",
+    "text": "Getting help\n\nDuring my turn and our turn segments – raise your hand\nDuring your turn segments – also feel free to raise your hand for questions but use the stickies to signal:\n\nLight green: I’d like some help / I’m stuck / I’m lost\nDark green: I’m done"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#meeting-you-where-you-are",
+    "href": "1-hello-quarto/1-hello-quarto.html#meeting-you-where-you-are",
+    "title": "Hello Quarto",
+    "section": "Meeting you where you are",
+    "text": "Meeting you where you are\n\n\n\nI’ll assume you\n\nknow some R\nhave worked in RStudio\nwant to learn about Quarto\n\n\n\n\nI’ll teach you\n\nQuarto syntax and formats\nMore Markdown\nEven more R along the way!"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#checking-in-one-more-time",
+    "href": "1-hello-quarto/1-hello-quarto.html#checking-in-one-more-time",
+    "title": "Hello Quarto",
+    "section": "Checking in one more time",
+    "text": "Checking in one more time\n\nHave you completed the following?\n\nDownload and install the latest versions of R, RStudio, and Quarto:\n\nR: https://cran.r-project.org\nRStudio: https://posit.co/download/rstudio-desktop\nQuarto: https://quarto.org/docs/get-started\n\nInstall the following packages:\n\npkg_list &lt;- c(\"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\")\ninstall.packages(pkg_list)\n\nDownload exercises.zip at https://mine.quarto.pub/quarto-asa-nebraska/exercises.zip and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio &gt; File &gt; New Project &gt; Existing Directory and navigate to the unzipped exercises folder and create an RStudio project in there and open it.\n\n\n\n\nLet’s get started!"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#quarto",
+    "href": "1-hello-quarto/1-hello-quarto.html#quarto",
+    "title": "Hello Quarto",
+    "section": "Quarto …",
+    "text": "Quarto …\n\nis a new, open-source, scientific, and technical publishing system\naims to make the process of creating and collaborating dramatically better\n\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#quarto-1",
+    "href": "1-hello-quarto/1-hello-quarto.html#quarto-1",
+    "title": "Hello Quarto",
+    "section": "Quarto",
+    "text": "Quarto\nWith Quarto you can weave together narrative text and code to produce elegantly formatted output as documents, web pages, blog posts, books and more.\n\n\njust like R Markdown…\n\n\n\nbut not just like it, there’s more to it…"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#quarto-2",
+    "href": "1-hello-quarto/1-hello-quarto.html#quarto-2",
+    "title": "Hello Quarto",
+    "section": "Quarto …",
+    "text": "Quarto …\nunifies + extends the R Markdown ecosystem"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#quarto-3",
+    "href": "1-hello-quarto/1-hello-quarto.html#quarto-3",
+    "title": "Hello Quarto",
+    "section": "Quarto …",
+    "text": "Quarto …\nunifies + extends the R Markdown ecosystem\n\nunifies for people who love R Markdown"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#quarto-4",
+    "href": "1-hello-quarto/1-hello-quarto.html#quarto-4",
+    "title": "Hello Quarto",
+    "section": "Quarto …",
+    "text": "Quarto …\nunifies + extends the R Markdown ecosystem\n\nunifies for people who love R Markdown\nextends for people who don’t know R Markdown"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#quarto-unifies-extends-r-markdown",
+    "href": "1-hello-quarto/1-hello-quarto.html#quarto-unifies-extends-r-markdown",
+    "title": "Hello Quarto",
+    "section": "Quarto unifies + extends R Markdown",
+    "text": "Quarto unifies + extends R Markdown\n\n\nConsistent implementation of attractive and handy features across outputs: tabsets, code-folding, syntax highlighting, etc.\nMore accessible defaults as well as better support for accessibility\nGuardrails, particularly helpful for new learners: YAML completion, informative syntax errors, etc.\nSupport for other languages like Python, Julia, Observable, and more via Jupyter engine for executable code chunks."
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#a-tour-of-quarto",
+    "href": "1-hello-quarto/1-hello-quarto.html#a-tour-of-quarto",
+    "title": "Hello Quarto",
+    "section": "A tour of Quarto",
+    "text": "A tour of Quarto\n\n\nSit back and enjoy!"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#your-turn",
+    "href": "1-hello-quarto/1-hello-quarto.html#your-turn",
+    "title": "Hello Quarto",
+    "section": "Your turn",
+    "text": "Your turn\n\nOpen hello-penguins.qmd in RStudio and with the visual editor. Render the document. Update your name and re-render. Inspect components of the document and make one more update and re-render. Compare notes with neighbors about updates you’ve made and note any aspects of the document that are not clear after the tour and your first interaction with it.\n\n\n\n\n−+\n10:00"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#revisit-what-is-quarto",
+    "href": "1-hello-quarto/1-hello-quarto.html#revisit-what-is-quarto",
+    "title": "Hello Quarto",
+    "section": "Revisit: What is Quarto?",
+    "text": "Revisit: What is Quarto?\nQuarto is a command line interface (CLI) that renders plain text formats (.qmd, .rmd, .md) OR mixed formats (.ipynb/Jupyter notebook) into static PDF/Word/HTML reports, books, websites, presentations and more.\n\nmine$ quarto --help\n\n  Usage:   quarto \n  Version: 1.3.340\n\n  Description:\n\n    Quarto CLI\n\n  Options:\n\n    -h, --help     - Show this help.                            \n    -V, --version  - Show the version number for this program.  \n\n  Commands:\n\n    render          [input] [args...]     - Render files or projects to various document types.        \n    preview         [file] [args...]      - Render and preview a document or website project.          \n    serve           [input]               - Serve a Shiny interactive document.                        \n    create          [type] [commands...]  - Create a Quarto project or extension                       \n    create-project  [dir]                 - Create a project for rendering multiple documents          \n    convert         &lt;input&gt;               - Convert documents to alternate representations.            \n    pandoc          [args...]             - Run the version of Pandoc embedded within Quarto.          \n    run             [script] [args...]    - Run a TypeScript, R, Python, or Lua script.                \n    add             &lt;extension&gt;           - Add an extension to this folder or project                 \n    install         [target...]           - Installs an extension or global dependency.                \n    publish         [provider] [path]     - Publish a document or project. Available providers include:\n    check           [target]              - Verify correct functioning of Quarto installation.         \n    help            [command]             - Show this help or the help of a sub-command."
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#quarto-more-than-just-knitr",
+    "href": "1-hello-quarto/1-hello-quarto.html#quarto-more-than-just-knitr",
+    "title": "Hello Quarto",
+    "section": "Quarto, more than just knitr",
+    "text": "Quarto, more than just knitr\n\nWe learned from 10 years of literate programming with knitr + rmarkdown"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#quarto-more-than-just-knitr-1",
+    "href": "1-hello-quarto/1-hello-quarto.html#quarto-more-than-just-knitr-1",
+    "title": "Hello Quarto",
+    "section": "Quarto, more than just knitr",
+    "text": "Quarto, more than just knitr"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#quarto-more-than-just-knitr-2",
+    "href": "1-hello-quarto/1-hello-quarto.html#quarto-more-than-just-knitr-2",
+    "title": "Hello Quarto",
+    "section": "Quarto: More than just knitr",
+    "text": "Quarto: More than just knitr"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#under-the-hood",
+    "href": "1-hello-quarto/1-hello-quarto.html#under-the-hood",
+    "title": "Hello Quarto",
+    "section": "Under the hood",
+    "text": "Under the hood\n\n\nknitr or jupyter evaluates R/Python/Julia code and returns a .md file along with the evaluated code\nQuarto applies Lua filters + CSS/LaTeX which is then evaluated alongside the .md file by Pandoc and converted to a final output format"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#aside-lua-filters",
+    "href": "1-hello-quarto/1-hello-quarto.html#aside-lua-filters",
+    "title": "Hello Quarto",
+    "section": "Aside: Lua filters",
+    "text": "Aside: Lua filters\n\nHere is an example of a Lua filter that converts strong emphasis to small caps, from https://pandoc.org/lua-filters.html:\n\nreturn {\n  {\n    Strong = function (elem)\n      return pandoc.SmallCaps(elem.c)\n    end,\n  }\n}\n\n\nLua filters written by R/Python/Julia developers should be interchangeable between formats - not language specific!\n\n\n\n\nWe won’t go into the details of writing Lua filters in this workshop, and you don’t need to worry about learning about Lua filters unless you’re working on extending Quarto."
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#from-the-comfort-of-your-own-homeworkspace",
+    "href": "1-hello-quarto/1-hello-quarto.html#from-the-comfort-of-your-own-homeworkspace",
+    "title": "Hello Quarto",
+    "section": "From the comfort of your own homeworkspace",
+    "text": "From the comfort of your own homeworkspace"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#quarto-workflow",
+    "href": "1-hello-quarto/1-hello-quarto.html#quarto-workflow",
+    "title": "Hello Quarto",
+    "section": "Quarto workflow",
+    "text": "Quarto workflow\nRendering a Quarto file in RStudio via the Render button calls quarto render in a background job, preventing Quarto rendering from cluttering up the R console, and gives you and easy way to stop:"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#rendering",
+    "href": "1-hello-quarto/1-hello-quarto.html#rendering",
+    "title": "Hello Quarto",
+    "section": "Rendering",
+    "text": "Rendering\n\nOption 1: In RStudio as a background job, and preview the output.\n\n\n\nOption 2: In the Terminal via quarto render:\n\n\nquarto render document.qmd # defaults to html\nquarto render document.qmd --to pdf\nquarto render document.qmd --to docx\n\n\n\n\nOption 3: In the R console, via the quarto R package:\n\n\nlibrary(quarto)\n\nquarto_render(\"document.qmd\") # defaults to html\nquarto_render(\"document.qmd\", output_format = \"pdf\")"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#your-turn-1",
+    "href": "1-hello-quarto/1-hello-quarto.html#your-turn-1",
+    "title": "Hello Quarto",
+    "section": "Your turn",
+    "text": "Your turn\n\n\nOpen the last .qmd file you were working on in RStudio.\nCompare behavior of rendering with\n\nRStudio &gt; Render,\nusing the CLI with quarto render, and\nin the R console via quarto::quarto_render().\n\nIf you’re an RStudio user, brainstorm why you might still want to know about the other two ways of rendering Quarto documents.\n\n\n\n\n\n−+\n03:00"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#one-install-batteries-included",
+    "href": "1-hello-quarto/1-hello-quarto.html#one-install-batteries-included",
+    "title": "Hello Quarto",
+    "section": "One install, “Batteries included”",
+    "text": "One install, “Batteries included”\n\nRMarkdown grew into a large ecosystem, with varying syntax.\n\n\n\nQuarto comes “batteries included” straight out of the box\n\nHTML reports and websites\nPDF reports\nMS Office (Word, Powerpoint)\nPresentations (Powerpoint, Beamer, revealjs)\nBooks\n\n\n\n\n\nAny language, exact same approach and syntax"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#many-quarto-formats",
+    "href": "1-hello-quarto/1-hello-quarto.html#many-quarto-formats",
+    "title": "Hello Quarto",
+    "section": "Many Quarto formats",
+    "text": "Many Quarto formats\n\n\n\nFeature\nR Markdown\nQuarto\n\n\n\n\nBasic Formats\nhtml_document\npdf_document\nword_document\nhtml\npdf\ndocx\n\n\nBeamer\nbeamer_presentation\nbeamer\n\n\nPowerPoint\npowerpoint_presentation\npptx\n\n\nHTML Slides\nxaringan\nioslides\nrevealjs\nrevealjs\n\n\nAdvanced Layout\ntufte\ndistill\nQuarto Article Layout"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#many-quarto-formats-1",
+    "href": "1-hello-quarto/1-hello-quarto.html#many-quarto-formats-1",
+    "title": "Hello Quarto",
+    "section": "Many Quarto formats",
+    "text": "Many Quarto formats\n\n\n\nFeature\nR Markdown\nQuarto\n\n\n\n\nCross References\nhtml_document2\npdf_document2\nword_document2\nQuarto Crossrefs\n\n\nWebsites & Blogs\nblogdown\ndistill\nQuarto Websites\nQuarto Blogs\n\n\nBooks\nbookdown\nQuarto Books\n\n\nInteractivity\nShiny Documents\nQuarto Interactive Documents\n\n\nJournal Articles\nrticles\nJournal Articles\n\n\nDashboards\nflexdashboard\nComing soon!"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#your-turn-2",
+    "href": "1-hello-quarto/1-hello-quarto.html#your-turn-2",
+    "title": "Hello Quarto",
+    "section": "Your turn",
+    "text": "Your turn\n\nIn RStudio, go to File &gt; New File &gt; Quarto document to create a Quarto document with HTML output. Render the document, which will ask you to give it a name – you can use my-first-document.qmd.\nUse the visual editor for the next steps.\n\nAdd a title and your name as the author.\nCreate two sections, one with fact you want to learn and your favorite thing about R.\nAdd a table of contents.\nStretch goal: Change the html theme to sketchy.\n\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#what-about-r-markdown",
+    "href": "1-hello-quarto/1-hello-quarto.html#what-about-r-markdown",
+    "title": "Hello Quarto",
+    "section": "What about R Markdown?",
+    "text": "What about R Markdown?\n\n\nYou can render existing R Markdown documents with Quarto and you can rename them to .qmd files to turn them into Quarto documents.\nYou don’t have to do this – R Markdown continues to be maintained.\nHowever, new features are being developed for Quarto.\nAdditionally, Quarto\n\nOffers “batteries included” shared syntax across formats\nAllows you to choose your own editor and your preferred data science language\nComes with richer and more accessible features out of the box\nIs actively developed"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#questions",
+    "href": "1-hello-quarto/1-hello-quarto.html#questions",
+    "title": "Hello Quarto",
+    "section": "Questions",
+    "text": "Questions\n\nAny questions / anything you’d like to review before we wrap up this module?"
+  },
+  {
+    "objectID": "1-hello-quarto/1-hello-quarto.html#one-last-thing",
+    "href": "1-hello-quarto/1-hello-quarto.html#one-last-thing",
+    "title": "Hello Quarto",
+    "section": "One last thing!",
+    "text": "One last thing!\n\nWhere does the name “Quarto” come from?\n\n\n\n\n\n\n\n\n🔗 mine.quarto.pub/quarto-asa-nebraska\n\n\n\n\nSource: https://en.wikipedia.org/wiki/Quarto"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#components",
+    "href": "2-documents/2-documents.html#components",
+    "title": "Documents",
+    "section": "Components",
+    "text": "Components\n\nMetadata: YAML\nText: Markdown\nCode: Executed via knitr or jupyter\n\n\nWeave it all together, and you have beautiful, powerful, and useful outputs!"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#literate-programming",
+    "href": "2-documents/2-documents.html#literate-programming",
+    "title": "Documents",
+    "section": "Literate programming",
+    "text": "Literate programming\nLiterate programming is writing out the program logic in a human language with included (separated by a primitive markup) code snippets and macros.\n---\ntitle: \"ggplot2 demo\"\ndate: \"4/28/2023\"\nformat: html\n---\n\n## MPG\n\nThere is a relationship between city and highway mileage.\n\n```{r}\n#| label: fig-mpg\n\nlibrary(ggplot2)\n\nggplot(mpg, aes(x = cty, y = hwy)) + \n  geom_point() + \n  geom_smooth(method = \"loess\")\n```\n\n\nSource: https://en.wikipedia.org/wiki/Literate_programming"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#yaml",
+    "href": "2-documents/2-documents.html#yaml",
+    "title": "Documents",
+    "section": "YAML",
+    "text": "YAML\n“Yet Another Markup Language” or “YAML Ain’t Markup Language” is used to provide document level metadata.\n---\nkey: value\n---"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#output-options",
+    "href": "2-documents/2-documents.html#output-options",
+    "title": "Documents",
+    "section": "Output options",
+    "text": "Output options\n---\nformat: something\n---\n\n\n---\nformat: html\n---\n---\nformat: pdf\n---\n---\nformat: revealjs\n---"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#output-option-arguments",
+    "href": "2-documents/2-documents.html#output-option-arguments",
+    "title": "Documents",
+    "section": "Output option arguments",
+    "text": "Output option arguments\nIndentation matters!\n---\nformat: \n  html:\n    toc: true\n    code-fold: true\n---"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#yaml-validation",
+    "href": "2-documents/2-documents.html#yaml-validation",
+    "title": "Documents",
+    "section": "YAML validation",
+    "text": "YAML validation\n\nInvalid: No space after :\n\n---\nformat:html\n---\n\nInvalid: Read as missing\n\n---\nformat:\nhtml\n---\n\nValid, but needs next object\n\n---\nformat: \n  html:\n---"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#yaml-validation-1",
+    "href": "2-documents/2-documents.html#yaml-validation-1",
+    "title": "Documents",
+    "section": "YAML validation",
+    "text": "YAML validation\nThere are multiple ways of formatting valid YAML:\n\nValid: There’s a space after :\n\nformat: html\n\nValid: There are 2 spaces a new line and no trailing :\n\nformat:\n  html\n\nValid: format: html with selections made with proper indentation\n\nformat: \n  html:\n    toc: true"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#why-yaml",
+    "href": "2-documents/2-documents.html#why-yaml",
+    "title": "Documents",
+    "section": "Why YAML?",
+    "text": "Why YAML?\nTo avoid manually typing out all the options, every time when rendering via the CLI:\n\nquarto render document.qmd --to html\n\n\n\nquarto render document.qmd --to html -M code-fold:true\n\n\n\nquarto render document.qmd --to html -M code-fold:true -P alpha:0.2 -P ratio:0.3"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#quarto-linting",
+    "href": "2-documents/2-documents.html#quarto-linting",
+    "title": "Documents",
+    "section": "Quarto linting",
+    "text": "Quarto linting\nLint, or a linter, is a static code analysis tool used to flag programming errors, bugs, stylistic errors and suspicious constructs.\n\n\n\n\n\n\n\n\n\nSource: https://en.wikipedia.org/wiki/Lint_(software)"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#quarto-yaml-intelligence",
+    "href": "2-documents/2-documents.html#quarto-yaml-intelligence",
+    "title": "Documents",
+    "section": "Quarto YAML Intelligence",
+    "text": "Quarto YAML Intelligence\nRStudio + VSCode provide rich tab-completion - start a word and tab to complete, or Ctrl + space to see all available options."
+  },
+  {
+    "objectID": "2-documents/2-documents.html#your-turn",
+    "href": "2-documents/2-documents.html#your-turn",
+    "title": "Documents",
+    "section": "Your turn",
+    "text": "Your turn\n\n\nOpen hello-penguins.qmd in RStudio.\nTry Ctrl + space to see the available YAML options.\nTry out the tab-completion of any options you remember.\nYou can use the HTML reference as needed.\n\n\n\n\n\n−+\n03:00"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#list-of-valid-yaml-fields",
+    "href": "2-documents/2-documents.html#list-of-valid-yaml-fields",
+    "title": "Documents",
+    "section": "List of valid YAML fields",
+    "text": "List of valid YAML fields\n\nMany YAML fields are common across various outputs\nBut also each output type has its own set of valid YAML fields and options\nDefinitive list: quarto.org/docs/reference/formats/html"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#text-formatting",
+    "href": "2-documents/2-documents.html#text-formatting",
+    "title": "Documents",
+    "section": "Text Formatting",
+    "text": "Text Formatting\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n*italics* and **bold**\nitalics and bold\n\n\nsuperscript^2^ / subscript~2~\nsuperscript2 / subscript2\n\n\n~~strikethrough~~\nstrikethrough\n\n\n`verbatim code`\nverbatim code"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#headings",
+    "href": "2-documents/2-documents.html#headings",
+    "title": "Documents",
+    "section": "Headings",
+    "text": "Headings\n\n\n\n\n\n\n\nMarkdown Syntax\nOutput\n\n\n\n\n# Header 1\nHeader 1\n\n\n## Header 2\nHeader 2\n\n\n### Header 3\nHeader 3\n\n\n#### Header 4\nHeader 4\n\n\n##### Header 5\nHeader 5\n\n\n###### Header 6\nHeader 6"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#links",
+    "href": "2-documents/2-documents.html#links",
+    "title": "Documents",
+    "section": "Links",
+    "text": "Links\nThere are several types of “links” or hyperlinks.\n\n\nMarkdown\nYou can embed [named hyperlinks](https://quarto.org/),\ndirect urls like &lt;https://quarto.org/&gt;, and links to \n[other places](#quarto-anatomy) in \nthe document. The syntax is similar for embedding an\ninline image: ![Penguins playing with ball](images/penguins-quarto-ball.png).\n\nOutput\nYou can embed named hyperlinks, direct urls like https://quarto.org/, and links to other places in the document. The syntax is similar for embedding an inline image: ."
+  },
+  {
+    "objectID": "2-documents/2-documents.html#lists",
+    "href": "2-documents/2-documents.html#lists",
+    "title": "Documents",
+    "section": "Lists",
+    "text": "Lists\nUnordered list:\n\n\nMarkdown:\n-   unordered list         \n    -   sub-item 1         \n    -   sub-item 1         \n        -   sub-sub-item 1 \n\nOutput\n\nunordered list\n\nsub-item 1\n\nsub-item 1\n\nsub-sub-item 1\n\n\n\n\nOrdered list:\n\n\nMarkdown:\n1. ordered list            \n2. item 2                  \n    i. sub-item 1          \n         A.  sub-sub-item 1\n\nOutput\n\nordered list\n\nitem 2\n\nsub-item 1\n\nsub-sub-item 1"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#quotes",
+    "href": "2-documents/2-documents.html#quotes",
+    "title": "Documents",
+    "section": "Quotes",
+    "text": "Quotes\nMarkdown:\n&gt; Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do. \n&gt; - Donald Knuth, Literate Programming\n\nOutput:\n\nLet us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do. - Donald Knuth, Literate Programming\n\n\n\n\n“Literate Programming”, The Computer Journal 27 (1984), p. 97. (Reprinted in Literate Programming, 1992, p. 99.) Literate Programming (1984)"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#divs-and-spans",
+    "href": "2-documents/2-documents.html#divs-and-spans",
+    "title": "Documents",
+    "section": "Divs and spans",
+    "text": "Divs and spans\nPandoc, and therefore Quarto, can parse “fenced div blocks”:\n\n\nYou can think of a ::: div as a HTML &lt;div&gt; but it can also apply in specific situations to content in PDF:\n\n::: {style=\"border-left:10px solid red\"}\nThis content can be styled with a border\n:::\n\nThis content can be styled with a border\n\n\n\n\n[text]{.class} spans can be thought of a &lt;span .class&gt;Text&lt;/span&gt; but again are a bit more transferable if using Pandoc/Quarto native attributes.\n\nThis is text with [special]{style=\"color:red;\"} formatting.\nThis is text with special formatting."
+  },
+  {
+    "objectID": "2-documents/2-documents.html#divs-with-pre-defined-classes",
+    "href": "2-documents/2-documents.html#divs-with-pre-defined-classes",
+    "title": "Documents",
+    "section": "Divs with pre-defined classes",
+    "text": "Divs with pre-defined classes\nThese can often apply between formats:\n::: {.unnumbered .unlisted}\nText\n:::"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#your-turn-1",
+    "href": "2-documents/2-documents.html#your-turn-1",
+    "title": "Documents",
+    "section": "Your turn",
+    "text": "Your turn\n\n\nOpen markdown-syntax.qmd in RStudio.\nFollow the instructions in the document, then exchange one new thing you’ve learned with your neighbor.\n\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#callouts",
+    "href": "2-documents/2-documents.html#callouts",
+    "title": "Documents",
+    "section": "Callouts",
+    "text": "Callouts\n::: callout-note\nNote that there are five types of callouts, including: \n`note`, `tip`, `warning`, `caution`, and `important`.\n:::\n\n\n\n\n\n\nNote\n\n\nNote that there are five types of callouts, including: note, tip, warning, caution, and important."
+  },
+  {
+    "objectID": "2-documents/2-documents.html#more-callouts",
+    "href": "2-documents/2-documents.html#more-callouts",
+    "title": "Documents",
+    "section": "More callouts",
+    "text": "More callouts\n\n\n\n\n\n\nWarning\n\n\nCallouts provide a simple way to attract attention, for example, to this warning.\n\n\n\n\n\n\n\n\n\nImportant\n\n\nDanger, callouts will really improve your writing.\n\n\n\n\n\n\n\n\n\nCaution\n\n\nHere is something under construction.\n\n\n\n\n\n\n\n\n\nCaption\n\n\nTip with caption."
+  },
+  {
+    "objectID": "2-documents/2-documents.html#your-turn-2",
+    "href": "2-documents/2-documents.html#your-turn-2",
+    "title": "Documents",
+    "section": "Your turn",
+    "text": "Your turn\n\n\nOpen callout-boxes.qmd and render the document.\nUsing the visual editor, change the type of the first callouts box and then re-render. Also play with the options to change its appearance.\nAdd a caption to the second callout box.\nMake the third callout box collapsible. Then, switch over to the source editor to inspect the markdown code.\nChange the format to PDF and re-render.\n\n\n\n\n\n−+\n03:00"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#footnotes",
+    "href": "2-documents/2-documents.html#footnotes",
+    "title": "Documents",
+    "section": "Footnotes",
+    "text": "Footnotes\nPandoc supports numbering and formatting footnotes."
+  },
+  {
+    "objectID": "2-documents/2-documents.html#inline-footnotes",
+    "href": "2-documents/2-documents.html#inline-footnotes",
+    "title": "Documents",
+    "section": "Inline footnotes",
+    "text": "Inline footnotes\nHere is an inline note.^[Inlines notes are easier to write,\nsince you don't have to pick an identifier and move down to\ntype the note.]\nHere is an inline note.1\nInlines notes are easier to write, since you don’t have to pick an identifier and move down to type the note."
+  },
+  {
+    "objectID": "2-documents/2-documents.html#inline-footnotes-1",
+    "href": "2-documents/2-documents.html#inline-footnotes-1",
+    "title": "Documents",
+    "section": "Inline footnotes",
+    "text": "Inline footnotes\nHere is an footnore reference[^1]\n\n[^1]: This can be easy in some situations when you have a really long note or\ndon't want to inline complex outputs.\n\nHere is an footnote reference1\n\n\nNotice in both situations that the footnote is placed at the bottom of the page in presentations, whereas in a document it would be hoverable or at the end of the document.\n\nThis can be easy in some situations when you have a really long note or don’t want to inline complex outputs."
+  },
+  {
+    "objectID": "2-documents/2-documents.html#anatomy-of-a-code-chunk",
+    "href": "2-documents/2-documents.html#anatomy-of-a-code-chunk",
+    "title": "Documents",
+    "section": "Anatomy of a code chunk",
+    "text": "Anatomy of a code chunk\n\n\n\n```{r}\n#| label: car-stuff\n#| message: false\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\npenguins |&gt; \n  distinct(species)\n```\n\n# A tibble: 3 × 1\n  species  \n  &lt;fct&gt;    \n1 Adelie   \n2 Gentoo   \n3 Chinstrap\n\n\n\n\nHas 3x backticks on each end\nEngine (r) is indicated between curly braces {r}\nOptions stated with the #| (hashpipe): #| option1: value"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#code-who-is-it-for",
+    "href": "2-documents/2-documents.html#code-who-is-it-for",
+    "title": "Documents",
+    "section": "Code, who is it for?",
+    "text": "Code, who is it for?\n\n\nThe way you display code is very different for different contexts.\nIn a teaching scenario like today, I really want to display code.\nIn a business, you may want to have a data-science facing output which displays the source code AND a stakeholder-facing output which hides the code."
+  },
+  {
+    "objectID": "2-documents/2-documents.html#code-1",
+    "href": "2-documents/2-documents.html#code-1",
+    "title": "Documents",
+    "section": "Code",
+    "text": "Code\nIf you simply want code formatting but don’t want to execute the code:\n\nOption 1: Use 3x back ticks + the language ```r\n\n```r\nhead(penguins)\n```\n\n\nOption 2: Add eval: false as chunk option\n\n\n```{r}\n#| eval: false\n\nhead(penguins)\n```"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#showing-and-hiding-code-with-echo",
+    "href": "2-documents/2-documents.html#showing-and-hiding-code-with-echo",
+    "title": "Documents",
+    "section": "Showing and hiding code with echo",
+    "text": "Showing and hiding code with echo\n\nThe echo option shows the code when set to true and hides it when set to false.\nIf you want to both execute the code and return the full code including backticks (like in a teaching scenario) echo: fenced is your friend!\n\n\n```{r}\n1 + 1\n```\n\n[1] 2"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#tables-and-figures",
+    "href": "2-documents/2-documents.html#tables-and-figures",
+    "title": "Documents",
+    "section": "Tables and figures",
+    "text": "Tables and figures\n\nIn reproducible reports and manuscripts, the most commonly included code outputs are tables and figures.\nSo they get their own special sections in our deep dive!"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#markdown-tables",
+    "href": "2-documents/2-documents.html#markdown-tables",
+    "title": "Documents",
+    "section": "Markdown tables",
+    "text": "Markdown tables\nMarkdown:\n| Right | Left | Default | Center |\n|------:|:-----|---------|:------:|\n|   12  |  12  |    12   |    12  |\n|  123  |  123 |   123   |   123  |\n|    1  |    1 |     1   |     1  |\n\nOutput:\n\n\n\nRight\nLeft\nDefault\nCenter\n\n\n\n\n12\n12\n12\n12\n\n\n123\n123\n123\n123\n\n\n1\n1\n1\n1"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#grid-tables",
+    "href": "2-documents/2-documents.html#grid-tables",
+    "title": "Documents",
+    "section": "Grid tables",
+    "text": "Grid tables\nMarkdown:\n+---------------+---------------+--------------------+\n| Fruit         | Price         | Advantages         |\n+===============+===============+====================+\n| Bananas       | $1.34         | - built-in wrapper |\n|               |               | - bright color     |\n+---------------+---------------+--------------------+\n| Oranges       | $2.10         | - cures scurvy     |\n|               |               | - tasty            |\n+---------------+---------------+--------------------+\n\n: Sample grid table."
+  },
+  {
+    "objectID": "2-documents/2-documents.html#grid-tables-1",
+    "href": "2-documents/2-documents.html#grid-tables-1",
+    "title": "Documents",
+    "section": "Grid tables",
+    "text": "Grid tables\nOutput:\n\nSample grid table.\n\n\n\n\n\n\n\nFruit\nPrice\nAdvantages\n\n\n\n\nBananas\n$1.34\n\nbuilt-in wrapper\nbright color\n\n\n\nOranges\n$2.10\n\ncures scurvy\ntasty"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#grid-tables-alignment",
+    "href": "2-documents/2-documents.html#grid-tables-alignment",
+    "title": "Documents",
+    "section": "Grid tables: Alignment",
+    "text": "Grid tables: Alignment\n\nAlignments can be specified as with pipe tables, by putting colons at the boundaries of the separator line after the header:\n\n+---------------+---------------+--------------------+\n| Right         | Left          | Centered           |\n+==============:+:==============+:==================:+\n| Bananas       | $1.34         | built-in wrapper   |\n+---------------+---------------+--------------------+\n\n\nFor headerless tables, the colons go on the top line instead:\n\n+--------------:+:--------------+:------------------:+\n| Right         | Left          | Centered           |\n+---------------+---------------+--------------------+"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#grid-tables-authoring",
+    "href": "2-documents/2-documents.html#grid-tables-authoring",
+    "title": "Documents",
+    "section": "Grid tables: Authoring",
+    "text": "Grid tables: Authoring\n\nNote that grid tables are quite awkward to write with a plain text editor because unlike pipe tables, the column indicators must align.\nThe Visual Editor can assist in making these tables!"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#tables-from-code",
+    "href": "2-documents/2-documents.html#tables-from-code",
+    "title": "Documents",
+    "section": "Tables from code",
+    "text": "Tables from code\nThe knitr package can turn data frames into tables with knitr::kable():\n\nlibrary(knitr)\n\nhead(penguins) |&gt; \n  kable()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n181\n3750\nmale\n2007\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n2007\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195\n3250\nfemale\n2007\n\n\nAdelie\nTorgersen\nNA\nNA\nNA\nNA\nNA\n2007\n\n\nAdelie\nTorgersen\n36.7\n19.3\n193\n3450\nfemale\n2007\n\n\nAdelie\nTorgersen\n39.3\n20.6\n190\n3650\nmale\n2007"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#tables-from-code-1",
+    "href": "2-documents/2-documents.html#tables-from-code-1",
+    "title": "Documents",
+    "section": "Tables from code",
+    "text": "Tables from code\nIf you want fancier tables, try the gt package and all that it offers!\n\n\nlibrary(gt)\n\nhead(penguins) |&gt; \n  gt() |&gt;\n  tab_style(\n    style = list(\n      cell_fill(color = \"pink\"),\n      cell_text(style = \"italic\")\n      ),\n    locations = cells_body(\n      columns = bill_length_mm,\n      rows = bill_length_mm &gt; 40\n    )\n  )\n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n181\n3750\nmale\n2007\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n2007\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195\n3250\nfemale\n2007\n\n\nAdelie\nTorgersen\nNA\nNA\nNA\nNA\nNA\n2007\n\n\nAdelie\nTorgersen\n36.7\n19.3\n193\n3450\nfemale\n2007\n\n\nAdelie\nTorgersen\n39.3\n20.6\n190\n3650\nmale\n2007"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#markdown-figures",
+    "href": "2-documents/2-documents.html#markdown-figures",
+    "title": "Documents",
+    "section": "Markdown figures",
+    "text": "Markdown figures\n![Penguins playing with a Quarto ball](images/penguins-quarto-ball.png)\n\nPenguins playing with a Quarto ball"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#markdown-figures-with-options",
+    "href": "2-documents/2-documents.html#markdown-figures-with-options",
+    "title": "Documents",
+    "section": "Markdown figures with options",
+    "text": "Markdown figures with options\n\n\n![Penguins playing with a Quarto ball](images/penguins-quarto-ball.png){fig-align=\"left\"}\n\n\n![](images/penguins-quarto-ball.png){fig-align=\"right\" fig-alt=\"Illustration of two penguins playing with a Quarto ball.\"}"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#subfigures",
+    "href": "2-documents/2-documents.html#subfigures",
+    "title": "Documents",
+    "section": "Subfigures",
+    "text": "Subfigures\nMarkdown:\n::: {#fig-penguins layout-ncol=2}\n\n![Blue penguin](images/blue-penguin.png){#fig-blue width=\"250px\"}\n\n![Orange penguin](images/orange-penguin.png){#fig-orange width=\"250px\"}\n\nTwo penguins\n\n:::"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#subfigures-1",
+    "href": "2-documents/2-documents.html#subfigures-1",
+    "title": "Documents",
+    "section": "Subfigures",
+    "text": "Subfigures\nOutput:\n\n\n\n\n\n\n\n\n\n\n\n(a) Blue penguin\n\n\n\n\n\n\n\n\n\n\n\n(b) Orange penguin\n\n\n\n\n\n\n\nFigure 1: Two penguins"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#figure-divs",
+    "href": "2-documents/2-documents.html#figure-divs",
+    "title": "Documents",
+    "section": "Figure divs",
+    "text": "Figure divs\nMarkdown:\n::: {#fig-penguin}\n\n&lt;iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/q3uXXh1sHcI\"&gt;&lt;/iframe&gt;\n\nBaby penguin tries to make friends\n:::"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#figure-divs-1",
+    "href": "2-documents/2-documents.html#figure-divs-1",
+    "title": "Documents",
+    "section": "Figure divs",
+    "text": "Figure divs\nOutput:\n\n\n\n\n\n\n\nFigure 2: Baby penguin tries to make friends\n\n\n\n\n\n\nLast paragraph in the div block is used as the figure caption."
+  },
+  {
+    "objectID": "2-documents/2-documents.html#finding-the-figures-to-include",
+    "href": "2-documents/2-documents.html#finding-the-figures-to-include",
+    "title": "Documents",
+    "section": "Finding the figures to include",
+    "text": "Finding the figures to include\nIn places like markdown, YAML, or the command line/shell/terminal, you’ll need to use absolute or relative file paths:\n\n\nAbsolute = BAD: \"/Users/mine/quarto-asa-nebraska\" - Whose computer will this work on?\n\n\n\n\nRelative = BETTER:\n\n\"../ = up one directory, ../../ = up two directories, etc.\n/.. or / = start from root directory of your current computer"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#figures-with-code",
+    "href": "2-documents/2-documents.html#figures-with-code",
+    "title": "Documents",
+    "section": "Figures with code",
+    "text": "Figures with code\n\n```{r}\n#| fig-width: 4\n#| fig-align: right\n\nknitr::include_graphics(\"images/penguins-quarto-ball.png\")\n```"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#referencing-paths-in-r-code",
+    "href": "2-documents/2-documents.html#referencing-paths-in-r-code",
+    "title": "Documents",
+    "section": "Referencing paths in R code",
+    "text": "Referencing paths in R code\nUse the here package to reference the project root, as here::here() always starts at the top-level directory of a .Rproj:\n\nhere::here()\n\n[1] \"/Users/mine/Desktop/workshops/quarto/quarto-jsm24\"\n\nlist.files(here::here())\n\n [1] \"_extensions\"     \"_freeze\"         \"_quarto.yml\"    \n [4] \"_site\"           \"1-hello-quarto\"  \"2-documents\"    \n [7] \"3-presentations\" \"4-websites\"      \"exercises\"      \n[10] \"images\"          \"index.html\"      \"index.qmd\"      \n[13] \"LICENSE.html\"    \"LICENSE.md\"      \"pre-work.html\"  \n[16] \"pre-work.qmd\"    \"README.md\"       \"site_libs\"      \n[19] \"style\""
+  },
+  {
+    "objectID": "2-documents/2-documents.html#figures-from-code",
+    "href": "2-documents/2-documents.html#figures-from-code",
+    "title": "Documents",
+    "section": "Figures from code",
+    "text": "Figures from code\n\n```{r}\n#| fig-width: 6\n#| fig-asp: 0.618\n\nggplot(penguins, aes(x = species, fill = species)) +\n  geom_bar(show.legend = FALSE)\n```"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#cross-references-1",
+    "href": "2-documents/2-documents.html#cross-references-1",
+    "title": "Documents",
+    "section": "Cross references",
+    "text": "Cross references\n\nHelp readers to navigate your document with numbered references and hyperlinks to entities like figures and tables.\nCross referencing steps:\n\nAdd a caption to your figure or table.\nGive an id to your figure or table, starting with fig- or tbl-.\nRefer to it with @fig-... or @tbl-...."
+  },
+  {
+    "objectID": "2-documents/2-documents.html#figure-cross-references",
+    "href": "2-documents/2-documents.html#figure-cross-references",
+    "title": "Documents",
+    "section": "Figure cross references",
+    "text": "Figure cross references\nThe presence of the caption (Blue penguin) and label (#fig-blue-penguin) make this figure referenceable:\n\n\nMarkdown:\nSee @fig-blue-penguin for a cute blue penguin.\n![Blue penguin](images/blue-penguin.png){#fig-blue-penguin}\n\nOutput:\nSee Figure 3 for a cute blue penguin.\n\n\n\n\n\n\nFigure 3: Blue penguin"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#table-cross-references",
+    "href": "2-documents/2-documents.html#table-cross-references",
+    "title": "Documents",
+    "section": "Table cross references",
+    "text": "Table cross references\nThe presence of the caption (A few penguins) and label (#tbl-penguins) make this table referenceable:\n\n\nMarkdown:\nSee @tbl-penguins for data on a few penguins.\n\n```{r}\n#| label: tbl-penguins\n#| tbl-cap: A few penguins\n\nhead(penguins) |&gt; \n  gt()\n```\n\nOutput:\nSee Table 1 for data on a few penguins.\n\nhead(penguins) |&gt; \n  gt()\n\n\n\nTable 1: A few penguins\n\n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n181\n3750\nmale\n2007\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n2007\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195\n3250\nfemale\n2007\n\n\nAdelie\nTorgersen\nNA\nNA\nNA\nNA\nNA\n2007\n\n\nAdelie\nTorgersen\n36.7\n19.3\n193\n3450\nfemale\n2007\n\n\nAdelie\nTorgersen\n39.3\n20.6\n190\n3650\nmale\n2007"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#your-turn-3",
+    "href": "2-documents/2-documents.html#your-turn-3",
+    "title": "Documents",
+    "section": "Your turn",
+    "text": "Your turn\n\n\nOpen tables-figures.qmd.\nFollow the instructions in the document, then exchange one new thing you’ve learned with your neighbor.\n\n\n\n\n\n−+\n10:00"
+  },
+  {
+    "objectID": "2-documents/2-documents.html#questions",
+    "href": "2-documents/2-documents.html#questions",
+    "title": "Documents",
+    "section": "Questions",
+    "text": "Questions\n\nAny questions / anything you’d like to review before we wrap up this module?\n\n\n\n\n\n🔗 mine.quarto.pub/quarto-asa-nebraska"
+  },
+  {
+    "objectID": "4-websites/index.html",
+    "href": "4-websites/index.html",
+    "title": "Websites",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Modules",
+      "Websites"
+    ]
+  },
+  {
+    "objectID": "4-websites/index.html#slides",
+    "href": "4-websites/index.html#slides",
+    "title": "Websites",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Modules",
+      "Websites"
+    ]
+  },
+  {
+    "objectID": "4-websites/index.html#exercises",
+    "href": "4-websites/index.html#exercises",
+    "title": "Websites",
+    "section": "Exercises",
+    "text": "Exercises\nFor exercises in this module we’ll use all the documents we’ve created so far.",
+    "crumbs": [
+      "Modules",
+      "Websites"
+    ]
+  },
+  {
+    "objectID": "exercises/markdown-syntax.html",
+    "href": "exercises/markdown-syntax.html",
+    "title": "Markdown syntax",
+    "section": "",
+    "text": "Add a title and author to the YAML header. Add a table of contents as well.\nAdd two major sections with level two headers. Add a subsection to one of your major sections.\nAdd an image link to a web image you have chosen and a local image.\nUse any markdown syntax that you can recall from the slides or refresh your memory from https://quarto.org/docs/authoring/markdown-basics.html."
+  },
+  {
+    "objectID": "exercises/hello-penguins.html",
+    "href": "exercises/hello-penguins.html",
+    "title": "Hello, Penguins!",
+    "section": "",
+    "text": "For this analysis we’ll use the penguins dataset from the palmerpenguins package.\n\nlibrary(tidyverse)\nlibrary(ggthemes)\nlibrary(palmerpenguins)\nlibrary(gt)"
+  },
+  {
+    "objectID": "exercises/hello-penguins.html#data",
+    "href": "exercises/hello-penguins.html#data",
+    "title": "Hello, Penguins!",
+    "section": "",
+    "text": "For this analysis we’ll use the penguins dataset from the palmerpenguins package.\n\nlibrary(tidyverse)\nlibrary(ggthemes)\nlibrary(palmerpenguins)\nlibrary(gt)"
+  },
+  {
+    "objectID": "exercises/hello-penguins.html#species",
+    "href": "exercises/hello-penguins.html#species",
+    "title": "Hello, Penguins!",
+    "section": "Species",
+    "text": "Species\nThe figure below is a bar plot of species of penguins.\n\nggplot(\n  penguins,\n  aes(\n    x = bill_length_mm, y = bill_depth_mm,\n    color = species, shape = species\n  )\n) +\n  geom_point() +\n  scale_color_colorblind() +\n  labs(x = \"Bill length (mm)\", y = \"Bill depth (mm)\") +\n  theme_minimal()"
+  },
+  {
+    "objectID": "exercises/hello-penguins.html#penguins",
+    "href": "exercises/hello-penguins.html#penguins",
+    "title": "Hello, Penguins!",
+    "section": "Penguins",
+    "text": "Penguins\nThe table below shows the first 10 penguins from the dataset.\n\npenguins |&gt;\n  slice_head(n = 10) |&gt;\n  select(species, island, bill_length_mm, bill_depth_mm) |&gt;\n  gt()\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n\n\nAdelie\nTorgersen\n39.5\n17.4\n\n\nAdelie\nTorgersen\n40.3\n18.0\n\n\nAdelie\nTorgersen\nNA\nNA\n\n\nAdelie\nTorgersen\n36.7\n19.3\n\n\nAdelie\nTorgersen\n39.3\n20.6\n\n\nAdelie\nTorgersen\n38.9\n17.8\n\n\nAdelie\nTorgersen\n39.2\n19.6\n\n\nAdelie\nTorgersen\n34.1\n18.1\n\n\nAdelie\nTorgersen\n42.0\n20.2"
+  },
+  {
+    "objectID": "exercises/my-first-document.html",
+    "href": "exercises/my-first-document.html",
+    "title": "Untitled",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "exercises/my-first-document.html#quarto",
+    "href": "exercises/my-first-document.html#quarto",
+    "title": "Untitled",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "exercises/my-first-document.html#running-code",
+    "href": "exercises/my-first-document.html#running-code",
+    "title": "Untitled",
+    "section": "Running Code",
+    "text": "Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n1 + 1\n\n[1] 2\n\n\nYou can add options to executable code like this\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed)."
+  },
+  {
+    "objectID": "3-presentations/3-presentations.html#components",
+    "href": "3-presentations/3-presentations.html#components",
+    "title": "Presentations",
+    "section": "Components",
+    "text": "Components\n\nMetadata: YAML\nText: Markdown\nCode: Executed via knitr or jupyter\n\n\nWeave it all together, and you have a beautiful, functional slide deck!"
+  },
+  {
+    "objectID": "3-presentations/3-presentations.html#our-turn",
+    "href": "3-presentations/3-presentations.html#our-turn",
+    "title": "Presentations",
+    "section": "Our turn",
+    "text": "Our turn\n\nLet’s build a presentation together from hello-penguins-slides.qmd and showcase the following features of Quarto presentations:\n\nHierarchy, headers, and document outline\nIncremental lists\nColumns\nCode, output location, code highlighting\nLogo and footer\nMaking things fit on a slide\nChalkboard\nMultiplex\nPublishing your presentation to Quarto Pub"
+  },
+  {
+    "objectID": "3-presentations/3-presentations.html#your-turn",
+    "href": "3-presentations/3-presentations.html#your-turn",
+    "title": "Presentations",
+    "section": "Your turn",
+    "text": "Your turn\n\nPick up where we left off and\n\nChange the transition style between slides\nChange the slide size\nAdd slide numbers\n\n\n\n\n\n−+\n15:00"
+  },
+  {
+    "objectID": "3-presentations/3-presentations.html#our-turn-1",
+    "href": "3-presentations/3-presentations.html#our-turn-1",
+    "title": "Presentations",
+    "section": "Our turn",
+    "text": "Our turn\n\nLet’s continue building our a presentation together from hello-penguins-slides.qmd and showcase the following features of Quarto presentations:\n\nFragments\nTitle slide attributes"
+  },
+  {
+    "objectID": "3-presentations/3-presentations.html#quarto-presentation-formats",
+    "href": "3-presentations/3-presentations.html#quarto-presentation-formats",
+    "title": "Presentations",
+    "section": "Quarto presentation formats",
+    "text": "Quarto presentation formats\n\nrevealjs - essentially the replacement for xaringan, but with Pandoc-native syntax\nbeamer for LaTeX slides\nPowerPoint for when you have to collaborate via MS Office"
+  },
+  {
+    "objectID": "3-presentations/3-presentations.html#questions",
+    "href": "3-presentations/3-presentations.html#questions",
+    "title": "Presentations",
+    "section": "Questions",
+    "text": "Questions\n\nAny questions / anything you’d like to review before we wrap up this module?\n\n\n\n\n\n🔗 mine.quarto.pub/quarto-asa-nebraska"
+  }
+]

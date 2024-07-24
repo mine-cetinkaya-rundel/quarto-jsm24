@@ -5,7 +5,7 @@ institute: "Duke University + Posit"
 author: "Dr. Mine Çetinkaya-Rundel + Dr. Charlotte Wickham"
 date: "2023-04-28"
 footer: "[🔗 mine.quarto.pub/quarto-jsm24](https://mine-cetinkaya-rundel.github.io/quarto-jsm24)"
-logo: "../images/logo.png"
+logo: "../images/slide-logo.png"
 format:
   revealjs:
     theme: ../style/slides.scss

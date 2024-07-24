@@ -1,10 +1,10 @@
 ---
 title: "Hello Quarto"
-subtitle: "ASA Traveling Course: From R Markdown to Quarto"
+subtitle: "Reproducible publishing with Quarto"
 institute: "Duke University + Posit"
-author: "Dr. Mine Çetinkaya-Rundel"
+author: "Dr. Mine Çetinkaya-Rundel + Dr. Charlotte Wickham"
 date: "2023-04-28"
-footer: "[🔗 mine.quarto.pub/quarto-asa-nebraska](https://mine.quarto.pub/quarto-asa-nebraska)"
+footer: "[🔗 mine.quarto.pub/quarto-jsm24](https://mine-cetinkaya-rundel.github.io/quarto-jsm24)"
 logo: "../images/logo.png"
 format:
   revealjs:

@@ -1,0 +1,16 @@
+---
+title: "Hello Quarto"
+---
+
+## Slides
+
+[View slides in full screen](1-hello-quarto.html)
+
+```{=html}
+<iframe class="slide-deck" src="1-hello-quarto.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+## Exercises
+
+-   <a href="https://raw.githubusercontent.com/mine-cetinkaya-rundel/quarto-asa-nebraska/main/exercises/hello-penguins.qmd">{{< fa download >}} `hello-penguins.qmd`</i></a>
+
+-   <a href="https://raw.githubusercontent.com/mine-cetinkaya-rundel/quarto-asa-nebraska/main/exercises/my-first-document.qmd">{{< fa download >}} `my-first-document.qmd`</i></a>

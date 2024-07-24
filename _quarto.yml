@@ -1,0 +1,65 @@
+project:
+  type: website
+  resources:
+    - exercises.zip
+
+website:
+  page-navigation: true
+  title: "Reproducible publishing with Quarto"
+  description: "JSM 2024 - Reproducible publishing with Quarto"
+
+  repo-url: https://github.com/mine-cetinkaya-rundel/quarto-jsm24
+  repo-actions: [edit, issue]
+
+  open-graph: true
+
+  sidebar:
+    background: "#9bcbac"
+    logo: "images/logo.png"
+    pinned: true
+    align: center
+    tools:
+      - icon: github
+        href: https://github.com/mine-cetinkaya-rundel/quarto-asa
+        text: "GitHub organization"
+      - icon: code-square
+        href: https://posit.cloud
+        text: "Posit Cloud"
+
+    style: docked
+    search: true
+    collapse-level: 2
+    contents:
+      - href: index.qmd
+        text: Home
+      - href: pre-work.qmd
+        text: Pre-work
+      - section: "Modules"
+        contents:
+          - href: 1-hello-quarto/index.qmd
+            text: Hello Quarto
+          - href: 2-documents/index.qmd
+            text: Documents
+          - href: 3-presentations/index.qmd
+            text: Presentations
+          - href: 4-websites/index.qmd
+            text: Websites
+
+  page-footer:
+    right: "This page is built with 💛 and [Quarto](https://quarto.org/)."
+    left: "&copy; Copyright 2023, Mine Çetinkaya-Rundel + Andrew Bray"
+    background: "#9bcbac" # Arylide Yellow
+
+format:
+  html:
+    theme:
+      light: [cosmo, style/sta313.scss]
+      dark: [cosmo, style/sta313.scss, style/dark.scss]
+    linkcolor: "#688773"
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+    mainfont: "Atkinson Hyperlegible"
+
+execute:
+  freeze: auto

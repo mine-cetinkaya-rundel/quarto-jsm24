@@ -53,8 +53,8 @@ website:
 format:
   html:
     theme:
-      light: [cosmo, style/sta313.scss]
-      dark: [cosmo, style/sta313.scss, style/dark.scss]
+      light: [cosmo, style/quarto-asa.scss]
+      dark: [cosmo, style/quarto-asa.scss, style/dark.scss]
     linkcolor: "#688773"
     toc: true
     code-copy: true

@@ -32,18 +32,18 @@ website:
     contents:
       - href: index.qmd
         text: Home
-      - href: pre-work.qmd
-        text: Pre-work
+      - href: setup.qmd
+        text: Setup
       - section: "Modules"
         contents:
-          - href: 1-hello-quarto/index.qmd
-            text: Hello Quarto
-          - href: 2-documents/index.qmd
-            text: Documents
-          - href: 3-presentations/index.qmd
-            text: Presentations
-          - href: 4-websites/index.qmd
-            text: Websites
+          - href: 1-rmarkdown-quarto/index.qmd
+            text: R Markdown to Quarto
+          - href: 2-documents-slides/index.qmd
+            text: Documents and slides
+          - href: 3-websites-books/index.qmd
+            text: Websites and books
+          - href: 4-manuscripts/index.qmd
+            text: Manuscripts
 
   page-footer:
     right: "This page is built with 💛 and [Quarto](https://quarto.org/)."

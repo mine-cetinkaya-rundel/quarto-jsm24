@@ -1,0 +1,22 @@
+{
+  "hash": "f8a53e9651463a40661d6e59fbce1860",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Websites and books\"\nsubtitle: \"Reproducible publishing with Quarto\"\nauthor:   \n  - name: Dr. Mine Çetinkaya-Rundel\n    affiliations:\n      - name: Duke University\n      - name: Posit, PBC\n  - name: Dr. Charlotte Wickham\n    affiliations:\n      - name: Posit, PBC  \ndate: \"2024-08-04\"\nfooter: \"[🔗 bit.ly/quarto-jsm24](https://bit.ly/quarto-jsm24)\"\nlogo: \"../images/slide-logo.png\"\nformat:\n  revealjs:\n    theme: ../style/slides.scss\n    transition: fade\n    slide-number: true\n    chalkboard: true\neditor: visual\nexecute:\n  freeze: auto\n  echo: true\n---\n\n\n\n\n\n# Anatomy of a Quarto presentation\n\n## Components\n\n1.  Metadata: YAML\n\n2.  Text: Markdown\n\n3.  Code: Executed via `knitr` or `jupyter`\n\n. . .\n\n**Weave it all together**, and you have a beautiful, functional slide deck!\n\n## Our turn {.smaller}\n\n::: task\nLet's build a presentation together from `hello-penguins-slides.qmd` and showcase the following features of Quarto presentations:\n\n-   Hierarchy, headers, and document outline\n\n-   Incremental lists\n\n-   Columns\n\n-   Code, output location, code highlighting\n\n-   Logo and footer\n\n-   Making things fit on a slide\n\n-   Chalkboard\n\n-   Multiplex\n\n-   Publishing your presentation to Quarto Pub\n:::\n\n## Your turn\n\n::: task\nPick up where we left off and\n\n-   Change the [transition style](https://quarto.org/docs/presentations/revealjs/advanced.html#slide-transitions) between slides\n\n-   Change the [slide size](https://quarto.org/docs/presentations/revealjs/advanced.html#presentation-size)\n\n-   Add [slide numbers](https://quarto.org/docs/presentations/revealjs/presenting.html#slide-numbers)\n:::\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n\n```{=html}\n<div class=\"countdown\" id=\"timer_4fc8c0ab\" data-update-every=\"1\" tabindex=\"0\" style=\"right:0;bottom:0;\">\n<div class=\"countdown-controls\"><button class=\"countdown-bump-down\">&minus;</button><button class=\"countdown-bump-up\">&plus;</button></div>\n<code class=\"countdown-time\"><span class=\"countdown-digits minutes\">15</span><span class=\"countdown-digits colon\">:</span><span class=\"countdown-digits seconds\">00</span></code>\n</div>\n```\n\n:::\n:::\n\n\n\n## Our turn\n\n::: task\nLet's continue building our a presentation together from `hello-penguins-slides.qmd` and showcase the following features of Quarto presentations:\n\n\n-   Fragments\n\n-   Title slide attributes\n:::\n\n# Wrap up\n\n## Quarto presentation formats\n\n-   [`revealjs`](https://quarto.org/docs/presentations/revealjs) - essentially the replacement for `xaringan`, but with Pandoc-native syntax\n\n-   `beamer` for LaTeX slides\n\n-   PowerPoint for when you *have to* collaborate via MS Office\n\n## Questions\n\n::: task\nAny questions / anything you'd like to review before we wrap up this module?\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<link href=\"../site_libs/countdown-0.4.0/countdown.css\" rel=\"stylesheet\" />\n<script src=\"../site_libs/countdown-0.4.0/countdown.js\"></script>\n"
+      ],
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

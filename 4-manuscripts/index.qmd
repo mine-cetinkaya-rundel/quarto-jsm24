@@ -1,0 +1,14 @@
+---
+title: "Authoring manuscripts with Quarto"
+---
+
+## Slides
+
+[View slides in full screen](4-manuscripts.html)
+
+```{=html}
+<iframe class="slide-deck" src="4-manuscripts.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+## Exercises
+
+For exercises in this module we'll use all the documents we've created so far.

@@ -10,9 +10,10 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.55">
 
-  <meta name="author" content="Dr.&nbsp;Mine Çetinkaya-Rundel + Dr.&nbsp;Charlotte Wickham">
-  <meta name="dcterms.date" content="2023-04-28">
-  <title>Reproducible publishing with Quarto – Hello Quarto</title>
+  <meta name="author" content="Dr.&nbsp;Mine Çetinkaya-Rundel">
+  <meta name="author" content="Dr.&nbsp;Charlotte Wickham">
+  <meta name="dcterms.date" content="2024-08-04">
+  <title>Reproducible publishing with Quarto – Manuscripts</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -390,7 +391,7 @@
   </style>
   <link href="../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
   <script src="../site_libs/countdown-0.4.0/countdown.js"></script>
-<meta property="og:title" content="Hello Quarto – Reproducible publishing with Quarto">
+<meta property="og:title" content="Manuscripts – Reproducible publishing with Quarto">
 <meta property="og:description" content="Reproducible publishing with Quarto">
 <meta property="og:site_name" content="Reproducible publishing with Quarto">
 </head>
@@ -399,549 +400,79 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Hello Quarto</h1>
+  <h1 class="title">Manuscripts</h1>
   <p class="subtitle">Reproducible publishing with Quarto</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Dr.&nbsp;Mine Çetinkaya-Rundel + Dr.&nbsp;Charlotte Wickham 
+Dr.&nbsp;Mine Çetinkaya-Rundel 
 </div>
         <p class="quarto-title-affiliation">
-            Duke University + Posit
+            Duke University
+          </p>
+        <p class="quarto-title-affiliation">
+            Posit, PBC
+          </p>
+    </div>
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Dr.&nbsp;Charlotte Wickham 
+</div>
+        <p class="quarto-title-affiliation">
+            Posit, PBC
           </p>
     </div>
 </div>
 
-  <p class="date">2023-04-28</p>
+  <p class="date">2024-08-04</p>
 </section>
 <section>
-<section id="pre-workshop-instructions" class="title-slide slide level1 center">
-<h1>Pre-workshop instructions</h1>
+<section id="anatomy-of-a-quarto-project" class="title-slide slide level1 center">
+<h1>Anatomy of a Quarto project</h1>
 
 </section>
-<section id="while-you-wait-for-the-workshop-to-begin" class="slide level2 smaller">
-<h2>While you wait for the workshop to begin…</h2>
+<section id="quarto-projects" class="slide level2">
+<h2>Quarto projects</h2>
 <ul>
-<li><p>Download and install the latest versions of R, RStudio, and Quarto:</p>
+<li><p>Quarto projects have a <code>_quarto.yml</code> file</p></li>
+<li><p>The <code>type</code> field in this file indicates the type of project:</p>
 <ul>
-<li>R: <a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a></li>
-<li>RStudio: <a href="https://posit.co/download/rstudio-desktop" class="uri">https://posit.co/download/rstudio-desktop</a></li>
-<li>Quarto: <a href="https://quarto.org/docs/get-started" class="uri">https://quarto.org/docs/get-started</a></li>
+<li><p><code>default</code>: Collection of documents</p></li>
+<li><p><code>website</code>: Websites (and blogs)</p></li>
+<li><p><code>books</code>: Books 😃</p></li>
 </ul></li>
-<li><p>Install the following packages:</p></li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>pkg_list <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"tidyverse"</span>, <span class="st">"gt"</span>, <span class="st">"ggthemes"</span>, <span class="st">"palmerpenguins"</span>, <span class="st">"quarto"</span>, <span class="st">"here"</span>)</span>
-<span id="cb1-2"><a></a><span class="fu">install.packages</span>(pkg_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ul>
-<li>Download <code>exercises.zip</code> at <a href="https://mine.quarto.pub/quarto-asa-nebraska/exercises.zip" class="uri">https://mine.quarto.pub/quarto-asa-nebraska/exercises.zip</a> and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio &gt; File &gt; New Project &gt; Existing Directory and navigate to the unzipped <code>exercises</code> folder and create an RStudio project in there and open it.</li>
-</ul>
-</section></section>
-<section>
-<section id="welcome" class="title-slide slide level1 center">
-<h1>Welcome</h1>
-
-</section>
-<section id="logistics" class="slide level2 smaller">
-<h2>Logistics</h2>
-<ul>
-<li><p>WiFi: MedCenter Guest or eduroam</p></li>
-<li><p>Sli.do:</p>
-<ul>
-<li>Anonymous questions to go through at the end of a module / at the end of the day</li>
-<li>Use for not time pressing questions / things you’re curious about beyond what we’re explicitly covering</li>
-<li>Got to <a href="https://slido.com/">https://slido.com</a> and use code: <code>#quarto</code></li>
-<li>Or use this direct link <a href="https://app.sli.do/event/wkQ3fmnKafwzDNKQNXK7FF" class="uri">https://app.sli.do/event/wkQ3fmnKafwzDNKQNXK7FF</a></li>
-</ul></li>
-<li><p>Exits in the front of the room</p></li>
-<li><p>For restrooms, leave on the right (my right) of the room</p></li>
 </ul>
 </section>
-<section id="code-of-conduct" class="slide level2 smaller">
-<h2>Code of Conduct</h2>
-<blockquote>
-<p>The American Statistical Association (ASA) is committed to providing an atmosphere in which personal respect and intellectual growth are valued and the free expression and exchange of ideas are encouraged. Consistent with this commitment, it is the policy of the ASA that all participants in ASA activities enjoy a welcoming environment free from unlawful discrimination, harassment, and retaliation. We strive to be a community that welcomes and supports people of all backgrounds and identities. This includes, but is not limited to, members of any race, ethnicity, culture, national origin, color, immigration status, social and economic class, educational level, sex, sexual orientation, gender identity and expression, age, size, family status, political belief, religion, and mental and physical ability.</p>
-</blockquote>
-
-<aside><div>
-<p><a href="https://www.amstat.org/meetings/code-of-conduct">ASA Code of Conduct</a></p>
-</div></aside></section>
-<section id="expected-behavior" class="slide level2 smaller">
-<h2>Expected Behavior</h2>
-<ul>
-<li class="fragment"><p>Model and support the norms of respect necessary to promote the conditions for healthy exchange of scientific ideas.</p></li>
-<li class="fragment"><p>In speech or conduct, do not insult or disparage other participants.</p></li>
-<li class="fragment"><p>Be conscious of hierarchical structures, specifically the existence of stark power differentials between students, early career statisticians and established career statisticians—noting that fear of retaliation from more established statisticians can make it difficult for students and early career statisticians to express discomfort, rebuff unwelcome advances, and report violations of the conduct policy.</p></li>
-<li class="fragment"><p>Be sensitive to indications that may suggest that individuals are feeling unwelcome.</p></li>
-</ul>
-
-<aside><div>
-<p><a href="https://www.amstat.org/meetings/code-of-conduct">ASA Code of Conduct</a></p>
-</div></aside></section>
-<section id="about-me" class="slide level2">
-<h2>About me</h2>
-<ul>
-<li>Professor of the Practice, Department of Statistical Science, Duke University</li>
-<li>Developer Educator, Posit</li>
-<li>R Markdown user/educator for 10+ years, Quarto user/educator for 1+ years</li>
-</ul>
-</section>
-<section id="about-you" class="slide level2">
-<h2>About you</h2>
+<section id="our-turn" class="slide level2">
+<h2>Our turn</h2>
 <div class="task">
-<p>Meet 1-2 people around you!</p>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_da1bb6ae" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
-</section>
-<section id="workshop-structure" class="slide level2">
-<h2>Workshop structure</h2>
+<p>Let’s build a website together from all of the documents we’ve created so far and highlight the following features of Quarto websites:</p>
 <ul>
-<li><p><strong>My turn:</strong> Lecture segments + live coding</p></li>
-<li><p><strong>Our turn:</strong> Live coding + follow along</p></li>
-<li><p><strong>Your turn:</strong> Exercises</p></li>
+<li><p><code>_quarto.yml</code></p></li>
+<li><p><code>index.qmd</code> / landing page</p></li>
+<li><p>Navigation</p></li>
+<li><p>Freeze</p></li>
+<li><p>Themes and dark theme toggle</p></li>
+<li><p>Publishing</p></li>
+<li><p>An aspect of the workshop webpage that you fancy?</p></li>
 </ul>
-</section>
-<section id="getting-help" class="slide level2">
-<h2>Getting help</h2>
-<ul>
-<li><p>During <strong>my turn</strong> and <strong>our turn</strong> segments – raise your hand</p></li>
-<li><p>During <strong>your turn</strong> segments – also feel free to raise your hand for questions but use the stickies to signal:</p>
-<ul>
-<li>Light green: I’d like some help / I’m stuck / I’m lost</li>
-<li>Dark green: I’m done</li>
-</ul></li>
-</ul>
-</section></section>
-<section>
-<section id="hello-quarto" class="title-slide slide level1 center">
-<h1>Hello Quarto</h1>
-
-</section>
-<section id="meeting-you-where-you-are" class="slide level2">
-<h2>Meeting you where you are</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="fragment fade-in-then-semi-out">
-<p>I’ll <strong>assume</strong> you</p>
-<ul>
-<li><p>know some R</p></li>
-<li><p>have worked in RStudio</p></li>
-<li><p>want to learn about Quarto</p></li>
-</ul>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="fragment fade-in">
-<p>I’ll <strong>teach</strong> you</p>
-<ul>
-<li><p>Quarto syntax and formats</p></li>
-<li><p>More Markdown</p></li>
-<li><p>Even more R along the way!</p></li>
-</ul>
-</div>
-</div></div>
-</section>
-<section id="checking-in-one-more-time" class="slide level2 smaller">
-<h2>Checking in one more time</h2>
-<div class="task">
-<p>Have you completed the following?</p>
-<ul>
-<li><p>Download and install the latest versions of R, RStudio, and Quarto:</p>
-<ul>
-<li>R: <a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a></li>
-<li>RStudio: <a href="https://posit.co/download/rstudio-desktop" class="uri">https://posit.co/download/rstudio-desktop</a></li>
-<li>Quarto: <a href="https://quarto.org/docs/get-started" class="uri">https://quarto.org/docs/get-started</a></li>
-</ul></li>
-<li><p>Install the following packages:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>pkg_list <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"tidyverse"</span>, <span class="st">"gt"</span>, <span class="st">"ggthemes"</span>, <span class="st">"palmerpenguins"</span>, <span class="st">"quarto"</span>, <span class="st">"here"</span>)</span>
-<span id="cb2-2"><a></a><span class="fu">install.packages</span>(pkg_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div></li>
-<li><p>Download <code>exercises.zip</code> at <a href="https://mine.quarto.pub/quarto-asa-nebraska/exercises.zip" class="uri">https://mine.quarto.pub/quarto-asa-nebraska/exercises.zip</a> and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio &gt; File &gt; New Project &gt; Existing Directory and navigate to the unzipped <code>exercises</code> folder and create an RStudio project in there and open it.</p></li>
-</ul>
-</div>
-<div class="fragment">
-<div class="hand-blue-large" style="text-align: center;">
-<p>Let’s get started!</p>
-</div>
-</div>
-</section></section>
-<section>
-<section id="what-is-quarto" class="title-slide slide level1 center">
-<h1>What is Quarto?</h1>
-
-</section>
-<section id="quarto" class="slide level2">
-<h2>Quarto …</h2>
-<ul>
-<li>is a new, open-source, scientific, and technical publishing system</li>
-<li>aims to make the process of creating and collaborating dramatically better</li>
-</ul>
-
-<img data-src="images/horst_quarto_schematic.png" alt="A schematic representing the multi-language input (e.g. Python, R, Observable, Julia) and multi-format output (e.g. PDF, html, Word documents, and more) versatility of Quarto." class="r-stretch quarto-figure-center"><p class="caption">Artwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.</p></section>
-<section id="quarto-1" class="slide level2">
-<h2>Quarto</h2>
-<p>With Quarto you can weave together narrative text and code to produce elegantly formatted output as documents, web pages, blog posts, books and more.</p>
-<div class="fragment">
-<p><br></p>
-<p><em>just like R Markdown…</em></p>
-</div>
-<div class="fragment">
-<p><br></p>
-<p>but not <em>just like</em> it, there’s more to it…</p>
-</div>
-</section>
-<section id="quarto-2" class="slide level2 center" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Quarto …</h2>
-<p><strong>unifies</strong> + <strong>extends</strong> the R Markdown ecosystem</p>
-</section>
-<section id="quarto-3" class="slide level2 center" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Quarto …</h2>
-<p><strong>unifies</strong> + <strong>extends</strong> the R Markdown ecosystem</p>
-<p><br></p>
-<p><strong>unifies</strong> for people who love R Markdown</p>
-</section>
-<section id="quarto-4" class="slide level2 center" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Quarto …</h2>
-<p><strong>unifies</strong> + <strong>extends</strong> the R Markdown ecosystem</p>
-<p><br></p>
-<p><strong>unifies</strong> for people who love R Markdown</p>
-<p><strong>extends</strong> for people who don’t know R Markdown</p>
-</section>
-<section id="quarto-unifies-extends-r-markdown" class="slide level2">
-<h2>Quarto unifies + extends R Markdown</h2>
-<div>
-<ul>
-<li class="fragment">Consistent implementation of attractive and handy features across outputs: tabsets, code-folding, syntax highlighting, etc.</li>
-<li class="fragment">More accessible defaults as well as better support for accessibility</li>
-<li class="fragment">Guardrails, particularly helpful for new learners: YAML completion, informative syntax errors, etc.</li>
-<li class="fragment">Support for other languages like Python, Julia, Observable, and more via Jupyter engine for executable code chunks.</li>
-</ul>
-</div>
-</section>
-<section id="a-tour-of-quarto" class="slide level2">
-<h2>A tour of Quarto</h2>
-<p><br><br></p>
-<div class="hand-blue-large" style="text-align: center;">
-<p>Sit back and enjoy!</p>
 </div>
 </section>
 <section id="your-turn" class="slide level2">
 <h2>Your turn</h2>
 <div class="task">
-<p>Open <code>hello-penguins.qmd</code> in RStudio and with the visual editor. Render the document. Update your name and re-render. Inspect components of the document and make one more update and re-render. Compare notes with neighbors about updates you’ve made and note any aspects of the document that are not clear after the tour and your first interaction with it.</p>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_71b2f608" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="quarto-cli" class="title-slide slide level1 center">
-<h1>Quarto CLI</h1>
-
-</section>
-<section id="revisit-what-is-quarto" class="slide level2 smaller">
-<h2>Revisit: What is Quarto?</h2>
-<p>Quarto is a command line interface (CLI) that renders plain text formats (<code>.qmd</code>, <code>.rmd</code>, <code>.md</code>) OR mixed formats (<code>.ipynb</code>/Jupyter notebook) into static PDF/Word/HTML reports, books, websites, presentations and more.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="|1|4|12|17|18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="ex">mine$</span> quarto <span class="at">--help</span></span>
-<span id="cb3-2"><a></a></span>
-<span id="cb3-3"><a></a>  <span class="ex">Usage:</span>   quarto </span>
-<span id="cb3-4"><a></a>  <span class="ex">Version:</span> 1.3.340</span>
-<span id="cb3-5"><a></a></span>
-<span id="cb3-6"><a></a>  <span class="ex">Description:</span></span>
-<span id="cb3-7"><a></a></span>
-<span id="cb3-8"><a></a>    <span class="ex">Quarto</span> CLI</span>
-<span id="cb3-9"><a></a></span>
-<span id="cb3-10"><a></a>  <span class="ex">Options:</span></span>
-<span id="cb3-11"><a></a></span>
-<span id="cb3-12"><a></a>    <span class="ex">-h,</span> <span class="at">--help</span>     <span class="at">-</span> Show this help.                            </span>
-<span id="cb3-13"><a></a>    <span class="ex">-V,</span> <span class="at">--version</span>  <span class="at">-</span> Show the version number for this program.  </span>
-<span id="cb3-14"><a></a></span>
-<span id="cb3-15"><a></a>  <span class="ex">Commands:</span></span>
-<span id="cb3-16"><a></a></span>
-<span id="cb3-17"><a></a>    <span class="ex">render</span>          <span class="pp">[</span><span class="ss">input</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">args...</span><span class="pp">]</span>     <span class="at">-</span> Render files or projects to various document types.        </span>
-<span id="cb3-18"><a></a>    <span class="ex">preview</span>         <span class="pp">[</span><span class="ss">file</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">args...</span><span class="pp">]</span>      <span class="at">-</span> Render and preview a document or website project.          </span>
-<span id="cb3-19"><a></a>    <span class="ex">serve</span>           <span class="pp">[</span><span class="ss">input</span><span class="pp">]</span>               <span class="at">-</span> Serve a Shiny interactive document.                        </span>
-<span id="cb3-20"><a></a>    <span class="ex">create</span>          <span class="pp">[</span><span class="ss">type</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">commands...</span><span class="pp">]</span>  <span class="at">-</span> Create a Quarto project or extension                       </span>
-<span id="cb3-21"><a></a>    <span class="ex">create-project</span>  <span class="pp">[</span><span class="ss">dir</span><span class="pp">]</span>                 <span class="at">-</span> Create a project for rendering multiple documents          </span>
-<span id="cb3-22"><a></a>    <span class="ex">convert</span>         <span class="op">&lt;</span>input<span class="op">&gt;</span>               - Convert documents to alternate representations.            </span>
-<span id="cb3-23"><a></a>    <span class="ex">pandoc</span>          <span class="pp">[</span><span class="ss">args...</span><span class="pp">]</span>             <span class="at">-</span> Run the version of Pandoc embedded within Quarto.          </span>
-<span id="cb3-24"><a></a>    <span class="ex">run</span>             <span class="pp">[</span><span class="ss">script</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">args...</span><span class="pp">]</span>    <span class="at">-</span> Run a TypeScript, R, Python, or Lua script.                </span>
-<span id="cb3-25"><a></a>    <span class="ex">add</span>             <span class="op">&lt;</span>extension<span class="op">&gt;</span>           - Add an extension to this folder or project                 </span>
-<span id="cb3-26"><a></a>    <span class="fu">install</span>         <span class="pp">[</span><span class="ss">target...</span><span class="pp">]</span>           <span class="at">-</span> Installs an extension or global dependency.                </span>
-<span id="cb3-27"><a></a>    <span class="ex">publish</span>         <span class="pp">[</span><span class="ss">provider</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">path</span><span class="pp">]</span>     <span class="at">-</span> Publish a document or project. Available providers include:</span>
-<span id="cb3-28"><a></a>    <span class="ex">check</span>           <span class="pp">[</span><span class="ss">target</span><span class="pp">]</span>              <span class="at">-</span> Verify correct functioning of Quarto installation.         </span>
-<span id="cb3-29"><a></a>    <span class="bu">help</span>            <span class="pp">[</span><span class="ss">command</span><span class="pp">]</span>             <span class="at">-</span> Show this help or the help of a sub-command.      </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="quarto-more-than-just-knitr" class="slide level2">
-<h2>Quarto, more than <em>just</em> <code>knitr</code></h2>
-<div class="fragment">
-<p>We learned from 10 years of literate programming with <code>knitr</code> + <code>rmarkdown</code></p>
-<p><img data-src="images/qmd-knitr.png"></p>
-</div>
-</section>
-<section id="quarto-more-than-just-knitr-1" class="slide level2">
-<h2>Quarto, more than <em>just</em> <code>knitr</code></h2>
-
-<img data-src="images/qmd-jupyter.png" class="r-stretch"></section>
-<section id="quarto-more-than-just-knitr-2" class="slide level2">
-<h2>Quarto: More than <em>just</em> <code>knitr</code></h2>
-
-<img data-src="images/jupyter-alone.png" class="r-stretch"></section>
-<section id="under-the-hood" class="slide level2">
-<h2>Under the hood</h2>
-<div>
+<p>Pick up where we left off and</p>
 <ul>
-<li class="fragment"><code>knitr</code> or <code>jupyter</code> evaluates R/Python/Julia code and returns a <code>.md</code> file along with the evaluated code</li>
-<li class="fragment">Quarto applies Lua filters + CSS/LaTeX which is then evaluated alongside the <code>.md</code> file by Pandoc and converted to a final output format</li>
-</ul>
-</div>
-</section>
-<section id="aside-lua-filters" class="slide level2 smaller">
-<h2>Aside: Lua filters</h2>
-<ul>
-<li>Here is an example of a Lua filter that converts strong emphasis to small caps, from <a href="https://pandoc.org/lua-filters.html" class="uri">https://pandoc.org/lua-filters.html</a>:</li>
-</ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource lua number-lines code-with-copy"><code class="sourceCode lua"><span id="cb4-1"><a></a><span class="cf">return</span> <span class="op">{</span></span>
-<span id="cb4-2"><a></a>  <span class="op">{</span></span>
-<span id="cb4-3"><a></a>    <span class="va">Strong</span> <span class="op">=</span> <span class="kw">function</span> <span class="op">(</span><span class="va">elem</span><span class="op">)</span></span>
-<span id="cb4-4"><a></a>      <span class="cf">return</span> <span class="va">pandoc</span><span class="op">.</span>SmallCaps<span class="op">(</span><span class="va">elem</span><span class="op">.</span><span class="va">c</span><span class="op">)</span></span>
-<span id="cb4-5"><a></a>    <span class="kw">end</span><span class="op">,</span></span>
-<span id="cb4-6"><a></a>  <span class="op">}</span></span>
-<span id="cb4-7"><a></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="fragment">
-<ul>
-<li>Lua filters written by R/Python/Julia developers should be interchangeable between formats - not language specific!</li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li>We won’t go into the details of writing Lua filters in this workshop, and you don’t need to worry about learning about Lua filters unless you’re working on extending Quarto.</li>
-</ul>
-</div>
-</section>
-<section id="from-the-comfort-of-your-own-homeworkspace" class="slide level2">
-<h2>From the comfort of your own <del>home</del>workspace</h2>
-<div class="r-stack">
-<p><img data-src="https://quarto.org/docs/tools/images/rstudio-preview.png" class="fragment" alt="A screenshot of a Quarto document rendered inside RStudio" width="1200"></p>
-<p><img data-src="https://quarto.org/docs/tools/images/jupyterlab-preview.png" class="fragment" alt="A screenshot of a Quarto document rendered inside JupyterLab" width="1200"></p>
-<p><img data-src="https://quarto.org/docs/computations/images/python-vscode.png" class="fragment" alt="A screenshot of a Quarto document rendered inside VSCode" width="1200"></p>
-</div>
-</section></section>
-<section>
-<section id="navigating-within-rstudio" class="title-slide slide level1 center">
-<h1>Navigating within RStudio</h1>
-
-</section>
-<section id="quarto-workflow" class="slide level2">
-<h2>Quarto workflow</h2>
-<p>Rendering a Quarto file in RStudio via the Render button calls <code>quarto render</code> in a <strong>background job</strong>, preventing Quarto rendering from cluttering up the R console, and gives you and easy way to stop:</p>
-
-<img data-src="images/background-job.png" class="quarto-figure quarto-figure-center r-stretch" width="800"></section>
-<section id="rendering" class="slide level2">
-<h2>Rendering</h2>
-<ol type="1">
-<li>Option 1: In RStudio as a background job, and preview the output.</li>
-</ol>
-<div class="fragment">
-<ol start="2" type="1">
-<li>Option 2: In the Terminal via <code>quarto render</code>:</li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a></a><span class="ex">quarto</span> render document.qmd <span class="co"># defaults to html</span></span>
-<span id="cb5-2"><a></a><span class="ex">quarto</span> render document.qmd <span class="at">--to</span> pdf</span>
-<span id="cb5-3"><a></a><span class="ex">quarto</span> render document.qmd <span class="at">--to</span> docx</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div class="fragment">
-<ol start="3" type="1">
-<li>Option 3: In the R console, via the <code>quarto</code> R package:</li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">library</span>(quarto)</span>
-<span id="cb6-2"><a></a></span>
-<span id="cb6-3"><a></a><span class="fu">quarto_render</span>(<span class="st">"document.qmd"</span>) <span class="co"># defaults to html</span></span>
-<span id="cb6-4"><a></a><span class="fu">quarto_render</span>(<span class="st">"document.qmd"</span>, <span class="at">output_format =</span> <span class="st">"pdf"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</section>
-<section id="your-turn-1" class="slide level2">
-<h2>Your turn</h2>
-<div class="task">
-<ul>
-<li>Open the last .qmd file you were working on in RStudio.</li>
-<li>Compare behavior of rendering with
-<ul>
-<li>RStudio &gt; Render,</li>
-<li>using the CLI with <code>quarto render</code>, and</li>
-<li>in the R console via <code>quarto::quarto_render()</code>.</li>
-</ul></li>
-<li>If you’re an RStudio user, brainstorm why you might still want to know about the other two ways of rendering Quarto documents.</li>
+<li>Add an <a href="https://quarto.org/docs/websites/website-about.html">about page</a>.</li>
+<li>Add a folder called <code>posts</code> and create a few minimal blog post entries. Then, using the <a href="https://quarto.org/docs/websites/website-listings.html">listings feature</a>, create a blog page for your website.</li>
 </ul>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_9a4b7bd5" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_7e775dc7" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="quarto-formats" class="title-slide slide level1 center">
-<h1>Quarto formats</h1>
-
-</section>
-<section id="one-install-batteries-included" class="slide level2">
-<h2>One install, “Batteries included”</h2>
-<ul>
-<li>RMarkdown grew into a large ecosystem, with <strong>varying syntax</strong>.</li>
-</ul>
-<div class="fragment">
-<ul>
-<li><p>Quarto comes <strong>“batteries included”</strong> straight out of the box</p>
-<ul>
-<li>HTML reports and websites</li>
-<li>PDF reports</li>
-<li>MS Office (Word, Powerpoint)</li>
-<li>Presentations (Powerpoint, Beamer, <code>revealjs</code>)</li>
-<li>Books</li>
-</ul></li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li>Any language, <em>exact</em> same approach and syntax</li>
-</ul>
-</div>
-</section>
-<section id="many-quarto-formats" class="slide level2 smaller">
-<h2>Many Quarto formats</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Feature</th>
-<th>R Markdown</th>
-<th>Quarto</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Basic Formats</td>
-<td><p><a href="https://pkgs.rstudio.com/rmarkdown/reference/html_document.html">html_document</a></p>
-<p><a href="https://pkgs.rstudio.com/rmarkdown/reference/pdf_document.html">pdf_document</a></p>
-<p><a href="https://pkgs.rstudio.com/rmarkdown/reference/word_document.html">word_document</a></p></td>
-<td><p><a href="https://quarto.org/docs/output-formats/html-basics.html">html</a></p>
-<p><a href="https://quarto.org/docs/output-formats/pdf-basics.html">pdf</a></p>
-<p><a href="https://quarto.org/docs/output-formats/ms-word.html">docx</a></p></td>
-</tr>
-<tr class="even">
-<td>Beamer</td>
-<td><a href="https://pkgs.rstudio.com/rmarkdown/reference/beamer_presentation.html">beamer_presentation</a></td>
-<td><a href="https://quarto.org/docs/presentations/beamer.html">beamer</a></td>
-</tr>
-<tr class="odd">
-<td>PowerPoint</td>
-<td><a href="https://pkgs.rstudio.com/rmarkdown/reference/powerpoint_presentation.html">powerpoint_presentation</a></td>
-<td><a href="https://quarto.org/docs/presentations/powerpoint.html">pptx</a></td>
-</tr>
-<tr class="even">
-<td>HTML Slides</td>
-<td><p><a href="https://bookdown.org/yihui/rmarkdown/xaringan.html">xaringan</a></p>
-<p><a href="https://bookdown.org/yihui/rmarkdown/ioslides-presentation.html">ioslides</a></p>
-<p><a href="https://bookdown.org/yihui/rmarkdown/revealjs.html">revealjs</a></p></td>
-<td><a href="https://quarto.org/docs/presentations/revealjs/">revealjs</a></td>
-</tr>
-<tr class="odd">
-<td>Advanced Layout</td>
-<td><p><a href="https://bookdown.org/yihui/rmarkdown/tufte-handouts.html">tufte</a></p>
-<p><a href="https://rstudio.github.io/distill/figures.html">distill</a></p></td>
-<td><a href="https://quarto.org/docs/authoring/article-layout.html">Quarto Article Layout</a></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="many-quarto-formats-1" class="slide level2 smaller">
-<h2>Many Quarto formats</h2>
-<table class="caption-top">
-<thead>
-<tr class="header">
-<th>Feature</th>
-<th>R Markdown</th>
-<th>Quarto</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Cross References</td>
-<td><p><a href="https://bookdown.org/yihui/bookdown/a-single-document.html">html_document2</a></p>
-<p><a href="https://bookdown.org/yihui/bookdown/a-single-document.html">pdf_document2</a></p>
-<p><a href="https://bookdown.org/yihui/bookdown/a-single-document.html">word_document2</a></p></td>
-<td><a href="https://quarto.org/docs/authoring/cross-references.html">Quarto Crossrefs</a></td>
-</tr>
-<tr class="even">
-<td>Websites &amp; Blogs</td>
-<td><p><a href="https://pkgs.rstudio.com/blogdown/">blogdown</a></p>
-<p><a href="https://pkgs.rstudio.com/distill/">distill</a></p></td>
-<td><p><a href="https://quarto.org/docs/websites/">Quarto Websites</a></p>
-<p><a href="https://quarto.org/docs/websites/website-blog.html">Quarto Blogs</a></p></td>
-</tr>
-<tr class="odd">
-<td>Books</td>
-<td><a href="https://pkgs.rstudio.com/bookdown/">bookdown</a></td>
-<td><a href="https://quarto.org/docs/books/">Quarto Books</a></td>
-</tr>
-<tr class="even">
-<td>Interactivity</td>
-<td><a href="https://bookdown.org/yihui/rmarkdown/shiny-documents.html">Shiny Documents</a></td>
-<td><a href="https://quarto.org/docs/interactive/shiny/">Quarto Interactive Documents</a></td>
-</tr>
-<tr class="odd">
-<td>Journal Articles</td>
-<td><a href="https://pkgs.rstudio.com/rticles/">rticles</a></td>
-<td><a href="https://quarto.org/docs/journals/index.html">Journal Articles</a></td>
-</tr>
-<tr class="even">
-<td>Dashboards</td>
-<td><a href="https://pkgs.rstudio.com/flexdashboard/">flexdashboard</a></td>
-<td>Coming soon!</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="your-turn-2" class="slide level2">
-<h2>Your turn</h2>
-<div class="task">
-<p>In RStudio, go to File &gt; New File &gt; Quarto document to create a Quarto document with HTML output. Render the document, which will ask you to give it a name – you can use <code>my-first-document.qmd</code>.</p>
-<p>Use the visual editor for the next steps.</p>
-<ul>
-<li><p>Add a title and your name as the author.</p></li>
-<li><p>Create two sections, one with fact you want to learn and your favorite thing about R.</p></li>
-<li><p>Add a table of contents.</p></li>
-<li><p><strong>Stretch goal:</strong> Change the html theme to <code>sketchy</code>.</p></li>
-</ul>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_655f8eee" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+<code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
@@ -951,22 +482,39 @@ Dr.&nbsp;Mine Çetinkaya-Rundel + Dr.&nbsp;Charlotte Wickham
 <h1>Wrap up</h1>
 
 </section>
-<section id="what-about-r-markdown" class="slide level2 smaller">
-<h2>What about R Markdown?</h2>
-<div>
+<section id="freeze" class="slide level2 smaller">
+<h2>Freeze</h2>
 <ul>
-<li class="fragment"><p>You can render existing R Markdown documents with Quarto and you can rename them to <code>.qmd</code> files to turn them into Quarto documents.</p></li>
-<li class="fragment"><p>You don’t have to do this – R Markdown continues to be maintained.</p></li>
-<li class="fragment"><p>However, new features are being developed for Quarto.</p></li>
-<li class="fragment"><p>Additionally, Quarto</p>
-<ul>
-<li class="fragment"><p>Offers “batteries included” shared syntax across formats</p></li>
-<li class="fragment"><p>Allows you to choose your own editor and your preferred data science language</p></li>
-<li class="fragment"><p>Comes with richer and more accessible features out of the box</p></li>
-<li class="fragment"><p>Is actively developed</p></li>
-</ul></li>
+<li>The <code>freeze</code> option controls when/if computational documents be re-rendered during a global project render:</li>
 </ul>
-</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a></a><span class="fu">execute</span><span class="kw">:</span></span>
+<span id="cb1-2"><a></a><span class="at">  </span><span class="fu">freeze</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="co">  # never re-render during project render</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a></a><span class="fu">execute</span><span class="kw">:</span></span>
+<span id="cb2-2"><a></a><span class="at">  </span><span class="fu">freeze</span><span class="kw">:</span><span class="at"> auto</span><span class="co">  # re-render only when source changes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a></a><span class="fu">execute</span><span class="kw">:</span></span>
+<span id="cb3-2"><a></a><span class="at">  </span><span class="fu">freeze</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="co">  # always re-render</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><p>The <code>freeze</code> option is typically added to a <code>_metadata.yml</code> file within a specific directory, affecting all files in that directory.</p></li>
+<li><p>For blogs, set <code>feeze</code> in <code>_metadata.yml</code> at the root of the <code>posts</code> directory.</p></li>
+<li><p>You can have it only within specific subdirectories for more complex sites.</p></li>
+</ul>
+</section>
+<section id="freeze-vs.-cache" class="slide level2">
+<h2>Freeze vs.&nbsp;cache</h2>
+<ul>
+<li><p>Cache stores the results of computations for a specific file.</p></li>
+<li><p>Cache invalidation is triggered by changes in chunk source code (or other cache attributes you’ve defined).</p></li>
+<li><p><code>cache</code> can also be set at the chunk level. Consider using the cache for computationally expensive chunks.</p></li>
+</ul>
+</section>
+<section id="publishing" class="slide level2">
+<h2>Publishing</h2>
+<p>See <a href="https://quarto.org/docs/publishing" class="uri">https://quarto.org/docs/publishing</a> for publishing options other than Quarto Pub.</p>
+</section></section>
+<section>
+<section id="wrap-up-1" class="title-slide slide level1 center">
+<h1>Wrap up</h1>
+
 </section>
 <section id="questions" class="slide level2">
 <h2>Questions</h2>
@@ -974,25 +522,44 @@ Dr.&nbsp;Mine Çetinkaya-Rundel + Dr.&nbsp;Charlotte Wickham
 <p>Any questions / anything you’d like to review before we wrap up this module?</p>
 </div>
 </section>
-<section id="one-last-thing" class="slide level2">
-<h2>One last thing!</h2>
+<section id="time-permitting" class="slide level2">
+<h2>Time permitting</h2>
 <div class="task">
-<p>Where does the name “Quarto” come from?</p>
+<p>Demo journal articles with Quarto with the JASA template!</p>
 </div>
-<div class="fragment">
-<iframe src="https://en.wikipedia.org/wiki/Quarto" title="Quarto on Wikipedia" frameborder="1" height="400" width="900"></iframe>
+</section></section>
+<section>
+<section id="parting-remarks" class="title-slide slide level1 center">
+<h1>Parting remarks</h1>
 
+</section>
+<section id="quarto-cli" class="slide level2">
+<h2>Quarto CLI…</h2>
+<p>orchestrates each step of rendering</p>
+
+<img data-src="images/horst_qmd_render_schema.png" alt="A schematic representing rendering of Quarto documents from .qmd, to knitr or jupyter, to plain text markdown, then converted by pandoc into any number of output types including html, PDF, or Word document." class="r-stretch quarto-figure-center"><p class="caption">Artwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.</p></section>
+<section id="learning-more" class="slide level2">
+<h2>Learning more</h2>
+<p><a href="https://quarto.org/">https://quarto.org</a></p>
+<iframe src="https://quarto.org/" width="100%" height="600" title="Quarto Website"></iframe>
+</section>
+<section id="follow-up-with" class="slide level2">
+<h2>Follow up with…</h2>
+<p>the Quarto Blog: <a href="https://quarto.org/docs/blog" class="uri">https://quarto.org/docs/blog</a></p>
+<iframe src="https://quarto.org/docs/blog/" width="100%" height="600" title="Quarto 1.3 Pre-release notes"></iframe>
+</section>
+<section id="thank-you" class="slide level2" data-background-image="images/thank-you.png">
+<h2>Thank you!</h2>
+<p>🐘 <a href="https://fosstodon.org/@minecr">https://fosstodon.org/@minecr</a></p>
+<p>🐦 <a href="https://twitter.com/minebocek">@minebocek</a></p>
 
 <div class="quarto-auto-generated-content">
 <p><img src="../images/slide-logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p><a href="https://mine-cetinkaya-rundel.github.io/quarto-jsm24">🔗 mine.quarto.pub/quarto-jsm24</a></p>
+<p><a href="https://bit.ly/quarto-jsm24">🔗 bit.ly/quarto-jsm24</a></p>
 </div>
 </div>
-</div>
-<aside><div>
-<p>Source: <a href="https://en.wikipedia.org/wiki/Quarto" class="uri">https://en.wikipedia.org/wiki/Quarto</a></p>
-</div></aside></section></section>
+</section></section>
     </div>
   </div>
 

@@ -18,19 +18,13 @@ This workshop is designed for those who have some experience with R, RStudio, an
 
 | Time          | Module                        |
 |---------------|-------------------------------|
-| 09:00 - 10:30 | From R Markdown to Quarto     |
-| 10:30 - 11:00 | Break                         |
-| 11:00 - 12:30 | Creating computational documents and slides with Quarto |
-| 12:30 - 13:30 | Lunch                         |
-| 13:30 - 15:00 | Creating websites and books with Quarto |
-| 15:00 - 15:30 | Break                         |
+| 08:30 - 10:15 | From R Markdown to Quarto     |
+| 10:15 - 10:30 | Break                         |
+| 10:30 - 12:30 | Creating computational documents and slides with Quarto |
+| 12:30 - 14:00 | Lunch                         |
+| 14:00 - 15:15 | Creating websites and books with Quarto |
+| 15:15 - 15:30 | Break                         |
 | 15:30 - 17:00 | Authoring manuscripts with Quarto                      |
-
-
-Session 1: From R Markdown to Quarto - Mine
-Session 2: Creating computational documents and slides with Quarto - Charlotte
-Session 3: Creating websites and books with Quarto - Charlotte
-Session 4: Authoring manuscripts with Quarto - Mine
 
 ## Instructors
 

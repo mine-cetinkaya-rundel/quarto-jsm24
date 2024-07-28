@@ -24,17 +24,6 @@ execute:
   echo: true
 ---
 
-```{r}
-#| label: setup
-#| include: false
-
-# set width of code output
-options(width = 65)
-
-# load background packages
-library(countdown)
-```
-
 # Anatomy of a Quarto project
 
 ## Quarto projects
@@ -78,11 +67,7 @@ Pick up where we left off and
 -   Add a folder called `posts` and create a few minimal blog post entries. Then, using the [listings feature](https://quarto.org/docs/websites/website-listings.html), create a blog page for your website.
 :::
 
-```{r}
-#| echo: false
-
-countdown(minutes = 15)
-```
+{{< countdown minutes=15 >}}
 
 # Wrap up
 

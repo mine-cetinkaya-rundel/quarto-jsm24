@@ -24,17 +24,6 @@ execute:
   echo: true
 ---
 
-```{r}
-#| label: setup
-#| include: false
-
-# set width of code output
-options(width = 65)
-
-# load background packages
-library(countdown)
-```
-
 # Anatomy of a Quarto presentation
 
 ## Components
@@ -85,11 +74,7 @@ Pick up where we left off and
 -   Add [slide numbers](https://quarto.org/docs/presentations/revealjs/presenting.html#slide-numbers)
 :::
 
-```{r}
-#| echo: false
-
-countdown(minutes = 15)
-```
+{{< countdown minutes=15 >}}
 
 ## Our turn
 

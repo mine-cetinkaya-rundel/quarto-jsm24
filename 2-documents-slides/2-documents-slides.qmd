@@ -24,17 +24,6 @@ execute:
   echo: true
 ---
 
-```{r}
-#| label: setup
-#| include: false
-
-# set width of code output
-options(width = 65)
-
-# load background packages
-library(countdown)
-```
-
 # Anatomy of a Quarto document
 
 ## Components
@@ -250,11 +239,7 @@ RStudio + VSCode provide rich tab-completion - start a word and tab to complete,
 -   You can use the [HTML reference](https://quarto.org/docs/reference/formats/html.html) as needed.
 :::
 
-```{r}
-#| echo: false
-
-countdown(minutes = 3)
-```
+{{< countdown minutes=3 >}}
 
 ## List of valid YAML fields
 
@@ -460,11 +445,7 @@ Text
 -   Follow the instructions in the document, then exchange one new thing you've learned with your neighbor.
 :::
 
-```{r}
-#| echo: false
-
-countdown(minutes = 5)
-```
+{{< countdown minutes=5 >}}
 
 ## Callouts
 
@@ -509,11 +490,7 @@ Tip with caption.
 -   Change the format to PDF and re-render.
 :::
 
-```{r}
-#| echo: false
-
-countdown(minutes = 3)
-```
+{{< countdown minutes=3 >}}
 
 ## Footnotes
 
@@ -960,11 +937,7 @@ head(penguins) |>
 -   Follow the instructions in the document, then exchange one new thing you've learned with your neighbor.
 :::
 
-```{r}
-#| echo: false
-
-countdown(minutes = 10)
-```
+{{< countdown minutes=10 >}}
 
 # Wrap up
 

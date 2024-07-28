@@ -312,19 +312,6 @@
       ],
       "Hash": "bb097fccb22d156624fd07cd2894ddb6"
     },
-    "countdown": {
-      "Package": "countdown",
-      "Version": "0.4.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "htmltools",
-        "prismatic",
-        "utils",
-        "whisker"
-      ],
-      "Hash": "b44ad5a5e287637c3b8ca0e9bb64bb18"
-    },
     "cpp11": {
       "Package": "cpp11",
       "Version": "0.4.7",
@@ -1094,19 +1081,6 @@
       ],
       "Hash": "6b01fc98b1e86c4f705ce9dcfd2f57c7"
     },
-    "prismatic": {
-      "Package": "prismatic",
-      "Version": "1.1.2",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "farver",
-        "grDevices",
-        "graphics"
-      ],
-      "Hash": "51967d2e55a523791ae22832e86209ae"
-    },
     "processx": {
       "Package": "processx",
       "Version": "3.8.4",
@@ -1671,13 +1645,6 @@
         "withr"
       ],
       "Hash": "390f9315bc0025be03012054103d227c"
-    },
-    "whisker": {
-      "Package": "whisker",
-      "Version": "0.4.1",
-      "Source": "Repository",
-      "Repository": "https://packagemanager.rstudio.com/all/latest",
-      "Hash": "c6abfa47a46d281a7d5159d0a8891e88"
     },
     "withr": {
       "Package": "withr",

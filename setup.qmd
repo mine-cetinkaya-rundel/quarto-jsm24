@@ -5,10 +5,8 @@ title: "Setup instructions"
 -   Download and install the latest versions of R, RStudio, and Quarto:
 
     -   R `4.4.1` or above: <https://cran.r-project.org>
-    -   RStudio `2023.03.0+386` or above: <https://posit.co/download/rstudio-desktop>
-    -   Quarto `1.3.321`: <https://quarto.org/docs/get-started>
-
-**[TO DO: Update versions]** 
+    -   RStudio `2024.04.2+764` or above: <https://posit.co/download/rstudio-desktop>
+    -   Quarto `1.5.55`: <https://quarto.org/docs/get-started>
 
 -   Install the following packages:
 

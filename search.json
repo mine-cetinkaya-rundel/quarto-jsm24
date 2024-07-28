@@ -37,7 +37,7 @@
     "href": "setup.html",
     "title": "Setup instructions",
     "section": "",
-    "text": "Download and install the latest versions of R, RStudio, and Quarto:\n\nR 4.4.1 or above: https://cran.r-project.org\nRStudio 2023.03.0+386 or above: https://posit.co/download/rstudio-desktop\nQuarto 1.3.321: https://quarto.org/docs/get-started\n\n\n[TO DO: Update versions]\n\nInstall the following packages:\n\n\npkg_list &lt;- c(\n  \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n)\ninstall.packages(pkg_list)\n\n[TO DO: Update packages]\n\nDownload exercises.zip at [TO DO: Add link] and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio &gt; File &gt; New Project &gt; Existing Directory and navigate to the unzipped exercises folder and create an RStudio project in there and open it.",
+    "text": "Download and install the latest versions of R, RStudio, and Quarto:\n\nR 4.4.1 or above: https://cran.r-project.org\nRStudio 2024.04.2+764 or above: https://posit.co/download/rstudio-desktop\nQuarto 1.5.55: https://quarto.org/docs/get-started\n\nInstall the following packages:\n\n\npkg_list &lt;- c(\n  \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n)\ninstall.packages(pkg_list)\n\n[TO DO: Update packages]\n\nDownload exercises.zip at [TO DO: Add link] and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio &gt; File &gt; New Project &gt; Existing Directory and navigate to the unzipped exercises folder and create an RStudio project in there and open it.",
     "crumbs": [
       "Setup"
     ]
@@ -61,7 +61,7 @@
     "href": "4-manuscripts/4-manuscripts.html#your-turn",
     "title": "Manuscripts",
     "section": "Your turn",
-    "text": "Your turn\n\nPick up where we left off and\n\nAdd an about page.\nAdd a folder called posts and create a few minimal blog post entries. Then, using the listings feature, create a blog page for your website.\n\n\n\n\n\n−+\n15:00"
+    "text": "Your turn\n\nPick up where we left off and\n\nAdd an about page.\nAdd a folder called posts and create a few minimal blog post entries. Then, using the listings feature, create a blog page for your website.\n\n\n\n  \n    −\n    +\n \n 15:00"
   },
   {
     "objectID": "4-manuscripts/4-manuscripts.html#freeze",
@@ -509,7 +509,7 @@
     "href": "2-documents-slides/2-documents-slides.html#your-turn",
     "title": "Documents and slides",
     "section": "Your turn",
-    "text": "Your turn\n\n\nOpen hello-penguins.qmd in RStudio.\nTry Ctrl + space to see the available YAML options.\nTry out the tab-completion of any options you remember.\nYou can use the HTML reference as needed.\n\n\n\n\n\n−+\n03:00"
+    "text": "Your turn\n\n\nOpen hello-penguins.qmd in RStudio.\nTry Ctrl + space to see the available YAML options.\nTry out the tab-completion of any options you remember.\nYou can use the HTML reference as needed.\n\n\n\n  \n    −\n    +\n \n 03:00"
   },
   {
     "objectID": "2-documents-slides/2-documents-slides.html#list-of-valid-yaml-fields",
@@ -572,7 +572,7 @@
     "href": "2-documents-slides/2-documents-slides.html#your-turn-1",
     "title": "Documents and slides",
     "section": "Your turn",
-    "text": "Your turn\n\n\nOpen markdown-syntax.qmd in RStudio.\nFollow the instructions in the document, then exchange one new thing you’ve learned with your neighbor.\n\n\n\n\n\n−+\n05:00"
+    "text": "Your turn\n\n\nOpen markdown-syntax.qmd in RStudio.\nFollow the instructions in the document, then exchange one new thing you’ve learned with your neighbor.\n\n\n\n  \n    −\n    +\n \n 05:00"
   },
   {
     "objectID": "2-documents-slides/2-documents-slides.html#callouts",
@@ -593,7 +593,7 @@
     "href": "2-documents-slides/2-documents-slides.html#your-turn-2",
     "title": "Documents and slides",
     "section": "Your turn",
-    "text": "Your turn\n\n\nOpen callout-boxes.qmd and render the document.\nUsing the visual editor, change the type of the first callouts box and then re-render. Also play with the options to change its appearance.\nAdd a caption to the second callout box.\nMake the third callout box collapsible. Then, switch over to the source editor to inspect the markdown code.\nChange the format to PDF and re-render.\n\n\n\n\n\n−+\n03:00"
+    "text": "Your turn\n\n\nOpen callout-boxes.qmd and render the document.\nUsing the visual editor, change the type of the first callouts box and then re-render. Also play with the options to change its appearance.\nAdd a caption to the second callout box.\nMake the third callout box collapsible. Then, switch over to the source editor to inspect the markdown code.\nChange the format to PDF and re-render.\n\n\n\n  \n    −\n    +\n \n 03:00"
   },
   {
     "objectID": "2-documents-slides/2-documents-slides.html#footnotes",
@@ -761,7 +761,7 @@
     "href": "2-documents-slides/2-documents-slides.html#referencing-paths-in-r-code",
     "title": "Documents and slides",
     "section": "Referencing paths in R code",
-    "text": "Referencing paths in R code\nUse the here package to reference the project root, as here::here() always starts at the top-level directory of a .Rproj:\n\nhere::here()\n\n[1] \"/Users/mine/Desktop/workshops/quarto/quarto-jsm24\"\n\nlist.files(here::here())\n\n [1] \"_extensions\"        \"_freeze\"           \n [3] \"_quarto.yml\"        \"_site\"             \n [5] \"1-rmarkdown-quarto\" \"2-documents-slides\"\n [7] \"3-websites-books\"   \"4-manuscripts\"     \n [9] \"exercises\"          \"images\"            \n[11] \"index.qmd\"          \"LICENSE.html\"      \n[13] \"LICENSE.md\"         \"README.md\"         \n[15] \"renv\"               \"renv.lock\"         \n[17] \"setup.qmd\"          \"site_libs\"         \n[19] \"style\""
+    "text": "Referencing paths in R code\nUse the here package to reference the project root, as here::here() always starts at the top-level directory of a .Rproj:\n\nhere::here()\n\n[1] \"/Users/mine/Desktop/workshops/quarto/quarto-jsm24\"\n\nlist.files(here::here())\n\n [1] \"_extensions\"        \"_freeze\"            \"_quarto.yml\"       \n [4] \"_site\"              \"1-rmarkdown-quarto\" \"2-documents-slides\"\n [7] \"3-websites-books\"   \"4-manuscripts\"      \"exercises\"         \n[10] \"images\"             \"index.qmd\"          \"LICENSE.html\"      \n[13] \"LICENSE.md\"         \"quarto-jsm24.Rproj\" \"README.md\"         \n[16] \"renv\"               \"renv.lock\"          \"setup.qmd\"         \n[19] \"site_libs\"          \"style\""
   },
   {
     "objectID": "2-documents-slides/2-documents-slides.html#figures-from-code",
@@ -796,7 +796,7 @@
     "href": "2-documents-slides/2-documents-slides.html#your-turn-3",
     "title": "Documents and slides",
     "section": "Your turn",
-    "text": "Your turn\n\n\nOpen tables-figures.qmd.\nFollow the instructions in the document, then exchange one new thing you’ve learned with your neighbor.\n\n\n\n\n\n−+\n10:00"
+    "text": "Your turn\n\n\nOpen tables-figures.qmd.\nFollow the instructions in the document, then exchange one new thing you’ve learned with your neighbor.\n\n\n\n  \n    −\n    +\n \n 10:00"
   },
   {
     "objectID": "2-documents-slides/2-documents-slides.html#questions",
@@ -995,7 +995,7 @@
     "href": "3-websites-books/3-websites-books.html#your-turn",
     "title": "Websites and books",
     "section": "Your turn",
-    "text": "Your turn\n\nPick up where we left off and\n\nChange the transition style between slides\nChange the slide size\nAdd slide numbers\n\n\n\n\n\n−+\n15:00"
+    "text": "Your turn\n\nPick up where we left off and\n\nChange the transition style between slides\nChange the slide size\nAdd slide numbers\n\n\n\n  \n    −\n    +\n \n 15:00"
   },
   {
     "objectID": "3-websites-books/3-websites-books.html#our-turn-1",

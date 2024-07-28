@@ -35,48 +35,32 @@ options(width = 65)
 library(countdown)
 ```
 
-# Pre-workshop instructions
+# Setup instructions
 
 ## While you wait for the workshop to begin... {.smaller}
 
--   Download and install the latest versions of R, RStudio, and Quarto:
-
-    -   R: <https://cran.r-project.org>
-    -   RStudio: <https://posit.co/download/rstudio-desktop>
-    -   Quarto: <https://quarto.org/docs/get-started>
-
--   Install the following packages:
-
-```{r}
-#| label: pkg-list
-#| eval: false
-
-pkg_list <- c("tidyverse", "gt", "ggthemes", "palmerpenguins", "quarto", "here")
-install.packages(pkg_list)
-```
-
--   Download `exercises.zip` at <https://mine.quarto.pub/quarto-asa-nebraska/exercises.zip> and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio \> File \> New Project \> Existing Directory and navigate to the unzipped `exercises` folder and create an RStudio project in there and open it.
+::: your-turn
+{{< include ../setup.qmd >}}
+:::
 
 # Welcome
 
 ## Logistics {.smaller}
 
--   WiFi: MedCenter Guest or eduroam
+**\[TO DO: Fill in details\]**
 
--   Sli.do:
+-   WiFi: \_\_\_\_
 
-    -   Anonymous questions to go through at the end of a module / at the end of the day
-    -   Use for not time pressing questions / things you're curious about beyond what we're explicitly covering
-    -   Got to [https://slido.com](https://slido.com/) and use code: `#quarto`
-    -   Or use this direct link <https://app.sli.do/event/wkQ3fmnKafwzDNKQNXK7FF>
+-   Exits: \_\_\_\_
 
--   Exits in the front of the room
-
--   For restrooms, leave on the right (my right) of the room
+-   Restrooms: \_\_\_\_
 
 ## Code of Conduct {.smaller}
 
-> The American Statistical Association (ASA) is committed to providing an atmosphere in which personal respect and intellectual growth are valued and the free expression and exchange of ideas are encouraged. Consistent with this commitment, it is the policy of the ASA that all participants in ASA activities enjoy a welcoming environment free from unlawful discrimination, harassment, and retaliation. We strive to be a community that welcomes and supports people of all backgrounds and identities. This includes, but is not limited to, members of any race, ethnicity, culture, national origin, color, immigration status, social and economic class, educational level, sex, sexual orientation, gender identity and expression, age, size, family status, political belief, religion, and mental and physical ability.
+> The American Statistical Association (ASA) is committed to providing an atmosphere in which personal respect and intellectual growth are valued and the free expression and exchange of ideas are encouraged.
+> Consistent with this commitment, it is the policy of the ASA that all participants in ASA activities enjoy a welcoming environment free from unlawful discrimination, harassment, and retaliation.
+> We strive to be a community that welcomes and supports people of all backgrounds and identities.
+> This includes, but is not limited to, members of any race, ethnicity, culture, national origin, color, immigration status, social and economic class, educational level, sex, sexual orientation, gender identity and expression, age, size, family status, political belief, religion, and mental and physical ability.
 
 ::: aside
 [ASA Code of Conduct](https://www.amstat.org/meetings/code-of-conduct)
@@ -84,43 +68,88 @@ install.packages(pkg_list)
 
 ## Expected Behavior {.smaller}
 
-> -   Model and support the norms of respect necessary to promote the conditions for healthy exchange of scientific ideas.
->
-> -   In speech or conduct, do not insult or disparage other participants.
->
-> -   Be conscious of hierarchical structures, specifically the existence of stark power differentials between students, early career statisticians and established career statisticians---noting that fear of retaliation from more established statisticians can make it difficult for students and early career statisticians to express discomfort, rebuff unwelcome advances, and report violations of the conduct policy.
->
-> -   Be sensitive to indications that may suggest that individuals are feeling unwelcome.
+-   Model and support the norms of respect necessary to promote the conditions for healthy exchange of scientific ideas.
+
+-   In speech or conduct, do not insult or disparage other participants.
+
+-   Be conscious of hierarchical structures, specifically the existence of stark power differentials between students, early career statisticians and established career statisticians---noting that fear of retaliation from more established statisticians can make it difficult for students and early career statisticians to express discomfort, rebuff unwelcome advances, and report violations of the conduct policy.
+
+-   Be sensitive to indications that may suggest that individuals are feeling unwelcome.
 
 ::: aside
 [ASA Code of Conduct](https://www.amstat.org/meetings/code-of-conduct)
 :::
 
-## About me
+## About us
 
--   Professor of the Practice, Department of Statistical Science, Duke University
--   Developer Educator, Posit
--   R Markdown user/educator for 10+ years, Quarto user/educator for 1+ years
+::: columns
+
+::: column
+**Mine Çetinkaya-Rundel**
+
+[mine-cr.com](https::/mine-cr.com)
+
+Professor of the Practice, Department of Statistical Science, Duke University
+
+Developer Educator, Posit
+:::
+
+::: column
+**Charlotte Wickham**
+
+[cwick.co.nz](https://www.cwick.co.nz/)
+
+Developer Educator, Posit
+:::
+
+:::
+
+::: center-align
+R Markdown user/educators for 10+ years
+
+Quarto user/educators for 3+ years
+:::
 
 ## About you
 
-::: task
-Meet 1-2 people around you!
+::: your-turn
+Please share with the person next to you...
+
+-   Your name
+-   Your professional affiliation
+-   What you hope to get out of this tutorial
 :::
 
-```{r}
-#| echo: false
-
-countdown(minutes = 2)
-```
+{{< countdown minutes=3 >}}
 
 ## Workshop structure
 
--   **My turn:** Lecture segments + live coding
+:::: columns
+::: {.column .fragment width="33%"}
+**My turn**
 
--   **Our turn:** Live coding + follow along
+-   Lecture segments
+-   Feel free to just watch, take notes, browse docs, or tinker around with the code
+:::
 
--   **Your turn:** Exercises
+:::: {.column .fragment width="33%"}
+::: our-turn
+**Our turn**
+
+-   Lecture segments + live coding
+-   (Optionally) follow along with live coding
+:::
+::::
+
+:::: {.column .fragment width="33%"}
+::: your-turn
+**Your turn**
+
+-   Practice exercises for you
+-   Work on your own or with the person next to you
+:::
+::::
+:::: 
 
 ## Getting help
 
@@ -163,28 +192,15 @@ I'll **teach** you
 
 ## Checking in one more time {.smaller}
 
-::: task
 Have you completed the following?
 
--   Download and install the latest versions of R, RStudio, and Quarto:
-
-    -   R: <https://cran.r-project.org>
-    -   RStudio: <https://posit.co/download/rstudio-desktop>
-    -   Quarto: <https://quarto.org/docs/get-started>
-
--   Install the following packages:
-
-    ```{r}
-    #| eval: false
-    #| ref.label: pkg-list
-    ```
-
--   Download `exercises.zip` at <https://mine.quarto.pub/quarto-asa-nebraska/exercises.zip> and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio \> File \> New Project \> Existing Directory and navigate to the unzipped `exercises` folder and create an RStudio project in there and open it.
+::: your-turn
+{{< include ../setup.qmd >}}
 :::
 
-. . .
+## {.center}
 
-::: {.hand-blue-large style="text-align: center;"}
+::: {.hand-green-large style="text-align: center;"}
 Let's get started!
 :::
 
@@ -248,14 +264,18 @@ but not *just like* it, there's more to it...
 
 <br><br>
 
-::: {.hand-blue-large style="text-align: center;"}
+::: {.hand-green-large style="text-align: center;"}
 Sit back and enjoy!
 :::
 
 ## Your turn
 
 ::: task
-Open `hello-penguins.qmd` in RStudio and with the visual editor. Render the document. Update your name and re-render. Inspect components of the document and make one more update and re-render. Compare notes with neighbors about updates you've made and note any aspects of the document that are not clear after the tour and your first interaction with it.
+Open `hello-penguins.qmd` in RStudio and with the visual editor.
+Render the document.
+Update your name and re-render.
+Inspect components of the document and make one more update and re-render.
+Compare notes with neighbors about updates you've made and note any aspects of the document that are not clear after the tour and your first interaction with it.
 :::
 
 ```{r}
@@ -490,7 +510,8 @@ countdown(minutes = 3)
 ## Your turn
 
 ::: task
-In RStudio, go to File \> New File \> Quarto document to create a Quarto document with HTML output. Render the document, which will ask you to give it a name -- you can use `my-first-document.qmd`.
+In RStudio, go to File \> New File \> Quarto document to create a Quarto document with HTML output.
+Render the document, which will ask you to give it a name -- you can use `my-first-document.qmd`.
 
 Use the visual editor for the next steps.
 

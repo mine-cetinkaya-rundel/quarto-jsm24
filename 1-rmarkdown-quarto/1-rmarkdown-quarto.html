@@ -7,13 +7,15 @@
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/quarto-contrib/countdown-0.5.0/countdown.js"></script>
+<link href="../site_libs/quarto-contrib/countdown-0.5.0/countdown.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.55">
 
   <meta name="author" content="Dr.&nbsp;Mine Çetinkaya-Rundel">
   <meta name="author" content="Dr.&nbsp;Charlotte Wickham">
   <meta name="dcterms.date" content="2024-08-04">
-  <title>Reproducible publishing with Quarto – From R Markdown to Quarto</title>
+  <title>Reproducible publishing with Quarto – Setup instructions</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -391,7 +393,7 @@
   </style>
   <link href="../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
   <script src="../site_libs/countdown-0.4.0/countdown.js"></script>
-<meta property="og:title" content="From R Markdown to Quarto – Reproducible publishing with Quarto">
+<meta property="og:title" content="Setup instructions – Reproducible publishing with Quarto">
 <meta property="og:description" content="Reproducible publishing with Quarto">
 <meta property="og:site_name" content="Reproducible publishing with Quarto">
 </head>
@@ -400,7 +402,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">From R Markdown to Quarto</h1>
+  <h1 class="title">Setup instructions</h1>
   <p class="subtitle">Reproducible publishing with Quarto</p>
 
 <div class="quarto-title-authors">
@@ -428,28 +430,36 @@ Dr.&nbsp;Charlotte Wickham
   <p class="date">2024-08-04</p>
 </section>
 <section>
-<section id="pre-workshop-instructions" class="title-slide slide level1 center">
-<h1>Pre-workshop instructions</h1>
+<section id="setup-instructions" class="title-slide slide level1 center">
+<h1>Setup instructions</h1>
 
 </section>
 <section id="while-you-wait-for-the-workshop-to-begin" class="slide level2 smaller">
 <h2>While you wait for the workshop to begin…</h2>
+<div class="your-turn">
 <ul>
 <li><p>Download and install the latest versions of R, RStudio, and Quarto:</p>
 <ul>
-<li>R: <a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a></li>
-<li>RStudio: <a href="https://posit.co/download/rstudio-desktop" class="uri">https://posit.co/download/rstudio-desktop</a></li>
-<li>Quarto: <a href="https://quarto.org/docs/get-started" class="uri">https://quarto.org/docs/get-started</a></li>
+<li>R <code>4.4.1</code> or above: <a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a></li>
+<li>RStudio <code>2023.03.0+386</code> or above: <a href="https://posit.co/download/rstudio-desktop" class="uri">https://posit.co/download/rstudio-desktop</a></li>
+<li>Quarto <code>1.3.321</code>: <a href="https://quarto.org/docs/get-started" class="uri">https://quarto.org/docs/get-started</a></li>
 </ul></li>
-<li><p>Install the following packages:</p></li>
+</ul>
+<p><strong>[TO DO: Update versions]</strong></p>
+<ul>
+<li>Install the following packages:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>pkg_list <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"tidyverse"</span>, <span class="st">"gt"</span>, <span class="st">"ggthemes"</span>, <span class="st">"palmerpenguins"</span>, <span class="st">"quarto"</span>, <span class="st">"here"</span>)</span>
-<span id="cb1-2"><a></a><span class="fu">install.packages</span>(pkg_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>pkg_list <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb1-2"><a></a>  <span class="st">"tidyverse"</span>, <span class="st">"gt"</span>, <span class="st">"ggthemes"</span>, <span class="st">"palmerpenguins"</span>, <span class="st">"quarto"</span>, <span class="st">"here"</span></span>
+<span id="cb1-3"><a></a>)</span>
+<span id="cb1-4"><a></a><span class="fu">install.packages</span>(pkg_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p><strong>[TO DO: Update packages]</strong></p>
 <ul>
-<li>Download <code>exercises.zip</code> at <a href="https://mine.quarto.pub/quarto-asa-nebraska/exercises.zip" class="uri">https://mine.quarto.pub/quarto-asa-nebraska/exercises.zip</a> and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio &gt; File &gt; New Project &gt; Existing Directory and navigate to the unzipped <code>exercises</code> folder and create an RStudio project in there and open it.</li>
+<li>Download <code>exercises.zip</code> at <strong>[TO DO: Add link]</strong> and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio &gt; File &gt; New Project &gt; Existing Directory and navigate to the unzipped <code>exercises</code> folder and create an RStudio project in there and open it.</li>
 </ul>
+</div>
 </section></section>
 <section>
 <section id="welcome" class="title-slide slide level1 center">
@@ -458,17 +468,11 @@ Dr.&nbsp;Charlotte Wickham
 </section>
 <section id="logistics" class="slide level2 smaller">
 <h2>Logistics</h2>
+<p><strong>[TO DO: Fill in details]</strong></p>
 <ul>
-<li><p>WiFi: MedCenter Guest or eduroam</p></li>
-<li><p>Sli.do:</p>
-<ul>
-<li>Anonymous questions to go through at the end of a module / at the end of the day</li>
-<li>Use for not time pressing questions / things you’re curious about beyond what we’re explicitly covering</li>
-<li>Got to <a href="https://slido.com/">https://slido.com</a> and use code: <code>#quarto</code></li>
-<li>Or use this direct link <a href="https://app.sli.do/event/wkQ3fmnKafwzDNKQNXK7FF" class="uri">https://app.sli.do/event/wkQ3fmnKafwzDNKQNXK7FF</a></li>
-</ul></li>
-<li><p>Exits in the front of the room</p></li>
-<li><p>For restrooms, leave on the right (my right) of the room</p></li>
+<li><p>WiFi: ____</p></li>
+<li><p>Exits: ____</p></li>
+<li><p>Restrooms: ____</p></li>
 </ul>
 </section>
 <section id="code-of-conduct" class="slide level2 smaller">
@@ -483,44 +487,77 @@ Dr.&nbsp;Charlotte Wickham
 <section id="expected-behavior" class="slide level2 smaller">
 <h2>Expected Behavior</h2>
 <ul>
-<li class="fragment"><p>Model and support the norms of respect necessary to promote the conditions for healthy exchange of scientific ideas.</p></li>
-<li class="fragment"><p>In speech or conduct, do not insult or disparage other participants.</p></li>
-<li class="fragment"><p>Be conscious of hierarchical structures, specifically the existence of stark power differentials between students, early career statisticians and established career statisticians—noting that fear of retaliation from more established statisticians can make it difficult for students and early career statisticians to express discomfort, rebuff unwelcome advances, and report violations of the conduct policy.</p></li>
-<li class="fragment"><p>Be sensitive to indications that may suggest that individuals are feeling unwelcome.</p></li>
+<li><p>Model and support the norms of respect necessary to promote the conditions for healthy exchange of scientific ideas.</p></li>
+<li><p>In speech or conduct, do not insult or disparage other participants.</p></li>
+<li><p>Be conscious of hierarchical structures, specifically the existence of stark power differentials between students, early career statisticians and established career statisticians—noting that fear of retaliation from more established statisticians can make it difficult for students and early career statisticians to express discomfort, rebuff unwelcome advances, and report violations of the conduct policy.</p></li>
+<li><p>Be sensitive to indications that may suggest that individuals are feeling unwelcome.</p></li>
 </ul>
 
 <aside><div>
 <p><a href="https://www.amstat.org/meetings/code-of-conduct">ASA Code of Conduct</a></p>
 </div></aside></section>
-<section id="about-me" class="slide level2">
-<h2>About me</h2>
-<ul>
-<li>Professor of the Practice, Department of Statistical Science, Duke University</li>
-<li>Developer Educator, Posit</li>
-<li>R Markdown user/educator for 10+ years, Quarto user/educator for 1+ years</li>
-</ul>
+<section id="about-us" class="slide level2">
+<h2>About us</h2>
+<div class="columns">
+<div class="column">
+<p><strong>Mine Çetinkaya-Rundel</strong></p>
+<p><a href="https::/mine-cr.com">mine-cr.com</a></p>
+<p>Professor of the Practice, Department of Statistical Science, Duke University</p>
+<p>Developer Educator, Posit</p>
+</div><div class="column">
+<p><strong>Charlotte Wickham</strong></p>
+<p><a href="https://www.cwick.co.nz/">cwick.co.nz</a></p>
+<p>Developer Educator, Posit</p>
+</div></div>
+<div class="center-align">
+<p>R Markdown user/educators for 10+ years</p>
+<p>Quarto user/educators for 3+ years</p>
+</div>
 </section>
 <section id="about-you" class="slide level2">
 <h2>About you</h2>
-<div class="task">
-<p>Meet 1-2 people around you!</p>
+<div class="your-turn">
+<p>Please share with the person next to you…</p>
+<ul>
+<li>Your name</li>
+<li>Your professional affiliation</li>
+<li>What you hope to get out of this tutorial</li>
+</ul>
 </div>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_ca7b56b7" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
+<div id="timer_64d8d83903120abf2e9658bdae9a48a44a9e037e" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+  <div class="countdown-controls">
+    <button class="countdown-bump-down">−</button>
+    <button class="countdown-bump-up">+</button>
+ </div>
+ <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+ </div>
 </section>
 <section id="workshop-structure" class="slide level2">
 <h2>Workshop structure</h2>
+<div class="columns">
+<div class="column fragment" style="width:33%;">
+<p><strong>My turn</strong></p>
 <ul>
-<li><p><strong>My turn:</strong> Lecture segments + live coding</p></li>
-<li><p><strong>Our turn:</strong> Live coding + follow along</p></li>
-<li><p><strong>Your turn:</strong> Exercises</p></li>
+<li>Lecture segments</li>
+<li>Feel free to just watch, take notes, browse docs, or tinker around with the code</li>
 </ul>
+</div><div class="column fragment" style="width:33%;">
+<div class="our-turn">
+<p><strong>Our turn</strong></p>
+<ul>
+<li>Lecture segments + live coding</li>
+<li>(Optionally) follow along with live coding</li>
+</ul>
+</div>
+</div><div class="column fragment" style="width:33%;">
+<div class="your-turn">
+<p><strong>Your turn</strong></p>
+<ul>
+<li>Practice exercises for you</li>
+<li>Work on your own or with the person next to you</li>
+</ul>
+</div>
+</div></div>
 </section>
 <section id="getting-help" class="slide level2">
 <h2>Getting help</h2>
@@ -563,27 +600,36 @@ Dr.&nbsp;Charlotte Wickham
 </section>
 <section id="checking-in-one-more-time" class="slide level2 smaller">
 <h2>Checking in one more time</h2>
-<div class="task">
 <p>Have you completed the following?</p>
+<div class="your-turn">
 <ul>
 <li><p>Download and install the latest versions of R, RStudio, and Quarto:</p>
 <ul>
-<li>R: <a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a></li>
-<li>RStudio: <a href="https://posit.co/download/rstudio-desktop" class="uri">https://posit.co/download/rstudio-desktop</a></li>
-<li>Quarto: <a href="https://quarto.org/docs/get-started" class="uri">https://quarto.org/docs/get-started</a></li>
+<li>R <code>4.4.1</code> or above: <a href="https://cran.r-project.org" class="uri">https://cran.r-project.org</a></li>
+<li>RStudio <code>2023.03.0+386</code> or above: <a href="https://posit.co/download/rstudio-desktop" class="uri">https://posit.co/download/rstudio-desktop</a></li>
+<li>Quarto <code>1.3.321</code>: <a href="https://quarto.org/docs/get-started" class="uri">https://quarto.org/docs/get-started</a></li>
 </ul></li>
-<li><p>Install the following packages:</p>
+</ul>
+<p><strong>[TO DO: Update versions]</strong></p>
+<ul>
+<li>Install the following packages:</li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>pkg_list <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"tidyverse"</span>, <span class="st">"gt"</span>, <span class="st">"ggthemes"</span>, <span class="st">"palmerpenguins"</span>, <span class="st">"quarto"</span>, <span class="st">"here"</span>)</span>
-<span id="cb2-2"><a></a><span class="fu">install.packages</span>(pkg_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div></li>
-<li><p>Download <code>exercises.zip</code> at <a href="https://mine.quarto.pub/quarto-asa-nebraska/exercises.zip" class="uri">https://mine.quarto.pub/quarto-asa-nebraska/exercises.zip</a> and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio &gt; File &gt; New Project &gt; Existing Directory and navigate to the unzipped <code>exercises</code> folder and create an RStudio project in there and open it.</p></li>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>pkg_list <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb2-2"><a></a>  <span class="st">"tidyverse"</span>, <span class="st">"gt"</span>, <span class="st">"ggthemes"</span>, <span class="st">"palmerpenguins"</span>, <span class="st">"quarto"</span>, <span class="st">"here"</span></span>
+<span id="cb2-3"><a></a>)</span>
+<span id="cb2-4"><a></a><span class="fu">install.packages</span>(pkg_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>[TO DO: Update packages]</strong></p>
+<ul>
+<li>Download <code>exercises.zip</code> at <strong>[TO DO: Add link]</strong> and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio &gt; File &gt; New Project &gt; Existing Directory and navigate to the unzipped <code>exercises</code> folder and create an RStudio project in there and open it.</li>
 </ul>
 </div>
-<div class="fragment">
-<div class="hand-blue-large" style="text-align: center;">
+</section>
+<section id="section" class="slide level2 center">
+<h2></h2>
+<div class="hand-green-large" style="text-align: center;">
 <p>Let’s get started!</p>
-</div>
 </div>
 </section></section>
 <section>
@@ -642,7 +688,7 @@ Dr.&nbsp;Charlotte Wickham
 <section id="a-tour-of-quarto" class="slide level2">
 <h2>A tour of Quarto</h2>
 <p><br><br></p>
-<div class="hand-blue-large" style="text-align: center;">
+<div class="hand-green-large" style="text-align: center;">
 <p>Sit back and enjoy!</p>
 </div>
 </section>
@@ -653,7 +699,7 @@ Dr.&nbsp;Charlotte Wickham
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_0b2dc2ad" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_937adbe0" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -808,7 +854,7 @@ Dr.&nbsp;Charlotte Wickham
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_f92682c8" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_66db764a" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -951,7 +997,7 @@ Dr.&nbsp;Charlotte Wickham
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_e4919652" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_81224375" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>

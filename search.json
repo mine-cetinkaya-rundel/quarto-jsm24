@@ -37,7 +37,7 @@
     "href": "setup.html",
     "title": "Setup instructions",
     "section": "",
-    "text": "Prior to the workshop, please complete the following steps:\n\nDownload and install the latest versions of R, RStudio, and Quarto:\n\nR 4.4.1 or above: https://cran.r-project.org\nRStudio 2023.03.0+386 or above: https://posit.co/download/rstudio-desktop\nQuarto 1.3.321: https://quarto.org/docs/get-started\n\n\n[TO DO: Update versions]\n\nInstall the following packages:\n\n\npkg_list &lt;- c(\n  \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n)\ninstall.packages(pkg_list)\n\n[TO DO: Update packages]\n\nDownload exercises.zip at [TO DO: Add link] and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio &gt; File &gt; New Project &gt; Existing Directory and navigate to the unzipped exercises folder and create an RStudio project in there and open it.",
+    "text": "Download and install the latest versions of R, RStudio, and Quarto:\n\nR 4.4.1 or above: https://cran.r-project.org\nRStudio 2023.03.0+386 or above: https://posit.co/download/rstudio-desktop\nQuarto 1.3.321: https://quarto.org/docs/get-started\n\n\n[TO DO: Update versions]\n\nInstall the following packages:\n\n\npkg_list &lt;- c(\n  \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n)\ninstall.packages(pkg_list)\n\n[TO DO: Update packages]\n\nDownload exercises.zip at [TO DO: Add link] and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio &gt; File &gt; New Project &gt; Existing Directory and navigate to the unzipped exercises folder and create an RStudio project in there and open it.",
     "crumbs": [
       "Setup"
     ]
@@ -192,245 +192,252 @@
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#while-you-wait-for-the-workshop-to-begin",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#while-you-wait-for-the-workshop-to-begin",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "While you wait for the workshop to begin…",
-    "text": "While you wait for the workshop to begin…\n\nDownload and install the latest versions of R, RStudio, and Quarto:\n\nR: https://cran.r-project.org\nRStudio: https://posit.co/download/rstudio-desktop\nQuarto: https://quarto.org/docs/get-started\n\nInstall the following packages:\n\n\npkg_list &lt;- c(\"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\")\ninstall.packages(pkg_list)\n\n\nDownload exercises.zip at https://mine.quarto.pub/quarto-asa-nebraska/exercises.zip and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio &gt; File &gt; New Project &gt; Existing Directory and navigate to the unzipped exercises folder and create an RStudio project in there and open it."
+    "text": "While you wait for the workshop to begin…\n\n\nDownload and install the latest versions of R, RStudio, and Quarto:\n\nR 4.4.1 or above: https://cran.r-project.org\nRStudio 2023.03.0+386 or above: https://posit.co/download/rstudio-desktop\nQuarto 1.3.321: https://quarto.org/docs/get-started\n\n\n[TO DO: Update versions]\n\nInstall the following packages:\n\n\npkg_list &lt;- c(\n  \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n)\ninstall.packages(pkg_list)\n\n[TO DO: Update packages]\n\nDownload exercises.zip at [TO DO: Add link] and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio &gt; File &gt; New Project &gt; Existing Directory and navigate to the unzipped exercises folder and create an RStudio project in there and open it."
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#logistics",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#logistics",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Logistics",
-    "text": "Logistics\n\nWiFi: MedCenter Guest or eduroam\nSli.do:\n\nAnonymous questions to go through at the end of a module / at the end of the day\nUse for not time pressing questions / things you’re curious about beyond what we’re explicitly covering\nGot to https://slido.com and use code: #quarto\nOr use this direct link https://app.sli.do/event/wkQ3fmnKafwzDNKQNXK7FF\n\nExits in the front of the room\nFor restrooms, leave on the right (my right) of the room"
+    "text": "Logistics\n[TO DO: Fill in details]\n\nWiFi: ____\nExits: ____\nRestrooms: ____"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#code-of-conduct",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#code-of-conduct",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Code of Conduct",
     "text": "Code of Conduct\n\nThe American Statistical Association (ASA) is committed to providing an atmosphere in which personal respect and intellectual growth are valued and the free expression and exchange of ideas are encouraged. Consistent with this commitment, it is the policy of the ASA that all participants in ASA activities enjoy a welcoming environment free from unlawful discrimination, harassment, and retaliation. We strive to be a community that welcomes and supports people of all backgrounds and identities. This includes, but is not limited to, members of any race, ethnicity, culture, national origin, color, immigration status, social and economic class, educational level, sex, sexual orientation, gender identity and expression, age, size, family status, political belief, religion, and mental and physical ability.\n\n\n\nASA Code of Conduct"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#expected-behavior",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#expected-behavior",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Expected Behavior",
     "text": "Expected Behavior\n\nModel and support the norms of respect necessary to promote the conditions for healthy exchange of scientific ideas.\nIn speech or conduct, do not insult or disparage other participants.\nBe conscious of hierarchical structures, specifically the existence of stark power differentials between students, early career statisticians and established career statisticians—noting that fear of retaliation from more established statisticians can make it difficult for students and early career statisticians to express discomfort, rebuff unwelcome advances, and report violations of the conduct policy.\nBe sensitive to indications that may suggest that individuals are feeling unwelcome.\n\n\n\nASA Code of Conduct"
   },
   {
-    "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#about-me",
-    "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#about-me",
-    "title": "From R Markdown to Quarto",
-    "section": "About me",
-    "text": "About me\n\nProfessor of the Practice, Department of Statistical Science, Duke University\nDeveloper Educator, Posit\nR Markdown user/educator for 10+ years, Quarto user/educator for 1+ years"
+    "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#about-us",
+    "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#about-us",
+    "title": "Setup instructions",
+    "section": "About us",
+    "text": "About us\n\n\nMine Çetinkaya-Rundel\nmine-cr.com\nProfessor of the Practice, Department of Statistical Science, Duke University\nDeveloper Educator, Posit\n\nCharlotte Wickham\ncwick.co.nz\nDeveloper Educator, Posit\n\n\nR Markdown user/educators for 10+ years\nQuarto user/educators for 3+ years"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#about-you",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#about-you",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "About you",
-    "text": "About you\n\nMeet 1-2 people around you!\n\n\n\n\n−+\n02:00"
+    "text": "About you\n\nPlease share with the person next to you…\n\nYour name\nYour professional affiliation\nWhat you hope to get out of this tutorial\n\n\n\n  \n    −\n    +\n \n 03:00"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#workshop-structure",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#workshop-structure",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Workshop structure",
-    "text": "Workshop structure\n\nMy turn: Lecture segments + live coding\nOur turn: Live coding + follow along\nYour turn: Exercises"
+    "text": "Workshop structure\n\n\nMy turn\n\nLecture segments\nFeel free to just watch, take notes, browse docs, or tinker around with the code\n\n\n\nOur turn\n\nLecture segments + live coding\n(Optionally) follow along with live coding\n\n\n\n\nYour turn\n\nPractice exercises for you\nWork on your own or with the person next to you"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#getting-help",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#getting-help",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Getting help",
     "text": "Getting help\n\nDuring my turn and our turn segments – raise your hand\nDuring your turn segments – also feel free to raise your hand for questions but use the stickies to signal:\n\nLight green: I’d like some help / I’m stuck / I’m lost\nDark green: I’m done"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#meeting-you-where-you-are",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#meeting-you-where-you-are",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Meeting you where you are",
     "text": "Meeting you where you are\n\n\n\nI’ll assume you\n\nknow some R\nhave worked in RStudio\nwant to learn about Quarto\n\n\n\n\nI’ll teach you\n\nQuarto syntax and formats\nMore Markdown\nEven more R along the way!"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#checking-in-one-more-time",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#checking-in-one-more-time",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Checking in one more time",
-    "text": "Checking in one more time\n\nHave you completed the following?\n\nDownload and install the latest versions of R, RStudio, and Quarto:\n\nR: https://cran.r-project.org\nRStudio: https://posit.co/download/rstudio-desktop\nQuarto: https://quarto.org/docs/get-started\n\nInstall the following packages:\n\npkg_list &lt;- c(\"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\")\ninstall.packages(pkg_list)\n\nDownload exercises.zip at https://mine.quarto.pub/quarto-asa-nebraska/exercises.zip and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio &gt; File &gt; New Project &gt; Existing Directory and navigate to the unzipped exercises folder and create an RStudio project in there and open it.\n\n\n\n\nLet’s get started!"
+    "text": "Checking in one more time\nHave you completed the following?\n\n\nDownload and install the latest versions of R, RStudio, and Quarto:\n\nR 4.4.1 or above: https://cran.r-project.org\nRStudio 2023.03.0+386 or above: https://posit.co/download/rstudio-desktop\nQuarto 1.3.321: https://quarto.org/docs/get-started\n\n\n[TO DO: Update versions]\n\nInstall the following packages:\n\n\npkg_list &lt;- c(\n  \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n)\ninstall.packages(pkg_list)\n\n[TO DO: Update packages]\n\nDownload exercises.zip at [TO DO: Add link] and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio &gt; File &gt; New Project &gt; Existing Directory and navigate to the unzipped exercises folder and create an RStudio project in there and open it."
+  },
+  {
+    "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#section",
+    "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#section",
+    "title": "Setup instructions",
+    "section": "",
+    "text": "Let’s get started!"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#quarto",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#quarto",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Quarto …",
     "text": "Quarto …\n\nis a new, open-source, scientific, and technical publishing system\naims to make the process of creating and collaborating dramatically better\n\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#quarto-1",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#quarto-1",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Quarto",
     "text": "Quarto\nWith Quarto you can weave together narrative text and code to produce elegantly formatted output as documents, web pages, blog posts, books and more.\n\n\njust like R Markdown…\n\n\n\nbut not just like it, there’s more to it…"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#quarto-2",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#quarto-2",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Quarto …",
     "text": "Quarto …\nunifies + extends the R Markdown ecosystem"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#quarto-3",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#quarto-3",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Quarto …",
     "text": "Quarto …\nunifies + extends the R Markdown ecosystem\n\nunifies for people who love R Markdown"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#quarto-4",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#quarto-4",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Quarto …",
     "text": "Quarto …\nunifies + extends the R Markdown ecosystem\n\nunifies for people who love R Markdown\nextends for people who don’t know R Markdown"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#quarto-unifies-extends-r-markdown",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#quarto-unifies-extends-r-markdown",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Quarto unifies + extends R Markdown",
     "text": "Quarto unifies + extends R Markdown\n\n\nConsistent implementation of attractive and handy features across outputs: tabsets, code-folding, syntax highlighting, etc.\nMore accessible defaults as well as better support for accessibility\nGuardrails, particularly helpful for new learners: YAML completion, informative syntax errors, etc.\nSupport for other languages like Python, Julia, Observable, and more via Jupyter engine for executable code chunks."
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#a-tour-of-quarto",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#a-tour-of-quarto",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "A tour of Quarto",
     "text": "A tour of Quarto\n\n\nSit back and enjoy!"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#your-turn",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#your-turn",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Your turn",
     "text": "Your turn\n\nOpen hello-penguins.qmd in RStudio and with the visual editor. Render the document. Update your name and re-render. Inspect components of the document and make one more update and re-render. Compare notes with neighbors about updates you’ve made and note any aspects of the document that are not clear after the tour and your first interaction with it.\n\n\n\n\n−+\n10:00"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#revisit-what-is-quarto",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#revisit-what-is-quarto",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Revisit: What is Quarto?",
     "text": "Revisit: What is Quarto?\nQuarto is a command line interface (CLI) that renders plain text formats (.qmd, .rmd, .md) OR mixed formats (.ipynb/Jupyter notebook) into static PDF/Word/HTML reports, books, websites, presentations and more.\n\nmine$ quarto --help\n\n  Usage:   quarto \n  Version: 1.3.340\n\n  Description:\n\n    Quarto CLI\n\n  Options:\n\n    -h, --help     - Show this help.                            \n    -V, --version  - Show the version number for this program.  \n\n  Commands:\n\n    render          [input] [args...]     - Render files or projects to various document types.        \n    preview         [file] [args...]      - Render and preview a document or website project.          \n    serve           [input]               - Serve a Shiny interactive document.                        \n    create          [type] [commands...]  - Create a Quarto project or extension                       \n    create-project  [dir]                 - Create a project for rendering multiple documents          \n    convert         &lt;input&gt;               - Convert documents to alternate representations.            \n    pandoc          [args...]             - Run the version of Pandoc embedded within Quarto.          \n    run             [script] [args...]    - Run a TypeScript, R, Python, or Lua script.                \n    add             &lt;extension&gt;           - Add an extension to this folder or project                 \n    install         [target...]           - Installs an extension or global dependency.                \n    publish         [provider] [path]     - Publish a document or project. Available providers include:\n    check           [target]              - Verify correct functioning of Quarto installation.         \n    help            [command]             - Show this help or the help of a sub-command."
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#quarto-more-than-just-knitr",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#quarto-more-than-just-knitr",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Quarto, more than just knitr",
     "text": "Quarto, more than just knitr\n\nWe learned from 10 years of literate programming with knitr + rmarkdown"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#quarto-more-than-just-knitr-1",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#quarto-more-than-just-knitr-1",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Quarto, more than just knitr",
     "text": "Quarto, more than just knitr"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#quarto-more-than-just-knitr-2",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#quarto-more-than-just-knitr-2",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Quarto: More than just knitr",
     "text": "Quarto: More than just knitr"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#under-the-hood",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#under-the-hood",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Under the hood",
     "text": "Under the hood\n\n\nknitr or jupyter evaluates R/Python/Julia code and returns a .md file along with the evaluated code\nQuarto applies Lua filters + CSS/LaTeX which is then evaluated alongside the .md file by Pandoc and converted to a final output format"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#aside-lua-filters",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#aside-lua-filters",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Aside: Lua filters",
     "text": "Aside: Lua filters\n\nHere is an example of a Lua filter that converts strong emphasis to small caps, from https://pandoc.org/lua-filters.html:\n\nreturn {\n  {\n    Strong = function (elem)\n      return pandoc.SmallCaps(elem.c)\n    end,\n  }\n}\n\n\nLua filters written by R/Python/Julia developers should be interchangeable between formats - not language specific!\n\n\n\n\nWe won’t go into the details of writing Lua filters in this workshop, and you don’t need to worry about learning about Lua filters unless you’re working on extending Quarto."
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#from-the-comfort-of-your-own-homeworkspace",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#from-the-comfort-of-your-own-homeworkspace",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "From the comfort of your own homeworkspace",
     "text": "From the comfort of your own homeworkspace"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#quarto-workflow",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#quarto-workflow",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Quarto workflow",
     "text": "Quarto workflow\nRendering a Quarto file in RStudio via the Render button calls quarto render in a background job, preventing Quarto rendering from cluttering up the R console, and gives you and easy way to stop:"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#rendering",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#rendering",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Rendering",
     "text": "Rendering\n\nOption 1: In RStudio as a background job, and preview the output.\n\n\n\nOption 2: In the Terminal via quarto render:\n\n\nquarto render document.qmd # defaults to html\nquarto render document.qmd --to pdf\nquarto render document.qmd --to docx\n\n\n\n\nOption 3: In the R console, via the quarto R package:\n\n\nlibrary(quarto)\n\nquarto_render(\"document.qmd\") # defaults to html\nquarto_render(\"document.qmd\", output_format = \"pdf\")"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#your-turn-1",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#your-turn-1",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Your turn",
     "text": "Your turn\n\n\nOpen the last .qmd file you were working on in RStudio.\nCompare behavior of rendering with\n\nRStudio &gt; Render,\nusing the CLI with quarto render, and\nin the R console via quarto::quarto_render().\n\nIf you’re an RStudio user, brainstorm why you might still want to know about the other two ways of rendering Quarto documents.\n\n\n\n\n\n−+\n03:00"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#one-install-batteries-included",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#one-install-batteries-included",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "One install, “Batteries included”",
     "text": "One install, “Batteries included”\n\nRMarkdown grew into a large ecosystem, with varying syntax.\n\n\n\nQuarto comes “batteries included” straight out of the box\n\nHTML reports and websites\nPDF reports\nMS Office (Word, Powerpoint)\nPresentations (Powerpoint, Beamer, revealjs)\nBooks\n\n\n\n\n\nAny language, exact same approach and syntax"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#many-quarto-formats",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#many-quarto-formats",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Many Quarto formats",
     "text": "Many Quarto formats\n\n\n\nFeature\nR Markdown\nQuarto\n\n\n\n\nBasic Formats\nhtml_document\npdf_document\nword_document\nhtml\npdf\ndocx\n\n\nBeamer\nbeamer_presentation\nbeamer\n\n\nPowerPoint\npowerpoint_presentation\npptx\n\n\nHTML Slides\nxaringan\nioslides\nrevealjs\nrevealjs\n\n\nAdvanced Layout\ntufte\ndistill\nQuarto Article Layout"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#many-quarto-formats-1",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#many-quarto-formats-1",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Many Quarto formats",
     "text": "Many Quarto formats\n\n\n\nFeature\nR Markdown\nQuarto\n\n\n\n\nCross References\nhtml_document2\npdf_document2\nword_document2\nQuarto Crossrefs\n\n\nWebsites & Blogs\nblogdown\ndistill\nQuarto Websites\nQuarto Blogs\n\n\nBooks\nbookdown\nQuarto Books\n\n\nInteractivity\nShiny Documents\nQuarto Interactive Documents\n\n\nJournal Articles\nrticles\nJournal Articles\n\n\nDashboards\nflexdashboard\nComing soon!"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#your-turn-2",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#your-turn-2",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Your turn",
     "text": "Your turn\n\nIn RStudio, go to File &gt; New File &gt; Quarto document to create a Quarto document with HTML output. Render the document, which will ask you to give it a name – you can use my-first-document.qmd.\nUse the visual editor for the next steps.\n\nAdd a title and your name as the author.\nCreate two sections, one with fact you want to learn and your favorite thing about R.\nAdd a table of contents.\nStretch goal: Change the html theme to sketchy.\n\n\n\n\n\n−+\n05:00"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#what-about-r-markdown",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#what-about-r-markdown",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "What about R Markdown?",
     "text": "What about R Markdown?\n\n\nYou can render existing R Markdown documents with Quarto and you can rename them to .qmd files to turn them into Quarto documents.\nYou don’t have to do this – R Markdown continues to be maintained.\nHowever, new features are being developed for Quarto.\nAdditionally, Quarto\n\nOffers “batteries included” shared syntax across formats\nAllows you to choose your own editor and your preferred data science language\nComes with richer and more accessible features out of the box\nIs actively developed"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#questions",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#questions",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "Questions",
     "text": "Questions\n\nAny questions / anything you’d like to review before we wrap up this module?"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#one-last-thing",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#one-last-thing",
-    "title": "From R Markdown to Quarto",
+    "title": "Setup instructions",
     "section": "One last thing!",
     "text": "One last thing!\n\nWhere does the name “Quarto” come from?\n\n\n\n\n\n\n\n\n🔗 bit.ly/quarto-jsm24\n\n\n\n\nSource: https://en.wikipedia.org/wiki/Quarto"
   },

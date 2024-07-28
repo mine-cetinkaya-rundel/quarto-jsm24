@@ -1,14 +1,14 @@
 /*-- scss:defaults --*/
 
 // fonts
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
 
 
 $font-family-sans-serif: "Atkinson Hyperlegible", sans-serif;
 $font-family-monospace: "Source Code Pro", monospace;
-$presentation-heading-color: #688773; /* Quarto Blue */
+$presentation-heading-color: #688773; /* JSM 2024 green */
 $link-color: #688773;
 $code-color: #688773;
 $code-block-font-size: 0.7em;
@@ -59,25 +59,36 @@ details>summary {
   font-size: 1.2em
 }
 
-.reveal .hand-blue {
+.reveal .hand-green {
   font-family: 'Gochi Hand', cursive;
   color: #688773;
   font-size: 1.2em
 }
 
-.reveal .hand-blue-large {
+.reveal .hand-green-large {
   font-family: 'Gochi Hand', cursive;
   color: #688773;
   font-size: 3em
 }
 
-.reveal .slide .task {
+.reveal .slide .your-turn {
   padding-right: 10px;
   padding-left: 10px;
   padding-top: 3px;
   padding-bottom: 3px;
   margin-bottom: 6px;
   margin-top: 6px;
-  border-left: solid 5px #F1DE67;
-  background-color: #F1DE6750;
+  border-left: solid 5px #688773;
+  background-color: #68877350;
+}
+
+.reveal .slide .our-turn {
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-bottom: 6px;
+  margin-top: 6px;
+  border-left: solid 5px #80a9d7;
+  background-color: #80a9d750;
 }

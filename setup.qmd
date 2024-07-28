@@ -2,8 +2,6 @@
 title: "Setup instructions"
 ---
 
-Prior to the workshop, please complete the following steps:
-
 -   Download and install the latest versions of R, RStudio, and Quarto:
 
     -   R `4.4.1` or above: <https://cran.r-project.org>

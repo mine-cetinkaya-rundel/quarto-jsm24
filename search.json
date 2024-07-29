@@ -26,7 +26,7 @@
     "href": "3-websites-books/index.html#exercises",
     "title": "Creating websites and books with Quarto",
     "section": "Exercises",
-    "text": "Exercises\n hello-penguins-slides.qmd",
+    "text": "Exercises\nFor exercises in this module we’ll use all the documents we’ve created so far.",
     "crumbs": [
       "Modules",
       "Websites and books"
@@ -320,7 +320,7 @@
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#while-you-wait-for-the-workshop-to-begin",
     "title": "Setup instructions",
     "section": "While you wait for the workshop to begin…",
-    "text": "While you wait for the workshop to begin…\n\n\nDownload and install the latest versions of R, RStudio, and Quarto:\n\nR 4.4.1 or above: https://cran.r-project.org\nRStudio 2023.03.0+386 or above: https://posit.co/download/rstudio-desktop\nQuarto 1.3.321: https://quarto.org/docs/get-started\n\n\n[TO DO: Update versions]\n\nInstall the following packages:\n\n\npkg_list &lt;- c(\n  \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n)\ninstall.packages(pkg_list)\n\n[TO DO: Update packages]\n\nDownload exercises.zip at [TO DO: Add link] and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio &gt; File &gt; New Project &gt; Existing Directory and navigate to the unzipped exercises folder and create an RStudio project in there and open it."
+    "text": "While you wait for the workshop to begin…\n\n\nDownload and install the latest versions of R, RStudio, and Quarto:\n\nR 4.4.1 or above: https://cran.r-project.org\nRStudio 2024.04.2+764 or above: https://posit.co/download/rstudio-desktop\nQuarto 1.5.55: https://quarto.org/docs/get-started\n\nInstall the following packages:\n\n\npkg_list &lt;- c(\n  \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n)\ninstall.packages(pkg_list)\n\n[TO DO: Update packages]\n\nDownload exercises.zip at [TO DO: Add link] and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio &gt; File &gt; New Project &gt; Existing Directory and navigate to the unzipped exercises folder and create an RStudio project in there and open it."
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#logistics",
@@ -383,7 +383,7 @@
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#checking-in-one-more-time",
     "title": "Setup instructions",
     "section": "Checking in one more time",
-    "text": "Checking in one more time\nHave you completed the following?\n\n\nDownload and install the latest versions of R, RStudio, and Quarto:\n\nR 4.4.1 or above: https://cran.r-project.org\nRStudio 2023.03.0+386 or above: https://posit.co/download/rstudio-desktop\nQuarto 1.3.321: https://quarto.org/docs/get-started\n\n\n[TO DO: Update versions]\n\nInstall the following packages:\n\n\npkg_list &lt;- c(\n  \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n)\ninstall.packages(pkg_list)\n\n[TO DO: Update packages]\n\nDownload exercises.zip at [TO DO: Add link] and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio &gt; File &gt; New Project &gt; Existing Directory and navigate to the unzipped exercises folder and create an RStudio project in there and open it."
+    "text": "Checking in one more time\nHave you completed the following?\n\n\nDownload and install the latest versions of R, RStudio, and Quarto:\n\nR 4.4.1 or above: https://cran.r-project.org\nRStudio 2024.04.2+764 or above: https://posit.co/download/rstudio-desktop\nQuarto 1.5.55: https://quarto.org/docs/get-started\n\nInstall the following packages:\n\n\npkg_list &lt;- c(\n  \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n)\ninstall.packages(pkg_list)\n\n[TO DO: Update packages]\n\nDownload exercises.zip at [TO DO: Add link] and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio &gt; File &gt; New Project &gt; Existing Directory and navigate to the unzipped exercises folder and create an RStudio project in there and open it."
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#section",
@@ -663,7 +663,7 @@
     "href": "2-documents-slides/2-documents-slides.html#links",
     "title": "Documents and slides",
     "section": "Links",
-    "text": "Links\nThere are several types of “links” or hyperlinks.\n\n\nMarkdown\nYou can embed [named hyperlinks](https://quarto.org/),\ndirect urls like &lt;https://quarto.org/&gt;, and links to \n[other places](#quarto-anatomy) in \nthe document. The syntax is similar for embedding an\ninline image: ![Penguins playing with ball](images/penguins-quarto-ball.png).\n\nOutput\nYou can embed named hyperlinks, direct urls like https://quarto.org/, and links to other places in the document. The syntax is similar for embedding an inline image: ."
+    "text": "Links\nThere are several types of “links” or hyperlinks.\nMarkdown\nYou can embed [named hyperlinks](https://quarto.org/),\ndirect urls like &lt;https://quarto.org/&gt;, and links to \n[other places](#quarto-anatomy) in \nthe document. \n\nThe syntax is similar for embedding an\ninline image: ![Penguins playing with ball](images/penguins-quarto-ball.png).\nOutput\nYou can embed named hyperlinks, direct urls like https://quarto.org/, and links to other places in the document.\nThe syntax is similar for embedding an inline image: ."
   },
   {
     "objectID": "2-documents-slides/2-documents-slides.html#lists",
@@ -680,6 +680,13 @@
     "text": "Quotes\nMarkdown:\n&gt; Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do. \n&gt; - Donald Knuth, Literate Programming\n\nOutput:\n\nLet us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do. - Donald Knuth, Literate Programming\n\n\n\n\n“Literate Programming”, The Computer Journal 27 (1984), p. 97. (Reprinted in Literate Programming, 1992, p. 99.) Literate Programming (1984)"
   },
   {
+    "objectID": "2-documents-slides/2-documents-slides.html#your-turn-1",
+    "href": "2-documents-slides/2-documents-slides.html#your-turn-1",
+    "title": "Documents and slides",
+    "section": "Your turn",
+    "text": "Your turn\n\n\nSkim the previous slides. Share one new that’s new to you with your neighbor.\nOpen markdown-syntax.qmd in RStudio.\nFollow the instructions in the document.\n\n\n\n  \n    −\n    +\n \n 08:00"
+  },
+  {
     "objectID": "2-documents-slides/2-documents-slides.html#divs-and-spans",
     "href": "2-documents-slides/2-documents-slides.html#divs-and-spans",
     "title": "Documents and slides",
@@ -691,14 +698,7 @@
     "href": "2-documents-slides/2-documents-slides.html#divs-with-pre-defined-classes",
     "title": "Documents and slides",
     "section": "Divs with pre-defined classes",
-    "text": "Divs with pre-defined classes\nThese can often apply between formats:\n::: {.unnumbered .unlisted}\nText\n:::"
-  },
-  {
-    "objectID": "2-documents-slides/2-documents-slides.html#your-turn-1",
-    "href": "2-documents-slides/2-documents-slides.html#your-turn-1",
-    "title": "Documents and slides",
-    "section": "Your turn",
-    "text": "Your turn\n\n\nOpen markdown-syntax.qmd in RStudio.\nFollow the instructions in the document, then exchange one new thing you’ve learned with your neighbor.\n\n\n\n  \n    −\n    +\n \n 05:00"
+    "text": "Divs with pre-defined classes\nThese can often apply between formats:\nSingle class: Two equivalent syntaxes\n\n\nNo {, and no .:\n::: unnumbered\nText\n:::\n\n{ and .:\n::: {.unnumbered}\nText\n:::\n\nMultiple classes: use { and ., separate with spaces\n::: {.unnumbered .unlisted}\nText\n:::"
   },
   {
     "objectID": "2-documents-slides/2-documents-slides.html#callouts",
@@ -747,7 +747,7 @@
     "href": "2-documents-slides/2-documents-slides.html#anatomy-of-a-code-chunk",
     "title": "Documents and slides",
     "section": "Anatomy of a code chunk",
-    "text": "Anatomy of a code chunk\n\n\n\n```{r}\n#| label: car-stuff\n#| message: false\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\npenguins |&gt; \n  distinct(species)\n```\n\n# A tibble: 3 × 1\n  species  \n  &lt;fct&gt;    \n1 Adelie   \n2 Gentoo   \n3 Chinstrap\n\n\n\n\nHas 3x backticks on each end\nEngine (r) is indicated between curly braces {r}\nOptions stated with the #| (hashpipe): #| option1: value"
+    "text": "Anatomy of a code chunk\n\n\n\n```{r}\n#| label: penguin-stuff\n#| message: false\n#| output: false\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\npenguins |&gt; \n  distinct(species)\n```\n\n\n\nHas 3x backticks on each end\nEngine (r) is indicated between curly braces {r}\nOptions stated with the #| (hashpipe): #| option1: value"
   },
   {
     "objectID": "2-documents-slides/2-documents-slides.html#code-who-is-it-for",
@@ -768,7 +768,7 @@
     "href": "2-documents-slides/2-documents-slides.html#showing-and-hiding-code-with-echo",
     "title": "Documents and slides",
     "section": "Showing and hiding code with echo",
-    "text": "Showing and hiding code with echo\n\nThe echo option shows the code when set to true and hides it when set to false.\nIf you want to both execute the code and return the full code including backticks (like in a teaching scenario) echo: fenced is your friend!\n\n\n```{r}\n1 + 1\n```\n\n[1] 2"
+    "text": "Showing and hiding code with echo\n\nThe echo option shows the code when set to true and hides it when set to false.\nIf you want to both execute the code and return the full code including backticks (like in a teaching scenario) echo: fenced is your friend!\n\n\n\nSource:\n```{r}\n#| echo: fenced\n\n1 + 1\n```\n\nOutput:\n\n```{r}\n1 + 1\n```\n\n[1] 2"
   },
   {
     "objectID": "2-documents-slides/2-documents-slides.html#tables-and-figures",
@@ -887,7 +887,7 @@
     "href": "2-documents-slides/2-documents-slides.html#referencing-paths-in-r-code",
     "title": "Documents and slides",
     "section": "Referencing paths in R code",
-    "text": "Referencing paths in R code\nUse the here package to reference the project root, as here::here() always starts at the top-level directory of a .Rproj:\n\nhere::here()\n\n[1] \"/Users/mine/Desktop/workshops/quarto/quarto-jsm24\"\n\nlist.files(here::here())\n\n [1] \"_extensions\"        \"_freeze\"            \"_quarto.yml\"       \n [4] \"_site\"              \"1-rmarkdown-quarto\" \"2-documents-slides\"\n [7] \"3-websites-books\"   \"4-manuscripts\"      \"exercises\"         \n[10] \"images\"             \"index.qmd\"          \"LICENSE.md\"        \n[13] \"quarto-jsm24.Rproj\" \"README.md\"          \"renv\"              \n[16] \"renv.lock\"          \"setup.qmd\"          \"style\""
+    "text": "Referencing paths in R code\nUse the here package to reference the project root, as here::here() always starts at the top-level directory of a .Rproj:\n\nhere::here()\n\n[1] \"/Users/charlottewickham/Documents/posit/quarto-jsm24\"\n\nlist.files(here::here())\n\n [1] \"_extensions\"        \"_freeze\"            \"_quarto.yml\"       \n [4] \"_site\"              \"1-rmarkdown-quarto\" \"2-documents-slides\"\n [7] \"3-websites-books\"   \"4-manuscripts\"      \"exercises\"         \n[10] \"images\"             \"index.qmd\"          \"LICENSE.md\"        \n[13] \"quarto-jsm24.Rproj\" \"README.md\"          \"renv\"              \n[16] \"renv.lock\"          \"setup.qmd\"          \"style\""
   },
   {
     "objectID": "2-documents-slides/2-documents-slides.html#figures-from-code",
@@ -908,7 +908,7 @@
     "href": "2-documents-slides/2-documents-slides.html#figure-cross-references",
     "title": "Documents and slides",
     "section": "Figure cross references",
-    "text": "Figure cross references\nThe presence of the caption (Blue penguin) and label (#fig-blue-penguin) make this figure referenceable:\n\n\nMarkdown:\nSee @fig-blue-penguin for a cute blue penguin.\n![Blue penguin](images/blue-penguin.png){#fig-blue-penguin}\n\nOutput:\nSee Figure 3 for a cute blue penguin.\n\n\n\n\n\n\nFigure 3: Blue penguin"
+    "text": "Figure cross references\nThe presence of the caption (Blue penguin) and label (#fig-blue-penguin) make this figure referenceable:\nMarkdown:\nSee @fig-blue-penguin for a cute blue penguin.\n![Blue penguin](images/blue-penguin.png){#fig-blue-penguin}\nOutput:\nSee Figure 3 for a cute blue penguin.\n\n\nFigure 3: Blue penguin"
   },
   {
     "objectID": "2-documents-slides/2-documents-slides.html#table-cross-references",
@@ -925,13 +925,6 @@
     "text": "Your turn\n\n\nOpen tables-figures.qmd.\nFollow the instructions in the document, then exchange one new thing you’ve learned with your neighbor.\n\n\n\n  \n    −\n    +\n \n 10:00"
   },
   {
-    "objectID": "2-documents-slides/2-documents-slides.html#questions",
-    "href": "2-documents-slides/2-documents-slides.html#questions",
-    "title": "Documents and slides",
-    "section": "Questions",
-    "text": "Questions\n\nAny questions / anything you’d like to review before we wrap up this module?"
-  },
-  {
     "objectID": "2-documents-slides/2-documents-slides.html#components-1",
     "href": "2-documents-slides/2-documents-slides.html#components-1",
     "title": "Documents and slides",
@@ -943,14 +936,14 @@
     "href": "2-documents-slides/2-documents-slides.html#our-turn",
     "title": "Documents and slides",
     "section": "Our turn",
-    "text": "Our turn\n\nLet’s build a presentation together from hello-penguins-slides.qmd and showcase the following features of Quarto presentations:\n\nHierarchy, headers, and document outline\nIncremental lists\nColumns\nCode, output location, code highlighting\nLogo and footer\nMaking things fit on a slide\nChalkboard\nMultiplex\nPublishing your presentation to Quarto Pub"
+    "text": "Our turn\n\nLet’s build a presentation together from hello-penguins-slides.qmd and showcase the following features of Quarto presentations:\n\nHierarchy, headers, and document outline\nIncremental lists\nColumns\nCode, output location, code highlighting\nLogo and footer\nMaking things fit on a slide\nChalkboard\nPublishing your presentation to Quarto Pub"
   },
   {
     "objectID": "2-documents-slides/2-documents-slides.html#your-turn-4",
     "href": "2-documents-slides/2-documents-slides.html#your-turn-4",
     "title": "Documents and slides",
     "section": "Your turn",
-    "text": "Your turn\n\nPick up where we left off and\n\nChange the transition style between slides\nChange the slide size\nAdd slide numbers\n\n\n\n  \n    −\n    +\n \n 15:00"
+    "text": "Your turn\n\nPick up where we left off and\n\nChange the transition style between slides\nChange the slide size\nAdd slide numbers\n\n\n\n  \n    −\n    +\n \n 10:00"
   },
   {
     "objectID": "2-documents-slides/2-documents-slides.html#our-turn-1",
@@ -967,8 +960,8 @@
     "text": "Quarto presentation formats\n\nrevealjs - essentially the replacement for xaringan, but with Pandoc-native syntax\nbeamer for LaTeX slides\nPowerPoint for when you have to collaborate via MS Office"
   },
   {
-    "objectID": "2-documents-slides/2-documents-slides.html#questions-1",
-    "href": "2-documents-slides/2-documents-slides.html#questions-1",
+    "objectID": "2-documents-slides/2-documents-slides.html#questions",
+    "href": "2-documents-slides/2-documents-slides.html#questions",
     "title": "Documents and slides",
     "section": "Questions",
     "text": "Questions\n\nAny questions / anything you’d like to review before we wrap up this module?\n\n\n\n\n\n🔗 bit.ly/quarto-jsm24"
@@ -1000,7 +993,7 @@
     "href": "2-documents-slides/index.html#exercises",
     "title": "Creating computational documents and slides with Quarto",
     "section": "Exercises",
-    "text": "Exercises\n\n hello-penguins.qmd\n markdown-syntax.qmd\n callout-boxes.qmd\n tables-figures.qmd\n\n r-logo.png\n quarto-logo.png",
+    "text": "Exercises\n\n hello-penguins.qmd\n markdown-syntax.qmd\n callout-boxes.qmd\n tables-figures.qmd\n\n r-logo.png\n quarto-logo.png\n\n\n hello-penguins-slides.qmd",
     "crumbs": [
       "Modules",
       "Documents and slides"
@@ -1156,21 +1149,21 @@
     "href": "3-websites-books/3-websites-books.html#our-turn",
     "title": "Websites and books",
     "section": "Our turn",
-    "text": "Our turn\n\nLet’s build a website together from all of the documents we’ve created so far and highlight the following features of Quarto websites:\n\n_quarto.yml\nindex.qmd / landing page\nNavigation\nFreeze\nThemes and dark theme toggle\nPublishing\nAn aspect of the workshop webpage that you fancy?"
+    "text": "Our turn\n\nLet’s build a website together from all of the documents we’ve created so far and highlight the following features of Quarto websites:\n\nTerminal: quarto create project\n_quarto.yml\nindex.qmd / landing page\nNavigation: left and right under navbar; contents under sidebar.\nThemes and dark theme toggle\nPublishing: quarto publish"
   },
   {
     "objectID": "3-websites-books/3-websites-books.html#your-turn",
     "href": "3-websites-books/3-websites-books.html#your-turn",
     "title": "Websites and books",
     "section": "Your turn",
-    "text": "Your turn\n\nPick up where we left off and\n\nAdd an about page.\nAdd a folder called posts and create a few minimal blog post entries. Then, using the listings feature, create a blog page for your website.\n\n\n\n  \n    −\n    +\n \n 15:00"
+    "text": "Your turn\n\nPick up where we left off and\n\nAdd an about page.\nLook at the _quarto.yml for the workshop site. Find something you like and add it to your site.\n\n\n\n  \n    −\n    +\n \n 15:00"
   },
   {
     "objectID": "3-websites-books/3-websites-books.html#freeze",
     "href": "3-websites-books/3-websites-books.html#freeze",
     "title": "Websites and books",
     "section": "Freeze",
-    "text": "Freeze\n\nThe freeze option controls when/if computational documents be re-rendered during a global project render:\n\nexecute:\n  freeze: true  # never re-render during project render\nexecute:\n  freeze: auto  # re-render only when source changes\nexecute:\n  freeze: false  # always re-render\n\nThe freeze option is typically added to a _metadata.yml file within a specific directory, affecting all files in that directory.\nFor blogs, set feeze in _metadata.yml at the root of the posts directory.\nYou can have it only within specific subdirectories for more complex sites."
+    "text": "Freeze\n\n\nThe freeze option controls when/if computational documents be re-rendered during a global project render:\n\n   execute:\n     freeze: true # never re-render during project render\n   execute:\n     freeze: auto  # re-render when source file changes\n  execute:\n    freeze: false  # always re-render\n\nThe freeze option is typically added to a _metadata.yml file within a specific directory, affecting all files in that directory.\nFor blogs, set feeze in _metadata.yml at the root of the posts directory.\nYou can have it only within specific subdirectories for more complex sites."
   },
   {
     "objectID": "3-websites-books/3-websites-books.html#freeze-vs.-cache",
@@ -1185,6 +1178,27 @@
     "title": "Websites and books",
     "section": "Publishing",
     "text": "Publishing\nSee https://quarto.org/docs/publishing for publishing options other than Quarto Pub."
+  },
+  {
+    "objectID": "3-websites-books/3-websites-books.html#quarto-books",
+    "href": "3-websites-books/3-websites-books.html#quarto-books",
+    "title": "Websites and books",
+    "section": "Quarto books",
+    "text": "Quarto books\n\nBooks and websites are very similar in that they associate multiple pages/resources into a connected resource\n\n\n\nWebsite\n\n\n_quarto.yml\n\nproject:\n  type: website\n\nwebsite: \n  navbar:\n    left:\n      - index.qmd\n      - hello-penguins.qmd\n\n\nBook\n\n\n_quarto.yml\n\nproject:\n  type: book\n\nbook: \n  chapters:\n    - index.qmd\n    - hello-penguins.qmd"
+  },
+  {
+    "objectID": "3-websites-books/3-websites-books.html#our-turn-1",
+    "href": "3-websites-books/3-websites-books.html#our-turn-1",
+    "title": "Websites and books",
+    "section": "Our turn",
+    "text": "Our turn\n\nLet’s build a book together from all of the documents we’ve created so far and highlight the following features of Quarto books:\n\n_quarto.yml\nindex.qmd / landing page / change landing page\nAdd a PDF version\nCross references\nSections"
+  },
+  {
+    "objectID": "3-websites-books/3-websites-books.html#your-turn-1",
+    "href": "3-websites-books/3-websites-books.html#your-turn-1",
+    "title": "Websites and books",
+    "section": "Your turn",
+    "text": "Your turn\n\nPick up where we left off and\n\nGive a title to your book.\nTry dividing the chapters in to Parts\nAdd a numbered figure to chapter, and cross-reference it from another chapter\n\n\n\n  \n    −\n    +\n \n 10:00"
   },
   {
     "objectID": "3-websites-books/3-websites-books.html#questions",

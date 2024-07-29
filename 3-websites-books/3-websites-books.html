@@ -446,29 +446,28 @@ Dr.&nbsp;Charlotte Wickham
 </section>
 <section id="our-turn" class="slide level2">
 <h2>Our turn</h2>
-<div class="task">
+<div class="our-turn">
 <p>Let’s build a website together from all of the documents we’ve created so far and highlight the following features of Quarto websites:</p>
 <ul>
+<li><p><strong>Terminal:</strong> <code>quarto create project</code></p></li>
 <li><p><code>_quarto.yml</code></p></li>
 <li><p><code>index.qmd</code> / landing page</p></li>
-<li><p>Navigation</p></li>
-<li><p>Freeze</p></li>
+<li><p>Navigation: <code>left</code> and <code>right</code> under <code>navbar</code>; <code>contents</code> under <code>sidebar</code>.</p></li>
 <li><p>Themes and dark theme toggle</p></li>
-<li><p>Publishing</p></li>
-<li><p>An aspect of the workshop webpage that you fancy?</p></li>
+<li><p>Publishing: <code>quarto publish</code></p></li>
 </ul>
 </div>
 </section>
 <section id="your-turn" class="slide level2">
 <h2>Your turn</h2>
-<div class="task">
+<div class="your-turn">
 <p>Pick up where we left off and</p>
 <ul>
 <li>Add an <a href="https://quarto.org/docs/websites/website-about.html">about page</a>.</li>
-<li>Add a folder called <code>posts</code> and create a few minimal blog post entries. Then, using the <a href="https://quarto.org/docs/websites/website-listings.html">listings feature</a>, create a blog page for your website.</li>
+<li>Look at the <a href="https://github.com/mine-cetinkaya-rundel/quarto-jsm24/blob/main/_quarto.yml"><code>_quarto.yml</code> for the workshop site</a>. Find something you like and add it to your site.</li>
 </ul>
 </div>
-<div id="timer_b3912caede460c8b59cd594c5663d5af9f484559" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+<div id="timer_a50115f616cdf941320c0f15b748a6993c92ba2c" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
   <div class="countdown-controls">
     <button class="countdown-bump-down">−</button>
     <button class="countdown-bump-up">+</button>
@@ -483,20 +482,22 @@ Dr.&nbsp;Charlotte Wickham
 </section>
 <section id="freeze" class="slide level2 smaller">
 <h2>Freeze</h2>
+<div>
 <ul>
-<li>The <code>freeze</code> option controls when/if computational documents be re-rendered during a global project render:</li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a></a><span class="fu">execute</span><span class="kw">:</span></span>
-<span id="cb1-2"><a></a><span class="at">  </span><span class="fu">freeze</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="co">  # never re-render during project render</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a></a><span class="fu">execute</span><span class="kw">:</span></span>
-<span id="cb2-2"><a></a><span class="at">  </span><span class="fu">freeze</span><span class="kw">:</span><span class="at"> auto</span><span class="co">  # re-render only when source changes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a></a><span class="fu">execute</span><span class="kw">:</span></span>
-<span id="cb3-2"><a></a><span class="at">  </span><span class="fu">freeze</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="co">  # always re-render</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<li class="fragment"><p>The <code>freeze</code> option controls when/if computational documents be re-rendered during a global project render:</p>
 <ul>
-<li><p>The <code>freeze</code> option is typically added to a <code>_metadata.yml</code> file within a specific directory, affecting all files in that directory.</p></li>
-<li><p>For blogs, set <code>feeze</code> in <code>_metadata.yml</code> at the root of the <code>posts</code> directory.</p></li>
-<li><p>You can have it only within specific subdirectories for more complex sites.</p></li>
+<li class="fragment"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a></a><span class="at">   </span><span class="fu">execute</span><span class="kw">:</span></span>
+<span id="cb1-2"><a></a><span class="at">     </span><span class="fu">freeze</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="co"> # never re-render during project render</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li class="fragment"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a></a><span class="at">   </span><span class="fu">execute</span><span class="kw">:</span></span>
+<span id="cb2-2"><a></a><span class="at">     </span><span class="fu">freeze</span><span class="kw">:</span><span class="at"> auto</span><span class="co">  # re-render when source file changes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li class="fragment"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a></a><span class="at">  </span><span class="fu">execute</span><span class="kw">:</span></span>
+<span id="cb3-2"><a></a><span class="at">    </span><span class="fu">freeze</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="co">  # always re-render</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul></li>
+<li class="fragment"><p>The <code>freeze</code> option is typically added to a <code>_metadata.yml</code> file within a specific directory, affecting all files in that directory.</p></li>
+<li class="fragment"><p>For blogs, set <code>feeze</code> in <code>_metadata.yml</code> at the root of the <code>posts</code> directory.</p></li>
+<li class="fragment"><p>You can have it only within specific subdirectories for more complex sites.</p></li>
 </ul>
+</div>
 </section>
 <section id="freeze-vs.-cache" class="slide level2">
 <h2>Freeze vs.&nbsp;cache</h2>
@@ -509,6 +510,79 @@ Dr.&nbsp;Charlotte Wickham
 <section id="publishing" class="slide level2">
 <h2>Publishing</h2>
 <p>See <a href="https://quarto.org/docs/publishing" class="uri">https://quarto.org/docs/publishing</a> for publishing options other than Quarto Pub.</p>
+</section></section>
+<section>
+<section id="books" class="title-slide slide level1 center">
+<h1>Books</h1>
+
+</section>
+<section id="quarto-books" class="slide level2">
+<h2>Quarto books</h2>
+<ul>
+<li>Books and websites are very similar in that they associate multiple pages/resources into a connected resource</li>
+</ul>
+<div class="columns">
+<div class="column">
+<p>Website</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_quarto.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb4" data-filename="_quarto.yml"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb4-2"><a></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
+<span id="cb4-3"><a></a></span>
+<span id="cb4-4"><a></a><span class="fu">website</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb4-5"><a></a><span class="at">  </span><span class="fu">navbar</span><span class="kw">:</span></span>
+<span id="cb4-6"><a></a><span class="at">    </span><span class="fu">left</span><span class="kw">:</span></span>
+<span id="cb4-7"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> index.qmd</span></span>
+<span id="cb4-8"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> hello-penguins.qmd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column">
+<p>Book</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>_quarto.yml</strong></pre>
+</div>
+<div class="sourceCode" id="cb5" data-filename="_quarto.yml"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb5-2"><a></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> book</span></span>
+<span id="cb5-3"><a></a></span>
+<span id="cb5-4"><a></a><span class="fu">book</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb5-5"><a></a><span class="at">  </span><span class="fu">chapters</span><span class="kw">:</span></span>
+<span id="cb5-6"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> index.qmd</span></span>
+<span id="cb5-7"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> hello-penguins.qmd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div></div>
+</section>
+<section id="our-turn-1" class="slide level2">
+<h2>Our turn</h2>
+<div class="our-turn">
+<p>Let’s build a book together from all of the documents we’ve created so far and highlight the following features of Quarto books:</p>
+<ul>
+<li><p><code>_quarto.yml</code></p></li>
+<li><p><code>index.qmd</code> / landing page / change landing page</p></li>
+<li><p>Add a PDF version</p></li>
+<li><p>Cross references</p></li>
+<li><p>Sections</p></li>
+</ul>
+</div>
+</section>
+<section id="your-turn-1" class="slide level2">
+<h2>Your turn</h2>
+<div class="your-turn">
+<p>Pick up where we left off and</p>
+<ul>
+<li>Give a <a href="https://quarto.org/docs/books/book-structure.html#overview">title</a> to your book.</li>
+<li>Try <a href="https://quarto.org/docs/books/book-structure.html#parts-appendices">dividing the chapters in to Parts</a></li>
+<li>Add a numbered figure to chapter, and cross-reference it from another chapter</li>
+</ul>
+</div>
+<div id="timer_a50115f616cdf941320c0f15b748a6993c92ba2c" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
+  <div class="countdown-controls">
+    <button class="countdown-bump-down">−</button>
+    <button class="countdown-bump-up">+</button>
+ </div>
+ <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+ </div>
 </section></section>
 <section>
 <section id="wrap-up-1" class="title-slide slide level1 center">

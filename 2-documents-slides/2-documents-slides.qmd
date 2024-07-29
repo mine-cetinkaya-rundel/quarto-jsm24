@@ -24,7 +24,7 @@ execute:
   echo: true
 ---
 
-# Anatomy of a Quarto document
+# Anatomy of a Quarto document {#quarto-anatomy}
 
 ## Components
 
@@ -251,6 +251,8 @@ RStudio + VSCode provide rich tab-completion - start a word and tab to complete,
 
 # Text
 
+The markdown you know from R Markdown will work in Quarto.
+
 ## Text Formatting
 
 +-------------------------------+-------------------------------+
@@ -311,26 +313,22 @@ RStudio + VSCode provide rich tab-completion - start a word and tab to complete,
 
 There are several types of "links" or hyperlinks.
 
-::: columns
-::: {.column width="60%"}
 **Markdown**
 
-``` markdown
+```{.markdown .code-overflow-wrap}
 You can embed [named hyperlinks](https://quarto.org/),
 direct urls like <https://quarto.org/>, and links to 
 [other places](#quarto-anatomy) in 
-the document. The syntax is similar for embedding an
+the document. 
+
+The syntax is similar for embedding an
 inline image: ![Penguins playing with ball](images/penguins-quarto-ball.png).
 ```
-:::
-
-::: {.column .fragment width="40%"}
 **Output**
 
 You can embed [named hyperlinks](https://quarto.org/), direct urls like <https://quarto.org/>, and links to [other places](#quarto-anatomy) in the document.
+
 The syntax is similar for embedding an inline image: ![Penguins playing with ball](images/penguins-quarto-ball.png){style="width:250px;"}.
-:::
-:::
 
 ## Lists {.smaller}
 
@@ -403,6 +401,16 @@ Ordered list:
 (Reprinted in Literate Programming, 1992, p. 99.) Literate Programming (1984)
 :::
 
+## Your turn
+
+::: task
+-   Skim the previous slides. Share one new that's new to you with your neighbor.
+-   Open `markdown-syntax.qmd` in RStudio.
+-   Follow the instructions in the document.
+:::
+
+{{< countdown minutes=8 >}}
+
 ## Divs and spans {.smaller}
 
 Pandoc, and therefore Quarto, can parse ["fenced div blocks"](https://pandoc.org/MANUAL.html#divs-and-spans):
@@ -435,20 +443,34 @@ This is text with [special]{style="color:red;"} formatting.
 
 These can often apply between formats:
 
+**Single class**: Two equivalent syntaxes
+
+::: {.columns}
+::: {.column}
+No `{`, and no `.`:
+```` markdown
+::: unnumbered
+Text
+:::
+````
+:::
+::: {.column}
+`{` and `.`:
+```` markdown
+::: {.unnumbered}
+Text
+:::
+````
+:::
+::: 
+
+**Multiple classes**: use `{` and `.`, separate with spaces
+
 ``` markdown
 ::: {.unnumbered .unlisted}
 Text
 :::
 ```
-
-## Your turn
-
-::: task
--   Open `markdown-syntax.qmd` in RStudio.
--   Follow the instructions in the document, then exchange one new thing you've learned with your neighbor.
-:::
-
-{{< countdown minutes=5 >}}
 
 ## Callouts
 
@@ -537,9 +559,10 @@ Notice in both situations that the footnote is placed at the bottom of the page 
 ::: columns
 ::: {.column width="50%"}
 ```{r}
-#| label: car-stuff
+#| label: penguin-stuff
 #| message: false
 #| echo: fenced
+#| output: false
 
 library(tidyverse)
 library(palmerpenguins)
@@ -593,11 +616,28 @@ head(penguins)
 
 -   If you want to both execute the code and return the full code including backticks (like in a teaching scenario) `echo: fenced` is your friend!
 
+::: {.columns}
+::: {.column}
+Source:
+````
+```{{r}}
+#| echo: fenced
+
+1 + 1
+```
+````
+:::
+::: {.column}
+Output:
 ```{r}
 #| echo: fenced
 
 1 + 1
 ```
+
+:::
+::: 
+
 
 ## Tables and figures
 
@@ -874,24 +914,17 @@ ggplot(penguins, aes(x = species, fill = species)) +
 
 The presence of the caption (`Blue penguin`) and label (`#fig-blue-penguin`) make this figure referenceable:
 
-::: columns
-::: {.column width="50%"}
 **Markdown:**
 
 ``` markdown
 See @fig-blue-penguin for a cute blue penguin.
 ![Blue penguin](images/blue-penguin.png){#fig-blue-penguin}
 ```
-:::
-
-::: {.column width="50%"}
 **Output:**
 
 See @fig-blue-penguin for a cute blue penguin.
 
 ![Blue penguin](images/blue-penguin.png){#fig-blue-penguin fig-alt="A blue penguin" width="200"}
-:::
-:::
 
 ## Table cross references {.smaller}
 
@@ -938,15 +971,7 @@ head(penguins) |>
 
 {{< countdown minutes=10 >}}
 
-# Wrap up
-
-## Questions
-
-::: task
-Any questions / anything you'd like to review before we wrap up this module?
-:::
-
-# Anatomy of a Quarto presentation
+# Quarto presentations
 
 ## Components
 
@@ -962,7 +987,7 @@ Any questions / anything you'd like to review before we wrap up this module?
 
 ## Our turn {.smaller}
 
-::: task
+::: {.our-turn}
 Let's build a presentation together from `hello-penguins-slides.qmd` and showcase the following features of Quarto presentations:
 
 -   Hierarchy, headers, and document outline
@@ -979,14 +1004,12 @@ Let's build a presentation together from `hello-penguins-slides.qmd` and showcas
 
 -   Chalkboard
 
--   Multiplex
-
 -   Publishing your presentation to Quarto Pub
 :::
 
 ## Your turn
 
-::: task
+::: {.your-turn}
 Pick up where we left off and
 
 -   Change the [transition style](https://quarto.org/docs/presentations/revealjs/advanced.html#slide-transitions) between slides
@@ -996,11 +1019,11 @@ Pick up where we left off and
 -   Add [slide numbers](https://quarto.org/docs/presentations/revealjs/presenting.html#slide-numbers)
 :::
 
-{{< countdown minutes=15 >}}
+{{< countdown minutes=10 >}}
 
 ## Our turn
 
-::: task
+::: {.our-turn}
 Let's continue building our a presentation together from `hello-penguins-slides.qmd` and showcase the following features of Quarto presentations:
 
 -   Fragments

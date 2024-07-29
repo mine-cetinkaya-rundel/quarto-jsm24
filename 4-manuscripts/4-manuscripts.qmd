@@ -24,103 +24,359 @@ execute:
   echo: true
 ---
 
-# Anatomy of a Quarto project
+# Full complexity spectrum of reproducible scientific projects
 
-## Quarto projects
+## Simplest
 
--   Quarto projects have a `_quarto.yml` file
+Can run all code in a single file, and don't mind running it over and over again with each edit.
 
--   The `type` field in this file indicates the type of project:
-
-    -   `default`: Collection of documents
-
-    -   `website`: Websites (and blogs)
-
-    -   `books`: Books 😃
-
-## Our turn
-
-::: task
-Let's build a website together from all of the documents we've created so far and highlight the following features of Quarto websites:
-
--   `_quarto.yml`
-
--   `index.qmd` / landing page
-
--   Navigation
-
--   Freeze
-
--   Themes and dark theme toggle
-
--   Publishing
-
--   An aspect of the workshop webpage that you fancy?
+::: columns
+::: {.column width="47.5%"}
+::: {style="text-align: center;"}
+![](images/quarto-file.png){fig-align="center"} [{{< fa brands python >}}]{style="font-size: 100px;color: #3564B1"}
+:::
 :::
 
-## Your turn
-
-::: task
-Pick up where we left off and
-
--   Add an [about page](https://quarto.org/docs/websites/website-about.html).
--   Add a folder called `posts` and create a few minimal blog post entries. Then, using the [listings feature](https://quarto.org/docs/websites/website-listings.html), create a blog page for your website.
+::: {.column width="5%"}
+::: {style="text-align: center; font-size: 30px;"}
+<br><br> {{< fa arrow-right >}}
+:::
 :::
 
-{{< countdown minutes=15 >}}
+::: {.column width="47.5%"}
+::: {style="text-align: center; font-size: 190px;"}
+[{{< fa brands html5 >}}]{style="color: #d35836"}
+:::
+:::
+:::
+
+e.g.
+Data Science 101 - HW 1, Stat 101 - Final project, a blog post, a tutorial, a not-too-extensive consulting report, etc.
+
+## Simple
+
+Can run all code in a single file, and don't mind running it over and over again with each edit, **and** need an output that conforms to journal style.
+
+::: columns
+::: {.column width="35%"}
+::: {style="text-align: center;"}
+![](images/quarto-file.png){fig-align="center"} [{{< fa brands python >}}]{style="font-size: 100px;color: #3564B1"}
+
+`+` [**Quarto Journal Articles Extension**](https://quarto.org/docs/extensions/listing-journals.html)
+:::
+:::
+
+::: {.column width="5%"}
+::: {style="text-align: center; font-size: 30px;"}
+<br><br> {{< fa arrow-right >}}
+:::
+:::
+
+::: {.column width="55%"}
+::: {style="text-align: center; font-size: 190px;"}
+{{< fa file-pdf >}} [or]{style="font-size: 50px"} {{< fa file-word >}}
+:::
+
+::: {style="text-align: center;"}
+[formatted with journal style]{style="font-size: 40px"}
+:::
+:::
+:::
+
+e.g., a not-too-computational journal article.
+
+## [but science is rarely simple...]{style="font-size: 80px; font-family: Brusher;"} {.center}
+
+::: incremental
+-   multiple collaborators, each with their favorite computing language and code editor
+-   multiple stages of a project, each with their own level of feasibility of what can be re-run with each edit and what needs to be cached
+:::
+
+## More complex
+
+::: columns
+::: {.column width="30%"}
+::: {style="text-align: center;"}
+![](images/quarto-file.png){fig-align="center"}
+
+[{{< fa file-code >}} {{< fa file-code >}} {{< fa file-code >}} {{< fa file-code >}}]{style="font-size: 70px"}
+
+[{{< fa brands python >}}]{style="font-size: 100px;color: #3564B1"}
+:::
+:::
+
+::: {.column width="5%"}
+::: {style="text-align: center; font-size: 30px;"}
+<br><br> {{< fa arrow-right >}}
+:::
+:::
+
+::: {.column width="55%"}
+::: {style="text-align: center; font-size: 190px;"}
+{{< fa file-pdf >}} [or]{style="font-size: 50px"} {{< fa file-word >}}
+:::
+:::
+:::
+
+## Even more complex
+
+::: columns
+::: {.column width="40%"}
+::: {style="text-align: center;"}
+![](images/quarto-file.png){fig-align="center"}![](images/quarto-file.png){fig-align="center"}
+
+[{{< fa file-code >}} {{< fa file-code >}} {{< fa file-code >}} {{< fa file-code >}} {{< fa file-code >}} {{< fa file-code >}} {{< fa file-code >}}]{style="font-size: 70px"}
+
+[{{< fa brands python >}}]{style="font-size: 100px;color: #4B8BBE"} [{{< fa brands r-project >}}]{style="font-size: 100px;color: #306998"}
+:::
+:::
+
+::: {.column width="5%"}
+::: {style="text-align: center; font-size: 30px;"}
+<br><br> {{< fa arrow-right >}}
+:::
+:::
+
+::: {.column width="55%"}
+::: {style="text-align: center; font-size: 190px;"}
+{{< fa file-pdf >}} [or]{style="font-size: 50px"} {{< fa file-word >}}
+:::
+:::
+:::
+
+# Leveraging Quarto for fully reproducible scientific manuscripts
+
+## Aside: What is in a notebook?
+
+A notebook is a document that contains both **code** and **narrative**:
+
+-   Jupyter notebooks (`.ipynb`)
+-   Quarto documents (`.qmd`) -- a potential mindshift
+
+## Current state of affairs
+
+Most computational science is **born in notebooks**
+
+::: incremental
+-   Peer-review and publication workflows **don't support notebooks** as research outputs
+-   The more complex scenarios involve a lot of **manual finagling** to bring the project to journal submission stage
+-   Often during this process **reproducibility is lost**, or takes second seat to the formatting requirements
+-   Final submission **rarely captures all computations**, which are, at best, relegated to supplementary materials
+:::
+
+and ~~dies~~ **ends in PDF or Word documents**
+
+## Roadmap to fully reproducible scientific manuscripts
+
+*that are not just PDFs that are the outputs of a single qmd file*
+
+::: fragment
+[{{< fa puzzle-piece >}}]{style="font-size: 50px; color: #4B8BBE"} An end-to-end scholarly publishing workflow that treats Jupyter and Quarto notebooks as a primary element of the scientific record.
+:::
+
+::: fragment
+[{{< fa puzzle-piece >}}]{style="font-size: 50px; color: #306998"} A publication process that elevates transparent and reproducible work by authors, where data and software, together with narrative, are documented, shared, and archived.
+:::
+
+::: fragment
+[{{< fa puzzle-piece >}}]{style="font-size: 50px"} New forms of credit to the wider research community, including research software engineers or rsearch software engineers.
+:::
+
+## Quarto can...
+
+::: incremental
+-   **be authored** in your favorite code editor
+-   **render** from qmd or Jupyter notebook to PDF, Word, HTML, etc.
+-   **execute** code in Python, R, and more
+-   **apply** journal styles to your outputs with Quarto extensions
+-   **publish** to GitHub Pages, Netlify, and more
+-   **orchestrate** multiple inputs and outputs **with embedded computing using a new Quarto project `type: manuscript`**
+:::
+
+# `type: manuscript`
+
+## Quarto manuscript
+
+Quarto **manuscripts**, in addition to doing everything you can do with journal articles, can
+
+-   produce manuscripts in **multiple formats** (including LaTeX or MS Word formats required by journals), and give readers easy access to all of the formats through a website
+
+-   **publish computations** from one or more notebooks alongside the manuscript, allowing readers to dive into your code and view it or interact with it in a virtual environment
+
+# Let's write a manuscript
+
+## Getting started
+
+-   Approach 1: Start from scratch
+    -   Creating a Quarto manuscript
+        -   VS Code: In the Command Palette -- Quarto: Create Project \> Manuscript Project
+        -   `quarto create project manuscript <name>`
+    -   Add manuscript content
+-   Approach 2: Start with a sample from <https://github.com/quarto-ext/manuscript-template-vscode>
+
+::: callout-tip
+## Manuscripts ♥️ Git + GitHub
+
+Track your project with Git and host on GitHub for easy publishing.
+:::
+
+## A finished product
+
+```{=html}
+<iframe src="https://quarto-ext.github.io/manuscript-template-vscode/" title="La Palma Earthquakes" width="1100px" height="600px"></iframe>
+```
+## Multiple formats from one source
+
+![](images/multiple-formats.png){fig-align="center"}
+
+## Multiple formats from one source
+
+In `quarto.yml` of the project:
+
+``` {.yaml .yml}
+---
+format:
+  html:
+    theme: cosmo
+    toc-location: left
+    comments: 
+      hypothesis: true
+    citations-hover: true
+    crossrefs-hover: true
+  agu-pdf: default
+  docx: default
+  jats: default
+---
+```
+
+## Rich front matter
+
+In `index.qmd` of the project:
+
+``` yaml
+---
+title: La Palma Earthquakes
+author:
+  - name: Steve Purves
+    orcid: 0000-0002-0760-5497
+    corresponding: true
+    email: steve@curvenote.com
+    roles:
+      - Investigation
+      - Project administration
+      - Software
+      - Visualization
+    affiliations:
+      - Curvenote
+  - name: Rowan Cockett
+    orcid: 0000-0002-7859-8394
+    corresponding: false
+    roles: []
+    affiliations:
+      - Curvenote
+license: CC BY-SA 4.0
+keywords:
+  - La Palma
+  - Earthquakes
+date: '2022-05-11'
+abstract: |
+  In September 2021, a significant jump in seismic activity on the island of La Palma (Canary Islands, Spain) signaled the start of a volcanic crisis that still continues at the time of writing. Earthquake data is continually collected and published by the Instituto Geográphico Nacional (IGN). We have created an accessible dataset from this and completed preliminary data analysis which shows seismicity originating at two distinct depths, consistent with the model of a two reservoir system feeding the currently very active volcano.
+keypoints:
+  - You may specify 1 to 3 keypoints for this PDF template
+  - These keypoints are complete sentences and less than or equal to 140 characters
+  - 'They are specific to this PDF template, so they will not appear in other exports'
+citation:
+  container-title: Notebooks Now!
+draft: false
+bibliography: references.bib
+echo: false
+---
+```
+
+## Rich front matter
+
+from source $\rightarrow$ only relevant / required metadata in manuscript:
+
+![](images/manuscript-pdf.png){fig-align="center"}
+
+## Rich front matter
+
+from source $\rightarrow$ only relevant / required metadata in manuscript:
+
+![](images/manuscript-word.png){fig-align="center"}
+
+## Embedded computations
+
+- Perform computation in a labelled code cell in a notebook, in any language
+
+- Embed results of the computation with a link to the notebook with
+
+```markdown
+{{< embed name-of-notebook.qmd#fig-cell-label >}}
+{{< embed name-of-notebook.ipynd#tbl-cell-label >}}
+```
+
+<br>
+
+See example at <https://github.com/quarto-ext/manuscript-template-vscode/blob/main/index.qmd>.
+
+# What's next?
+
+## *Actually* dive into the code
+
+-   We've seen that you can *peruse* the code underlying the figures and tables in the manuscript
+
+-   What if you wanted to *interact* with the code -- in a computational environment that's just a click away and that has all the software and packages needed to reproduce the manuscript?
+
+## **Binder with Quarto**
+
+with `quarto use binder`:
+
+![](images/manuscript-binder.png){fig-align="center"}
+
+## **Binder with Quarto**
+
+![](images/launch-binder.png){fig-align="center"}
 
 # Wrap up
 
-## Freeze {.smaller}
+## Learn more
 
--   The `freeze` option controls when/if computational documents be re-rendered during a global project render:
+::: {.center-align .large}
+[quarto.org/docs/manuscripts](https://quarto.org/docs/manuscripts/)
+:::
 
-``` yaml
-execute:
-  freeze: true  # never re-render during project render
+```{=html}
+<iframe src="https://quarto.org/docs/manuscripts" width="100%" height="500" style="border:2px solid #123233;" title="Quarto Manuscripts"></iframe>
 ```
-
-``` yaml
-execute:
-  freeze: auto  # re-render only when source changes
-```
-
-``` yaml
-execute:
-  freeze: false  # always re-render
-```
-
--   The `freeze` option is typically added to a `_metadata.yml` file within a specific directory, affecting all files in that directory.
-
--   For blogs, set `feeze` in `_metadata.yml` at the root of the `posts` directory.
-
--   You can have it only within specific subdirectories for more complex sites.
-
-## Freeze vs. cache
-
--   Cache stores the results of computations for a specific file.
-
--   Cache invalidation is triggered by changes in chunk source code (or other cache attributes you've defined).
-
--   `cache` can also be set at the chunk level. Consider using the cache for computationally expensive chunks.
-
-## Publishing
-
-See <https://quarto.org/docs/publishing> for publishing options other than Quarto Pub.
-
-# Wrap up
 
 ## Questions
 
-::: task
+::: your-turn
 Any questions / anything you'd like to review before we wrap up this module?
 :::
 
-## Time permitting
+# Parting remarks
 
-::: task
-Demo journal articles with Quarto with the JASA template!
-:::
+## Learning more
+
+[https://quarto.org](https://quarto.org/)
+
+```{=html}
+<iframe src="https://quarto.org/" width="100%" height="600" title="Quarto Website"></iframe>
+```
+## Follow up with...
+
+the Quarto Blog: <https://quarto.org/docs/blog>
+
+```{=html}
+<iframe src="https://quarto.org/docs/blog/" width="100%" height="600" title="Quarto 1.3 Pre-release notes"></iframe>
+```
+## Thank you! {background-image="images/thank-you.png"}
+
+🐘 [https://fosstodon.org/\@minecr](https://fosstodon.org/@minecr)
+
+☁️ [\@minecr.bsky.social](https://bsky.app/profile/minecr.bsky.social)
 
 # Parting remarks
 

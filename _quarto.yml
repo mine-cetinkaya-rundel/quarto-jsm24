@@ -47,7 +47,7 @@ website:
 
   page-footer:
     right: "This page is built with 💛 and [Quarto](https://quarto.org/)."
-    left: "&copy; Copyright 2023, Mine Çetinkaya-Rundel + Andrew Bray"
+    left: "&copy; Copyright 2023, Mine Çetinkaya-Rundel + Charlotte Wickham"
     background: "#9bcbac" # Arylide Yellow
 
 format:

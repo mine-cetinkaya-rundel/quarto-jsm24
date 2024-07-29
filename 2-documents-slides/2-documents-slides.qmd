@@ -232,7 +232,7 @@ RStudio + VSCode provide rich tab-completion - start a word and tab to complete,
 
 ## Your turn
 
-::: task
+::: {.your-turn}
 -   Open `hello-penguins.qmd` in RStudio.
 -   Try <kbd>`Ctrl + space`</kbd> to see the available YAML options.
 -   Try out the tab-completion of any options you remember.
@@ -403,7 +403,7 @@ Ordered list:
 
 ## Your turn
 
-::: task
+::: {.your-turn}
 -   Skim the previous slides. Share one new that's new to you with your neighbor.
 -   Open `markdown-syntax.qmd` in RStudio.
 -   Follow the instructions in the document.
@@ -507,7 +507,7 @@ Tip with caption.
 
 ## Your turn
 
-::: task
+::: {.your-turn}
 -   Open `callout-boxes.qmd` and render the document.
 -   Using the visual editor, change the type of the first callouts box and then re-render. Also play with the options to change its appearance.
 -   Add a caption to the second callout box.
@@ -578,6 +578,8 @@ penguins |>
 -   Options stated with the `#|` (hashpipe): `#| option1: value`
 :::
 :::
+
+Available code cell options: <https://quarto.org/docs/reference/cells/cells-knitr.html>
 
 ## Code, who is it for?
 
@@ -964,7 +966,7 @@ head(penguins) |>
 
 ## Your turn
 
-::: task
+::: {.your-turn}
 -   Open `tables-figures.qmd`.
 -   Follow the instructions in the document, then exchange one new thing you've learned with your neighbor.
 :::
@@ -1043,6 +1045,6 @@ Let's continue building our a presentation together from `hello-penguins-slides.
 
 ## Questions
 
-::: task
+::: {.your-turn}
 Any questions / anything you'd like to review before we wrap up this module?
 :::

@@ -24,42 +24,38 @@ execute:
   echo: true
 ---
 
-# Anatomy of a Quarto presentation
+# Anatomy of a Quarto project
 
-## Components
+## Quarto projects
 
-1.  Metadata: YAML
+-   Quarto projects have a `_quarto.yml` file
 
-2.  Text: Markdown
+-   The `type` field in this file indicates the type of project:
 
-3.  Code: Executed via `knitr` or `jupyter`
+    -   `default`: Collection of documents
 
-. . .
+    -   `website`: Websites (and blogs)
 
-**Weave it all together**, and you have a beautiful, functional slide deck!
+    -   `books`: Books 😃
 
-## Our turn {.smaller}
+## Our turn
 
 ::: task
-Let's build a presentation together from `hello-penguins-slides.qmd` and showcase the following features of Quarto presentations:
+Let's build a website together from all of the documents we've created so far and highlight the following features of Quarto websites:
 
--   Hierarchy, headers, and document outline
+-   `_quarto.yml`
 
--   Incremental lists
+-   `index.qmd` / landing page
 
--   Columns
+-   Navigation
 
--   Code, output location, code highlighting
+-   Freeze
 
--   Logo and footer
+-   Themes and dark theme toggle
 
--   Making things fit on a slide
+-   Publishing
 
--   Chalkboard
-
--   Multiplex
-
--   Publishing your presentation to Quarto Pub
+-   An aspect of the workshop webpage that you fancy?
 :::
 
 ## Your turn
@@ -67,35 +63,53 @@ Let's build a presentation together from `hello-penguins-slides.qmd` and showcas
 ::: task
 Pick up where we left off and
 
--   Change the [transition style](https://quarto.org/docs/presentations/revealjs/advanced.html#slide-transitions) between slides
-
--   Change the [slide size](https://quarto.org/docs/presentations/revealjs/advanced.html#presentation-size)
-
--   Add [slide numbers](https://quarto.org/docs/presentations/revealjs/presenting.html#slide-numbers)
+-   Add an [about page](https://quarto.org/docs/websites/website-about.html).
+-   Add a folder called `posts` and create a few minimal blog post entries. Then, using the [listings feature](https://quarto.org/docs/websites/website-listings.html), create a blog page for your website.
 :::
 
 {{< countdown minutes=15 >}}
 
-## Our turn
-
-::: task
-Let's continue building our a presentation together from `hello-penguins-slides.qmd` and showcase the following features of Quarto presentations:
-
-
--   Fragments
-
--   Title slide attributes
-:::
-
 # Wrap up
 
-## Quarto presentation formats
+## Freeze {.smaller}
 
--   [`revealjs`](https://quarto.org/docs/presentations/revealjs) - essentially the replacement for `xaringan`, but with Pandoc-native syntax
+-   The `freeze` option controls when/if computational documents be re-rendered during a global project render:
 
--   `beamer` for LaTeX slides
+``` yaml
+execute:
+  freeze: true  # never re-render during project render
+```
 
--   PowerPoint for when you *have to* collaborate via MS Office
+``` yaml
+execute:
+  freeze: auto  # re-render only when source changes
+```
+
+``` yaml
+execute:
+  freeze: false  # always re-render
+```
+
+-   The `freeze` option is typically added to a `_metadata.yml` file within a specific directory, affecting all files in that directory.
+
+-   For blogs, set `feeze` in `_metadata.yml` at the root of the `posts` directory.
+
+-   You can have it only within specific subdirectories for more complex sites.
+
+## Freeze vs. cache
+
+-   Cache stores the results of computations for a specific file.
+
+-   Cache invalidation is triggered by changes in chunk source code (or other cache attributes you've defined).
+
+-   `cache` can also be set at the chunk level.
+    Consider using the cache for computationally expensive chunks.
+
+## Publishing
+
+See <https://quarto.org/docs/publishing> for publishing options other than Quarto Pub.
+
+# Wrap up
 
 ## Questions
 

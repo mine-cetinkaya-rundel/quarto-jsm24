@@ -327,7 +327,8 @@ inline image: ![Penguins playing with ball](images/penguins-quarto-ball.png).
 ::: {.column .fragment width="40%"}
 **Output**
 
-You can embed [named hyperlinks](https://quarto.org/), direct urls like <https://quarto.org/>, and links to [other places](#quarto-anatomy) in the document. The syntax is similar for embedding an inline image: ![Penguins playing with ball](images/penguins-quarto-ball.png){style="width:250px;"}.
+You can embed [named hyperlinks](https://quarto.org/), direct urls like <https://quarto.org/>, and links to [other places](#quarto-anatomy) in the document.
+The syntax is similar for embedding an inline image: ![Penguins playing with ball](images/penguins-quarto-ball.png){style="width:250px;"}.
 :::
 :::
 
@@ -394,10 +395,12 @@ Ordered list:
 
 **Output:**
 
-> Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do. - Donald Knuth, Literate Programming
+> Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do.
+> - Donald Knuth, Literate Programming
 
 ::: aside
-"Literate Programming", The Computer Journal 27 (1984), p. 97. (Reprinted in Literate Programming, 1992, p. 99.) Literate Programming (1984)
+"Literate Programming", The Computer Journal 27 (1984), p. 97.
+(Reprinted in Literate Programming, 1992, p. 99.) Literate Programming (1984)
 :::
 
 ## Divs and spans {.smaller}
@@ -859,19 +862,19 @@ ggplot(penguins, aes(x = species, fill = species)) +
 
 ## Cross references
 
-- Help readers to navigate your document with numbered references and hyperlinks to entities like figures and tables.
+-   Help readers to navigate your document with numbered references and hyperlinks to entities like figures and tables.
 
-- Cross referencing steps:
-  - Add a caption to your figure or table.
-  - Give an id to your figure or table, starting with `fig-` or `tbl-`.
-  - Refer to it with `@fig-...` or `@tbl-...`.
+-   Cross referencing steps:
+
+    -   Add a caption to your figure or table.
+    -   Give an id to your figure or table, starting with `fig-` or `tbl-`.
+    -   Refer to it with `@fig-...` or `@tbl-...`.
 
 ## Figure cross references {.smaller}
 
 The presence of the caption (`Blue penguin`) and label (`#fig-blue-penguin`) make this figure referenceable:
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="50%"}
 **Markdown:**
 
@@ -888,19 +891,17 @@ See @fig-blue-penguin for a cute blue penguin.
 
 ![Blue penguin](images/blue-penguin.png){#fig-blue-penguin fig-alt="A blue penguin" width="200"}
 :::
-
-::::
+:::
 
 ## Table cross references {.smaller}
 
 The presence of the caption (`A few penguins`) and label (`#tbl-penguins`) make this table referenceable:
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="50%"}
 **Markdown:**
 
-```` markdown
+````{.markdown}
 See @tbl-penguins for data on a few penguins.
 
 ```{{r}}
@@ -910,7 +911,6 @@ See @tbl-penguins for data on a few penguins.
 head(penguins) |> 
   gt()
 ```
-
 ````
 :::
 
@@ -927,8 +927,7 @@ head(penguins) |>
   gt()
 ```
 :::
-
-::::
+:::
 
 ## Your turn
 
@@ -947,3 +946,80 @@ head(penguins) |>
 Any questions / anything you'd like to review before we wrap up this module?
 :::
 
+# Anatomy of a Quarto presentation
+
+## Components
+
+1.  Metadata: YAML
+
+2.  Text: Markdown
+
+3.  Code: Executed via `knitr` or `jupyter`
+
+. . .
+
+**Weave it all together**, and you have a beautiful, functional slide deck!
+
+## Our turn {.smaller}
+
+::: task
+Let's build a presentation together from `hello-penguins-slides.qmd` and showcase the following features of Quarto presentations:
+
+-   Hierarchy, headers, and document outline
+
+-   Incremental lists
+
+-   Columns
+
+-   Code, output location, code highlighting
+
+-   Logo and footer
+
+-   Making things fit on a slide
+
+-   Chalkboard
+
+-   Multiplex
+
+-   Publishing your presentation to Quarto Pub
+:::
+
+## Your turn
+
+::: task
+Pick up where we left off and
+
+-   Change the [transition style](https://quarto.org/docs/presentations/revealjs/advanced.html#slide-transitions) between slides
+
+-   Change the [slide size](https://quarto.org/docs/presentations/revealjs/advanced.html#presentation-size)
+
+-   Add [slide numbers](https://quarto.org/docs/presentations/revealjs/presenting.html#slide-numbers)
+:::
+
+{{< countdown minutes=15 >}}
+
+## Our turn
+
+::: task
+Let's continue building our a presentation together from `hello-penguins-slides.qmd` and showcase the following features of Quarto presentations:
+
+-   Fragments
+
+-   Title slide attributes
+:::
+
+# Wrap up
+
+## Quarto presentation formats
+
+-   [`revealjs`](https://quarto.org/docs/presentations/revealjs) - essentially the replacement for `xaringan`, but with Pandoc-native syntax
+
+-   `beamer` for LaTeX slides
+
+-   PowerPoint for when you *have to* collaborate via MS Office
+
+## Questions
+
+::: task
+Any questions / anything you'd like to review before we wrap up this module?
+:::

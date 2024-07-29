@@ -1194,6 +1194,13 @@
     "text": "Our turn\n\nLet’s build a book together from all of the documents we’ve created so far and highlight the following features of Quarto books:\n\n_quarto.yml\nindex.qmd / landing page / change landing page\nAdd a PDF version\nCross references\nSections"
   },
   {
+    "objectID": "3-websites-books/3-websites-books.html#our-turn-code-snippets",
+    "href": "3-websites-books/3-websites-books.html#our-turn-code-snippets",
+    "title": "Websites and books",
+    "section": "Our turn: Code snippets",
+    "text": "Our turn: Code snippets\n\n\n\n\n_quarto.yml\n\nproject:\n  type: website\n\nwebsite:\n  title: \"default\"\n  navbar:\n    left:\n      - href: index.qmd\n        text: Home\n\n\n\n\nindex.qmd\n\n---\ntitle: \"default\"\n---\n\nThis is a Quarto website.\n\nTo learn more about Quarto websites visit &lt;https://quarto.org/docs/websites&gt;."
+  },
+  {
     "objectID": "3-websites-books/3-websites-books.html#your-turn-1",
     "href": "3-websites-books/3-websites-books.html#your-turn-1",
     "title": "Websites and books",

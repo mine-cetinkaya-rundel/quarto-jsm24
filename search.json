@@ -747,7 +747,7 @@
     "href": "2-documents-slides/2-documents-slides.html#anatomy-of-a-code-chunk",
     "title": "Documents and slides",
     "section": "Anatomy of a code chunk",
-    "text": "Anatomy of a code chunk\n\n\n\n```{r}\n#| label: penguin-stuff\n#| message: false\n#| output: false\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\npenguins |&gt; \n  distinct(species)\n```\n\n\n\nHas 3x backticks on each end\nEngine (r) is indicated between curly braces {r}\nOptions stated with the #| (hashpipe): #| option1: value"
+    "text": "Anatomy of a code chunk\n\n\n\n```{r}\n#| label: penguin-stuff\n#| message: false\n#| output: false\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\npenguins |&gt; \n  distinct(species)\n```\n\n\n\nHas 3x backticks on each end\nEngine (r) is indicated between curly braces {r}\nOptions stated with the #| (hashpipe): #| option1: value\n\n\nAvailable code cell options: https://quarto.org/docs/reference/cells/cells-knitr.html"
   },
   {
     "objectID": "2-documents-slides/2-documents-slides.html#code-who-is-it-for",

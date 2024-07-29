@@ -8,8 +8,8 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/quarto-contrib/countdown-0.5.0/countdown.js"></script>
-<link href="../site_libs/quarto-contrib/countdown-0.5.0/countdown.css" rel="stylesheet"><meta charset="utf-8">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.55">
 
   <meta name="author" content="Dr.&nbsp;Mine Çetinkaya-Rundel">
@@ -428,103 +428,325 @@ Dr.&nbsp;Charlotte Wickham
   <p class="date">2024-08-04</p>
 </section>
 <section>
-<section id="anatomy-of-a-quarto-project" class="title-slide slide level1 center">
-<h1>Anatomy of a Quarto project</h1>
+<section id="full-complexity-spectrum-of-reproducible-scientific-projects" class="title-slide slide level1 center">
+<h1>Full complexity spectrum of reproducible scientific projects</h1>
 
 </section>
-<section id="quarto-projects" class="slide level2">
-<h2>Quarto projects</h2>
-<ul>
-<li><p>Quarto projects have a <code>_quarto.yml</code> file</p></li>
-<li><p>The <code>type</code> field in this file indicates the type of project:</p>
-<ul>
-<li><p><code>default</code>: Collection of documents</p></li>
-<li><p><code>website</code>: Websites (and blogs)</p></li>
-<li><p><code>books</code>: Books 😃</p></li>
-</ul></li>
-</ul>
+<section id="simplest" class="slide level2">
+<h2>Simplest</h2>
+<p>Can run all code in a single file, and don’t mind running it over and over again with each edit.</p>
+<div class="columns">
+<div class="column" style="width:47.5%;">
+<div style="text-align: center;">
+<p><img data-src="images/quarto-file.png" class="quarto-figure quarto-figure-center"> <span style="font-size: 100px;color: #3564B1"><i class="fa-brands fa-python" aria-label="python"></i></span></p>
+</div>
+</div><div class="column" style="width:5%;">
+<div style="text-align: center; font-size: 30px;">
+<p><br><br> <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i></p>
+</div>
+</div><div class="column" style="width:47.5%;">
+<div style="text-align: center; font-size: 190px;">
+<p><span style="color: #d35836"><i class="fa-brands fa-html5" aria-label="html5"></i></span></p>
+</div>
+</div></div>
+<p>e.g. Data Science 101 - HW 1, Stat 101 - Final project, a blog post, a tutorial, a not-too-extensive consulting report, etc.</p>
 </section>
-<section id="our-turn" class="slide level2">
-<h2>Our turn</h2>
-<div class="task">
-<p>Let’s build a website together from all of the documents we’ve created so far and highlight the following features of Quarto websites:</p>
+<section id="simple" class="slide level2">
+<h2>Simple</h2>
+<p>Can run all code in a single file, and don’t mind running it over and over again with each edit, <strong>and</strong> need an output that conforms to journal style.</p>
+<div class="columns">
+<div class="column" style="width:35%;">
+<div style="text-align: center;">
+<p><img data-src="images/quarto-file.png" class="quarto-figure quarto-figure-center"> <span style="font-size: 100px;color: #3564B1"><i class="fa-brands fa-python" aria-label="python"></i></span></p>
+<p><code>+</code> <a href="https://quarto.org/docs/extensions/listing-journals.html"><strong>Quarto Journal Articles Extension</strong></a></p>
+</div>
+</div><div class="column" style="width:5%;">
+<div style="text-align: center; font-size: 30px;">
+<p><br><br> <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i></p>
+</div>
+</div><div class="column" style="width:55%;">
+<div style="text-align: center; font-size: 190px;">
+<p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> <span style="font-size: 50px">or</span> <i class="fa-solid fa-file-word" aria-label="file-word"></i></p>
+</div>
+<div style="text-align: center;">
+<p><span style="font-size: 40px">formatted with journal style</span></p>
+</div>
+</div></div>
+<p>e.g., a not-too-computational journal article.</p>
+</section>
+<section id="but-science-is-rarely-simple" class="slide level2 center">
+<h2><span style="font-size: 80px; font-family: Brusher;">but science is rarely simple…</span></h2>
+<div>
 <ul>
-<li><p><code>_quarto.yml</code></p></li>
-<li><p><code>index.qmd</code> / landing page</p></li>
-<li><p>Navigation</p></li>
-<li><p>Freeze</p></li>
-<li><p>Themes and dark theme toggle</p></li>
-<li><p>Publishing</p></li>
-<li><p>An aspect of the workshop webpage that you fancy?</p></li>
+<li class="fragment">multiple collaborators, each with their favorite computing language and code editor</li>
+<li class="fragment">multiple stages of a project, each with their own level of feasibility of what can be re-run with each edit and what needs to be cached</li>
 </ul>
 </div>
 </section>
-<section id="your-turn" class="slide level2">
-<h2>Your turn</h2>
-<div class="task">
-<p>Pick up where we left off and</p>
-<ul>
-<li>Add an <a href="https://quarto.org/docs/websites/website-about.html">about page</a>.</li>
-<li>Add a folder called <code>posts</code> and create a few minimal blog post entries. Then, using the <a href="https://quarto.org/docs/websites/website-listings.html">listings feature</a>, create a blog page for your website.</li>
-</ul>
+<section id="more-complex" class="slide level2">
+<h2>More complex</h2>
+<div class="columns">
+<div class="column" style="width:30%;">
+<div style="text-align: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/quarto-file.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
 </div>
-<div id="timer_95f8ea1dc9dd1eaa22c7c95f06742d1a1b46aa84" class="countdown" data-warn-when="0" data-update-every="1" data-play-sound="false" data-blink-colon="false" data-start-immediately="false" tabindex="0" style="right: 0;bottom: 0;">
-  <div class="countdown-controls">
-    <button class="countdown-bump-down">−</button>
-    <button class="countdown-bump-up">+</button>
- </div>
- <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
- </div>
+<p><span style="font-size: 70px"><i class="fa-solid fa-file-code" aria-label="file-code"></i> <i class="fa-solid fa-file-code" aria-label="file-code"></i> <i class="fa-solid fa-file-code" aria-label="file-code"></i> <i class="fa-solid fa-file-code" aria-label="file-code"></i></span></p>
+<p><span style="font-size: 100px;color: #3564B1"><i class="fa-brands fa-python" aria-label="python"></i></span></p>
+</div>
+</div><div class="column" style="width:5%;">
+<div style="text-align: center; font-size: 30px;">
+<p><br><br> <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i></p>
+</div>
+</div><div class="column" style="width:55%;">
+<div style="text-align: center; font-size: 190px;">
+<p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> <span style="font-size: 50px">or</span> <i class="fa-solid fa-file-word" aria-label="file-word"></i></p>
+</div>
+</div></div>
+</section>
+<section id="even-more-complex" class="slide level2">
+<h2>Even more complex</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div style="text-align: center;">
+<p><img data-src="images/quarto-file.png" class="quarto-figure quarto-figure-center"><img data-src="images/quarto-file.png" class="quarto-figure quarto-figure-center"></p>
+<p><span style="font-size: 70px"><i class="fa-solid fa-file-code" aria-label="file-code"></i> <i class="fa-solid fa-file-code" aria-label="file-code"></i> <i class="fa-solid fa-file-code" aria-label="file-code"></i> <i class="fa-solid fa-file-code" aria-label="file-code"></i> <i class="fa-solid fa-file-code" aria-label="file-code"></i> <i class="fa-solid fa-file-code" aria-label="file-code"></i> <i class="fa-solid fa-file-code" aria-label="file-code"></i></span></p>
+<p><span style="font-size: 100px;color: #4B8BBE"><i class="fa-brands fa-python" aria-label="python"></i></span> <span style="font-size: 100px;color: #306998"><i class="fa-brands fa-r-project" aria-label="r-project"></i></span></p>
+</div>
+</div><div class="column" style="width:5%;">
+<div style="text-align: center; font-size: 30px;">
+<p><br><br> <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i></p>
+</div>
+</div><div class="column" style="width:55%;">
+<div style="text-align: center; font-size: 190px;">
+<p><i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i> <span style="font-size: 50px">or</span> <i class="fa-solid fa-file-word" aria-label="file-word"></i></p>
+</div>
+</div></div>
 </section></section>
+<section>
+<section id="leveraging-quarto-for-fully-reproducible-scientific-manuscripts" class="title-slide slide level1 center">
+<h1>Leveraging Quarto for fully reproducible scientific manuscripts</h1>
+
+</section>
+<section id="aside-what-is-in-a-notebook" class="slide level2">
+<h2>Aside: What is in a notebook?</h2>
+<p>A notebook is a document that contains both <strong>code</strong> and <strong>narrative</strong>:</p>
+<ul>
+<li>Jupyter notebooks (<code>.ipynb</code>)</li>
+<li>Quarto documents (<code>.qmd</code>) – a potential mindshift</li>
+</ul>
+</section>
+<section id="current-state-of-affairs" class="slide level2">
+<h2>Current state of affairs</h2>
+<p>Most computational science is <strong>born in notebooks</strong></p>
+<div>
+<ul>
+<li class="fragment">Peer-review and publication workflows <strong>don’t support notebooks</strong> as research outputs</li>
+<li class="fragment">The more complex scenarios involve a lot of <strong>manual finagling</strong> to bring the project to journal submission stage</li>
+<li class="fragment">Often during this process <strong>reproducibility is lost</strong>, or takes second seat to the formatting requirements</li>
+<li class="fragment">Final submission <strong>rarely captures all computations</strong>, which are, at best, relegated to supplementary materials</li>
+</ul>
+</div>
+<p>and <del>dies</del> <strong>ends in PDF or Word documents</strong></p>
+</section>
+<section id="roadmap-to-fully-reproducible-scientific-manuscripts" class="slide level2">
+<h2>Roadmap to fully reproducible scientific manuscripts</h2>
+<p><em>that are not just PDFs that are the outputs of a single qmd file</em></p>
+<div class="fragment">
+<p><span style="font-size: 50px; color: #4B8BBE"><i class="fa-solid fa-puzzle-piece" aria-label="puzzle-piece"></i></span> An end-to-end scholarly publishing workflow that treats Jupyter and Quarto notebooks as a primary element of the scientific record.</p>
+</div>
+<div class="fragment">
+<p><span style="font-size: 50px; color: #306998"><i class="fa-solid fa-puzzle-piece" aria-label="puzzle-piece"></i></span> A publication process that elevates transparent and reproducible work by authors, where data and software, together with narrative, are documented, shared, and archived.</p>
+</div>
+<div class="fragment">
+<p><span style="font-size: 50px"><i class="fa-solid fa-puzzle-piece" aria-label="puzzle-piece"></i></span> New forms of credit to the wider research community, including research software engineers or rsearch software engineers.</p>
+</div>
+</section>
+<section id="quarto-can" class="slide level2">
+<h2>Quarto can…</h2>
+<div>
+<ul>
+<li class="fragment"><strong>be authored</strong> in your favorite code editor</li>
+<li class="fragment"><strong>render</strong> from qmd or Jupyter notebook to PDF, Word, HTML, etc.</li>
+<li class="fragment"><strong>execute</strong> code in Python, R, and more</li>
+<li class="fragment"><strong>apply</strong> journal styles to your outputs with Quarto extensions</li>
+<li class="fragment"><strong>publish</strong> to GitHub Pages, Netlify, and more</li>
+<li class="fragment"><strong>orchestrate</strong> multiple inputs and outputs <strong>with embedded computing using a new Quarto project <code>type: manuscript</code></strong></li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="type-manuscript" class="title-slide slide level1 center">
+<h1><code>type: manuscript</code></h1>
+
+</section>
+<section id="quarto-manuscript" class="slide level2">
+<h2>Quarto manuscript</h2>
+<p>Quarto <strong>manuscripts</strong>, in addition to doing everything you can do with journal articles, can</p>
+<ul>
+<li><p>produce manuscripts in <strong>multiple formats</strong> (including LaTeX or MS Word formats required by journals), and give readers easy access to all of the formats through a website</p></li>
+<li><p><strong>publish computations</strong> from one or more notebooks alongside the manuscript, allowing readers to dive into your code and view it or interact with it in a virtual environment</p></li>
+</ul>
+</section></section>
+<section>
+<section id="lets-write-a-manuscript" class="title-slide slide level1 center">
+<h1>Let’s write a manuscript</h1>
+
+</section>
+<section id="getting-started" class="slide level2">
+<h2>Getting started</h2>
+<ul>
+<li>Approach 1: Start from scratch
+<ul>
+<li>Creating a Quarto manuscript
+<ul>
+<li>VS Code: In the Command Palette – Quarto: Create Project &gt; Manuscript Project</li>
+<li><code>quarto create project manuscript &lt;name&gt;</code></li>
+</ul></li>
+<li>Add manuscript content</li>
+</ul></li>
+<li>Approach 2: Start with a sample from <a href="https://github.com/quarto-ext/manuscript-template-vscode" class="uri">https://github.com/quarto-ext/manuscript-template-vscode</a></li>
+</ul>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Manuscripts ♥️ Git + GitHub</strong></p>
+</div>
+<div class="callout-content">
+<p>Track your project with Git and host on GitHub for easy publishing.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="a-finished-product" class="slide level2">
+<h2>A finished product</h2>
+<iframe src="https://quarto-ext.github.io/manuscript-template-vscode/" title="La Palma Earthquakes" width="1100px" height="600px"></iframe>
+</section>
+<section id="multiple-formats-from-one-source" class="slide level2">
+<h2>Multiple formats from one source</h2>
+
+<img data-src="images/multiple-formats.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="multiple-formats-from-one-source-1" class="slide level2">
+<h2>Multiple formats from one source</h2>
+<p>In <code>quarto.yml</code> of the project:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource yaml yml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a></a><span class="pp">---</span></span>
+<span id="cb1-2"><a></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb1-3"><a></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb1-4"><a></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span><span class="at"> cosmo</span></span>
+<span id="cb1-5"><a></a><span class="at">    </span><span class="fu">toc-location</span><span class="kw">:</span><span class="at"> left</span></span>
+<span id="cb1-6"><a></a><span class="at">    </span><span class="fu">comments</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb1-7"><a></a><span class="at">      </span><span class="fu">hypothesis</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-8"><a></a><span class="at">    </span><span class="fu">citations-hover</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-9"><a></a><span class="at">    </span><span class="fu">crossrefs-hover</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-10"><a></a><span class="at">  </span><span class="fu">agu-pdf</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb1-11"><a></a><span class="at">  </span><span class="fu">docx</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb1-12"><a></a><span class="at">  </span><span class="fu">jats</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb1-13"><a></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="rich-front-matter" class="slide level2">
+<h2>Rich front matter</h2>
+<p>In <code>index.qmd</code> of the project:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a></a><span class="pp">---</span></span>
+<span id="cb2-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> La Palma Earthquakes</span></span>
+<span id="cb2-3"><a></a><span class="fu">author</span><span class="kw">:</span></span>
+<span id="cb2-4"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Steve Purves</span></span>
+<span id="cb2-5"><a></a><span class="at">    </span><span class="fu">orcid</span><span class="kw">:</span><span class="at"> 0000-0002-0760-5497</span></span>
+<span id="cb2-6"><a></a><span class="at">    </span><span class="fu">corresponding</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb2-7"><a></a><span class="at">    </span><span class="fu">email</span><span class="kw">:</span><span class="at"> steve@curvenote.com</span></span>
+<span id="cb2-8"><a></a><span class="at">    </span><span class="fu">roles</span><span class="kw">:</span></span>
+<span id="cb2-9"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> Investigation</span></span>
+<span id="cb2-10"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> Project administration</span></span>
+<span id="cb2-11"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> Software</span></span>
+<span id="cb2-12"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> Visualization</span></span>
+<span id="cb2-13"><a></a><span class="at">    </span><span class="fu">affiliations</span><span class="kw">:</span></span>
+<span id="cb2-14"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> Curvenote</span></span>
+<span id="cb2-15"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Rowan Cockett</span></span>
+<span id="cb2-16"><a></a><span class="at">    </span><span class="fu">orcid</span><span class="kw">:</span><span class="at"> 0000-0002-7859-8394</span></span>
+<span id="cb2-17"><a></a><span class="at">    </span><span class="fu">corresponding</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb2-18"><a></a><span class="at">    </span><span class="fu">roles</span><span class="kw">:</span><span class="at"> </span><span class="kw">[]</span></span>
+<span id="cb2-19"><a></a><span class="at">    </span><span class="fu">affiliations</span><span class="kw">:</span></span>
+<span id="cb2-20"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> Curvenote</span></span>
+<span id="cb2-21"><a></a><span class="fu">license</span><span class="kw">:</span><span class="at"> CC BY-SA 4.0</span></span>
+<span id="cb2-22"><a></a><span class="fu">keywords</span><span class="kw">:</span></span>
+<span id="cb2-23"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> La Palma</span></span>
+<span id="cb2-24"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> Earthquakes</span></span>
+<span id="cb2-25"><a></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">'2022-05-11'</span></span>
+<span id="cb2-26"><a></a><span class="fu">abstract</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb2-27"><a></a>  In September 2021, a significant jump in seismic activity on the island of La Palma (Canary Islands, Spain) signaled the start of a volcanic crisis that still continues at the time of writing. Earthquake data is continually collected and published by the Instituto Geográphico Nacional (IGN). We have created an accessible dataset from this and completed preliminary data analysis which shows seismicity originating at two distinct depths, consistent with the model of a two reservoir system feeding the currently very active volcano.</span>
+<span id="cb2-28"><a></a><span class="fu">keypoints</span><span class="kw">:</span></span>
+<span id="cb2-29"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> You may specify 1 to 3 keypoints for this PDF template</span></span>
+<span id="cb2-30"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> These keypoints are complete sentences and less than or equal to 140 characters</span></span>
+<span id="cb2-31"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="st">'They are specific to this PDF template, so they will not appear in other exports'</span></span>
+<span id="cb2-32"><a></a><span class="fu">citation</span><span class="kw">:</span></span>
+<span id="cb2-33"><a></a><span class="at">  </span><span class="fu">container-title</span><span class="kw">:</span><span class="at"> Notebooks Now!</span></span>
+<span id="cb2-34"><a></a><span class="fu">draft</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb2-35"><a></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> references.bib</span></span>
+<span id="cb2-36"><a></a><span class="fu">echo</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb2-37"><a></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="rich-front-matter-1" class="slide level2">
+<h2>Rich front matter</h2>
+<p>from source <span class="math inline">\(\rightarrow\)</span> only relevant / required metadata in manuscript:</p>
+
+<img data-src="images/manuscript-pdf.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="rich-front-matter-2" class="slide level2">
+<h2>Rich front matter</h2>
+<p>from source <span class="math inline">\(\rightarrow\)</span> only relevant / required metadata in manuscript:</p>
+
+<img data-src="images/manuscript-word.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="embedded-computations" class="slide level2">
+<h2>Embedded computations</h2>
+<ul>
+<li><p>Perform computation in a labelled code cell in a notebook, in any language</p></li>
+<li><p>Embed results of the computation with a link to the notebook with</p></li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a></a>{{&lt; embed name-of-notebook.qmd#fig-cell-label &gt;}}</span>
+<span id="cb3-2"><a></a>{{&lt; embed name-of-notebook.ipynd#tbl-cell-label &gt;}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br></p>
+<p>See example at <a href="https://github.com/quarto-ext/manuscript-template-vscode/blob/main/index.qmd" class="uri">https://github.com/quarto-ext/manuscript-template-vscode/blob/main/index.qmd</a>.</p>
+</section></section>
+<section>
+<section id="whats-next" class="title-slide slide level1 center">
+<h1>What’s next?</h1>
+
+</section>
+<section id="actually-dive-into-the-code" class="slide level2">
+<h2><em>Actually</em> dive into the code</h2>
+<ul>
+<li><p>We’ve seen that you can <em>peruse</em> the code underlying the figures and tables in the manuscript</p></li>
+<li><p>What if you wanted to <em>interact</em> with the code – in a computational environment that’s just a click away and that has all the software and packages needed to reproduce the manuscript?</p></li>
+</ul>
+</section>
+<section id="binder-with-quarto" class="slide level2">
+<h2><strong>Binder with Quarto</strong></h2>
+<p>with <code>quarto use binder</code>:</p>
+
+<img data-src="images/manuscript-binder.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="binder-with-quarto-1" class="slide level2">
+<h2><strong>Binder with Quarto</strong></h2>
+
+<img data-src="images/launch-binder.png" class="quarto-figure quarto-figure-center r-stretch"></section></section>
 <section>
 <section id="wrap-up" class="title-slide slide level1 center">
 <h1>Wrap up</h1>
 
 </section>
-<section id="freeze" class="slide level2 smaller">
-<h2>Freeze</h2>
-<ul>
-<li>The <code>freeze</code> option controls when/if computational documents be re-rendered during a global project render:</li>
-</ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a></a><span class="fu">execute</span><span class="kw">:</span></span>
-<span id="cb1-2"><a></a><span class="at">  </span><span class="fu">freeze</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="co">  # never re-render during project render</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a></a><span class="fu">execute</span><span class="kw">:</span></span>
-<span id="cb2-2"><a></a><span class="at">  </span><span class="fu">freeze</span><span class="kw">:</span><span class="at"> auto</span><span class="co">  # re-render only when source changes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a></a><span class="fu">execute</span><span class="kw">:</span></span>
-<span id="cb3-2"><a></a><span class="at">  </span><span class="fu">freeze</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span><span class="co">  # always re-render</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li><p>The <code>freeze</code> option is typically added to a <code>_metadata.yml</code> file within a specific directory, affecting all files in that directory.</p></li>
-<li><p>For blogs, set <code>feeze</code> in <code>_metadata.yml</code> at the root of the <code>posts</code> directory.</p></li>
-<li><p>You can have it only within specific subdirectories for more complex sites.</p></li>
-</ul>
-</section>
-<section id="freeze-vs.-cache" class="slide level2">
-<h2>Freeze vs.&nbsp;cache</h2>
-<ul>
-<li><p>Cache stores the results of computations for a specific file.</p></li>
-<li><p>Cache invalidation is triggered by changes in chunk source code (or other cache attributes you’ve defined).</p></li>
-<li><p><code>cache</code> can also be set at the chunk level. Consider using the cache for computationally expensive chunks.</p></li>
-</ul>
-</section>
-<section id="publishing" class="slide level2">
-<h2>Publishing</h2>
-<p>See <a href="https://quarto.org/docs/publishing" class="uri">https://quarto.org/docs/publishing</a> for publishing options other than Quarto Pub.</p>
-</section></section>
-<section>
-<section id="wrap-up-1" class="title-slide slide level1 center">
-<h1>Wrap up</h1>
-
+<section id="learn-more" class="slide level2">
+<h2>Learn more</h2>
+<div class="center-align large">
+<p><a href="https://quarto.org/docs/manuscripts/">quarto.org/docs/manuscripts</a></p>
+</div>
+<iframe src="https://quarto.org/docs/manuscripts" width="100%" height="500" style="border:2px solid #123233;" title="Quarto Manuscripts"></iframe>
 </section>
 <section id="questions" class="slide level2">
 <h2>Questions</h2>
-<div class="task">
+<div class="your-turn">
 <p>Any questions / anything you’d like to review before we wrap up this module?</p>
-</div>
-</section>
-<section id="time-permitting" class="slide level2">
-<h2>Time permitting</h2>
-<div class="task">
-<p>Demo journal articles with Quarto with the JASA template!</p>
 </div>
 </section></section>
 <section>
@@ -532,11 +754,6 @@ Dr.&nbsp;Charlotte Wickham
 <h1>Parting remarks</h1>
 
 </section>
-<section id="quarto-cli" class="slide level2">
-<h2>Quarto CLI…</h2>
-<p>orchestrates each step of rendering</p>
-
-<img data-src="images/horst_qmd_render_schema.png" alt="A schematic representing rendering of Quarto documents from .qmd, to knitr or jupyter, to plain text markdown, then converted by pandoc into any number of output types including html, PDF, or Word document." class="r-stretch quarto-figure-center"><p class="caption">Artwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.</p></section>
 <section id="learning-more" class="slide level2">
 <h2>Learning more</h2>
 <p><a href="https://quarto.org/">https://quarto.org</a></p>
@@ -548,6 +765,31 @@ Dr.&nbsp;Charlotte Wickham
 <iframe src="https://quarto.org/docs/blog/" width="100%" height="600" title="Quarto 1.3 Pre-release notes"></iframe>
 </section>
 <section id="thank-you" class="slide level2" data-background-image="images/thank-you.png">
+<h2>Thank you!</h2>
+<p>🐘 <a href="https://fosstodon.org/@minecr">https://fosstodon.org/@minecr</a></p>
+<p>☁️ <a href="https://bsky.app/profile/minecr.bsky.social">@minecr.bsky.social</a></p>
+</section></section>
+<section>
+<section id="parting-remarks-1" class="title-slide slide level1 center">
+<h1>Parting remarks</h1>
+
+</section>
+<section id="quarto-cli" class="slide level2">
+<h2>Quarto CLI…</h2>
+<p>orchestrates each step of rendering</p>
+
+<img data-src="images/horst_qmd_render_schema.png" alt="A schematic representing rendering of Quarto documents from .qmd, to knitr or jupyter, to plain text markdown, then converted by pandoc into any number of output types including html, PDF, or Word document." class="r-stretch quarto-figure-center"><p class="caption">Artwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.</p></section>
+<section id="learning-more-1" class="slide level2">
+<h2>Learning more</h2>
+<p><a href="https://quarto.org/">https://quarto.org</a></p>
+<iframe src="https://quarto.org/" width="100%" height="600" title="Quarto Website"></iframe>
+</section>
+<section id="follow-up-with-1" class="slide level2">
+<h2>Follow up with…</h2>
+<p>the Quarto Blog: <a href="https://quarto.org/docs/blog" class="uri">https://quarto.org/docs/blog</a></p>
+<iframe src="https://quarto.org/docs/blog/" width="100%" height="600" title="Quarto 1.3 Pre-release notes"></iframe>
+</section>
+<section id="thank-you-1" class="slide level2" data-background-image="images/thank-you.png">
 <h2>Thank you!</h2>
 <p>🐘 <a href="https://fosstodon.org/@minecr">https://fosstodon.org/@minecr</a></p>
 <p>🐦 <a href="https://twitter.com/minebocek">@minebocek</a></p>

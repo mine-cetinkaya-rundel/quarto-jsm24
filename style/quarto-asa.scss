@@ -4,7 +4,8 @@
 
 $font-family: "Atkinson Hyperlegible", sans-serif;
 $link-color: #688773;
-$hover-color: lighten($link-color, 40%);
+$hover-color: lighten($link-color, 20%);
+$sidebar-hl-hover: darken($link-color, 20%);
 
 /*-- scss:rules --*/
 
@@ -17,4 +18,13 @@ a{
     border-bottom: 1px solid $hover-color;
   }
 
+}
+
+.sidebar a{
+  border-bottom: 1px solid transparent;
+
+  &:hover{
+    color: $sidebar-hl-hover;
+    border-bottom: 1px solid $sidebar-hl-hover;
+  }
 }

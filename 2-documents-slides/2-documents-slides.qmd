@@ -869,26 +869,6 @@ In places like markdown, YAML, or the command line/shell/terminal, you'll need t
     -   `"../` = up one directory, `../../` = up two directories, etc.
     -   `/..` or `/` = start from `root` directory of your current computer
 
-## Figures with code
-
-```{r}
-#| echo: fenced
-#| fig-width: 4
-#| fig-align: right
-
-knitr::include_graphics("images/penguins-quarto-ball.png")
-```
-
-## Referencing paths in R code
-
-Use the **here** package to reference the project root, as `here::here()` always starts at the top-level directory of a `.Rproj`:
-
-```{r}
-here::here()
-
-list.files(here::here())
-```
-
 ## Figures from code
 
 ```{r}

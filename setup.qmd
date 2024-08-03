@@ -6,7 +6,7 @@ title: "Setup instructions"
 
     -   R `4.4.1` or above: <https://cran.r-project.org>
     -   RStudio `2024.04.2+764` or above: <https://posit.co/download/rstudio-desktop>
-    -   Quarto `1.5.55`: <https://quarto.org/docs/get-started>
+    -   Quarto `1.5.56`: <https://quarto.org/docs/get-started>
 
 -   Install the following packages:
 
@@ -19,6 +19,4 @@ pkg_list <- c(
 install.packages(pkg_list)
 ```
 
-**[TO DO: Update packages]** 
-
--   Download `exercises.zip` at **[TO DO: Add link]** and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio \> File \> New Project \> Existing Directory and navigate to the unzipped `exercises` folder and create an RStudio project in there and open it.
+-   Download `exercises.zip` at and unzip it on your Desktop or somewhere you can easily locate on your computer.

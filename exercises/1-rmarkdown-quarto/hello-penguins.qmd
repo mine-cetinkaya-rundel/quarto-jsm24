@@ -1,6 +1,6 @@
 ---
 title: "Hello, Penguins!"
-format: html
+format: pdf
 editor: visual
 ---
 

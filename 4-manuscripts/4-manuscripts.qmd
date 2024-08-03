@@ -179,21 +179,72 @@ and ~~dies~~ **ends in PDF or Word documents**
 :::
 
 ::: fragment
-[{{< fa puzzle-piece >}}]{style="font-size: 50px"} New forms of credit to the wider research community, including research software engineers or rsearch software engineers.
+[{{< fa puzzle-piece >}}]{style="font-size: 50px"} New forms of credit to the wider research community, including research software engineers or research software engineers.
 :::
 
-## Quarto can...
+# Journal articles
 
-::: incremental
--   **be authored** in your favorite code editor
--   **render** from qmd or Jupyter notebook to PDF, Word, HTML, etc.
--   **execute** code in Python, R, and more
--   **apply** journal styles to your outputs with Quarto extensions
--   **publish** to GitHub Pages, Netlify, and more
--   **orchestrate** multiple inputs and outputs **with embedded computing using a new Quarto project `type: manuscript`**
+## aka "Yes, you can write a JASA article with Quarto"
+
+```{.bash}
+quarto use template quarto-journals/jasa
+```
+
+## A tour of journal articles with Quarto
+
+::: {.hand-green style="text-align: center;"}
+Sit back and enjoy the first part, <br>
+your turn activity coming soon!
 :::
 
-# `type: manuscript`
+::: {.our-turn .small}
+-   Create a journal article with JASA template
+-   Add executable cells
+-   Review cross referencing
+-   Add a citation from a DOI
+:::
+
+::: callout-warning
+The project will be available to you to continue at the end of the tour.
+:::
+
+## Your turn
+
+::: your-turn
+
+:::: {.columns}
+
+::: {.column}
+**Option 1:**
+{{< fa cloud >}} Start the project `4-articles`.
+:::
+
+::: {.column}
+**Option 2:**
+{{< fa folder >}} Launch the project in `4-articles`, then go to *Terminal* and run `quarto use template quarto-journals/jasa`.
+:::
+
+::::
+
+Then,
+
+- Add another cross-referencable code cell and cross reference it.
+- Add another citation from a DOI.
+:::
+
+{{< countdown minutes=10 >}}
+
+## Learn more {.smaller}
+
+::: {.center-align .large}
+[quarto.org/docs/extensions/listing-journals.html](https://quarto.org/docs/extensions/listing-journals.html)
+:::
+
+```{=html}
+<iframe src="https://quarto.org/docs/extensions/listing-journals.html" width="100%" height="500" style="border:2px solid #123233;" title="Journal Articles"></iframe>
+```
+
+# Journal articles with `type: manuscript`
 
 ## Quarto manuscript
 
@@ -203,16 +254,14 @@ Quarto **manuscripts**, in addition to doing everything you can do with journal 
 
 -   **publish computations** from one or more notebooks alongside the manuscript, allowing readers to dive into your code and view it or interact with it in a virtual environment
 
-# Let's write a manuscript
-
 ## Getting started
 
 -   Approach 1: Start from scratch
     -   Creating a Quarto manuscript
-        -   VS Code: In the Command Palette -- Quarto: Create Project \> Manuscript Project
+        -   RStudio: File > New Project > New Directory > Quarto Manuscript
         -   `quarto create project manuscript <name>`
     -   Add manuscript content
--   Approach 2: Start with a sample from <https://github.com/quarto-ext/manuscript-template-vscode>
+-   Approach 2: Start with a sample from <https://github.com/quarto-ext/manuscript-template-rstudio>
 
 ::: callout-tip
 ## Manuscripts ♥️ Git + GitHub
@@ -223,7 +272,7 @@ Track your project with Git and host on GitHub for easy publishing.
 ## A finished product
 
 ```{=html}
-<iframe src="https://quarto-ext.github.io/manuscript-template-vscode/" title="La Palma Earthquakes" width="1100px" height="600px"></iframe>
+<iframe src="https://github.com/quarto-ext/manuscript-template-rstudio" title="La Palma Earthquakes" width="1100px" height="600px"></iframe>
 ```
 ## Multiple formats from one source
 
@@ -307,11 +356,11 @@ from source $\rightarrow$ only relevant / required metadata in manuscript:
 
 ## Embedded computations
 
-- Perform computation in a labelled code cell in a notebook, in any language
+-   Perform computation in a labelled code cell in a notebook, in any language
 
-- Embed results of the computation with a link to the notebook with
+-   Embed results of the computation with a link to the notebook with
 
-```markdown
+``` markdown
 {{< embed name-of-notebook.qmd#fig-cell-label >}}
 {{< embed name-of-notebook.ipynd#tbl-cell-label >}}
 ```
@@ -328,17 +377,15 @@ See example at <https://github.com/quarto-ext/manuscript-template-vscode/blob/ma
 
 -   What if you wanted to *interact* with the code -- in a computational environment that's just a click away and that has all the software and packages needed to reproduce the manuscript?
 
-## **Binder with Quarto**
+## Binder with Quarto
 
 with `quarto use binder`:
 
 ![](images/manuscript-binder.png){fig-align="center"}
 
-## **Binder with Quarto**
+## Binder with Quarto
 
 ![](images/launch-binder.png){fig-align="center"}
-
-# Wrap up
 
 ## Learn more
 
@@ -349,7 +396,6 @@ with `quarto use binder`:
 ```{=html}
 <iframe src="https://quarto.org/docs/manuscripts" width="100%" height="500" style="border:2px solid #123233;" title="Quarto Manuscripts"></iframe>
 ```
-
 ## Questions
 
 ::: your-turn

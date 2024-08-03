@@ -267,14 +267,31 @@ or follow along with `hello-penguins.qmd`.
 -   Cross referencing figures and tables, with and without the visual editor
 :::
 
-## Your turn
+## Your turn {.smaller}
 
 ::: your-turn
-Open `hello-penguins.qmd` in RStudio and with the visual editor.
-Render the document.
-Update your name and re-render.
-Inspect components of the document and make one more update and re-render.
-Compare notes with neighbors about updates you've made and note any aspects of the document that are not clear after the tour and your first interaction with it.
+
+:::: {.columns}
+
+::: {.column}
+**Option 1:**
+{{< fa cloud >}} Start the project `1-rmarkdown-quarto`.
+:::
+
+::: {.column}
+**Option 2:**
+{{< fa folder >}} Launch the project in `1-rmarkdown-quarto`.
+:::
+
+::::
+
+---
+
+- Open `hello-penguins.qmd` in RStudio and with the visual editor.
+- Render the document.
+- Update your name and re-render.
+- Inspect components of the document and make one more update and re-render.
+- Compare notes with neighbors about updates you've made and note any aspects of the document that are not clear after the tour and your first interaction with it.
 :::
 
 {{< countdown minutes=5 >}}
@@ -418,9 +435,26 @@ quarto_render("document.qmd") # defaults to html
 quarto_render("document.qmd", output_format = "pdf")
 ```
 
-## Your turn
+## Your turn {.smaller}
 
 ::: your-turn
+
+:::: {.columns}
+
+::: {.column}
+**Option 1:**
+{{< fa cloud >}} Start the project `1-rmarkdown-quarto`.
+:::
+
+::: {.column}
+**Option 2:**
+{{< fa folder >}} Launch the project in `1-rmarkdown-quarto`.
+:::
+
+::::
+
+---
+
 -   Open the last .qmd file you were working on in RStudio.
 -   Compare behavior of rendering with
     -   RStudio \> Render,
@@ -458,7 +492,7 @@ quarto_render("document.qmd", output_format = "pdf")
 ## Many Quarto formats {.smaller}
 
 | Feature          | Quarto                                                                                                                                                                                                                                                  |
-|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|------------|-----------------------------------------------------------|
 | Basic Formats    | [html](https://quarto.org/docs/output-formats/html-basics.html), [pdf](https://quarto.org/docs/output-formats/pdf-basics.html), [docx](https://quarto.org/docs/output-formats/ms-word.html), [typst](https://quarto.org/docs/output-formats/typst.html) |
 | Beamer           | [beamer](https://quarto.org/docs/presentations/beamer.html)                                                                                                                                                                                             |
 | PowerPoint       | [pptx](https://quarto.org/docs/presentations/powerpoint.html)                                                                                                                                                                                           |
@@ -473,20 +507,34 @@ quarto_render("document.qmd", output_format = "pdf")
 
 : {tbl-colwidths="\[25,75\]"}
 
-## Your turn
+## Your turn {.smaller}
 
 ::: your-turn
-In RStudio, go to File \> New File \> Quarto document to create a Quarto document with HTML output.
+
+:::: {.columns}
+
+::: {.column}
+**Option 1:**
+{{< fa cloud >}} Start the project `1-rmarkdown-quarto`.
+:::
+
+::: {.column}
+**Option 2:**
+{{< fa folder >}} Launch the project in `1-rmarkdown-quarto`.
+:::
+
+::::
+
+---
+
+Go to File \> New File \> Quarto document to create a Quarto document with HTML output.
 Render the document, which will ask you to give it a name -- you can use `my-first-document.qmd`.
 
 Use the visual editor for the next steps.
 
 -   Add a title and your name as the author.
-
 -   Create two sections, one with fact you want to learn and your favorite thing about R.
-
 -   Add a table of contents.
-
 -   **Stretch goal:** Change the html theme to `sketchy`.
 :::
 

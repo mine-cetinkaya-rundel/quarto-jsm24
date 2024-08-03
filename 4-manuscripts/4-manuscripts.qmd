@@ -226,7 +226,7 @@ The project will be available to you to continue at the end of the tour.
 
 ::::
 
-Then,
+---
 
 - Add another cross-referencable code cell and cross reference it.
 - Add another citation from a DOI.

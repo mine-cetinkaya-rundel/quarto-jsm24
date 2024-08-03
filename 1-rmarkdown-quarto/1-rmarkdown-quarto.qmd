@@ -72,7 +72,6 @@ execute:
 ## About us
 
 ::: columns
-
 ::: column
 **Mine Çetinkaya-Rundel**
 
@@ -90,7 +89,6 @@ Developer Educator, Posit
 
 Developer Educator, Posit
 :::
-
 :::
 
 ::: center-align
@@ -113,7 +111,7 @@ Please share with the person next to you...
 
 ## Workshop structure
 
-:::: columns
+::: columns
 ::: {.column .fragment width="33%"}
 **My turn**
 
@@ -121,24 +119,24 @@ Please share with the person next to you...
 -   Feel free to just watch, take notes, browse docs, or tinker around with the code
 :::
 
-:::: {.column .fragment width="33%"}
+::: {.column .fragment width="33%"}
 ::: our-turn
 **Our turn**
 
 -   Lecture segments + live coding
 -   (Optionally) follow along with live coding
 :::
-::::
+:::
 
-:::: {.column .fragment width="33%"}
+::: {.column .fragment width="33%"}
 ::: your-turn
 **Your turn**
 
 -   Practice exercises for you
 -   Work on your own or with the person next to you
 :::
-::::
-:::: 
+:::
+:::
 
 ## Getting help
 
@@ -187,7 +185,7 @@ Have you completed the following?
 {{< include ../setup.qmd >}}
 :::
 
-## {.center}
+##  {.center}
 
 ::: {.hand-green-large style="text-align: center;"}
 Let's get started!
@@ -252,7 +250,9 @@ but not *just like* it, there's more to it...
 ## A tour of Quarto
 
 ::: {.hand-green style="text-align: center;"}
-Sit back and enjoy! ... or follow along with `hello-penguins.qmd`.
+Sit back and enjoy!
+...
+or follow along with `hello-penguins.qmd`.
 :::
 
 ::: {.our-turn .small}
@@ -262,7 +262,7 @@ Sit back and enjoy! ... or follow along with `hello-penguins.qmd`.
 -   Inserting images and lightbox effect
 -   Inserting tables
 -   Customizing formats: `pdf`, `docx`, `revealjs`
--   Customizing format options:  `code-fold`, `toc`
+-   Customizing format options: `code-fold`, `toc`
 -   Code cells: labels, alt-text, execution options (`echo`, `warning`)
 -   Cross referencing figures and tables, with and without the visual editor
 :::
@@ -285,11 +285,11 @@ Compare notes with neighbors about updates you've made and note any aspects of t
 
 Quarto is a command line interface (CLI) that renders plain text formats (`.qmd`, `.rmd`, `.md`) OR mixed formats (`.ipynb`/Jupyter notebook) into static PDF/Word/HTML reports, books, websites, presentations and more.
 
-```{.bash code-line-numbers="|1|4|12|17|18"}
+``` {.bash code-line-numbers="|1|4|12|17|18"}
 mine$ quarto --help
 
 Usage:   quarto
-Version: 1.5.55
+Version: 1.5.56
 
 Description:
 
@@ -457,19 +457,19 @@ quarto_render("document.qmd", output_format = "pdf")
 
 ## Many Quarto formats {.smaller}
 
-| Feature | Quarto |
-|--------------------------|----------------------------------------------|
-| Basic Formats | [html](https://quarto.org/docs/output-formats/html-basics.html), [pdf](https://quarto.org/docs/output-formats/pdf-basics.html), [docx](https://quarto.org/docs/output-formats/ms-word.html), [typst](https://quarto.org/docs/output-formats/typst.html) |
-| Beamer | [beamer](https://quarto.org/docs/presentations/beamer.html) |
-| PowerPoint | [pptx](https://quarto.org/docs/presentations/powerpoint.html) |
-| HTML Slides | [revealjs](https://quarto.org/docs/presentations/revealjs/) |
-| Advanced Layout | [Quarto Article Layout](https://quarto.org/docs/authoring/article-layout.html) |
-| Cross References | [Quarto Crossrefs](https://quarto.org/docs/authoring/cross-references.html) |
-| Websites & Blogs | [Quarto Websites](https://quarto.org/docs/websites/), [Quarto Blogs](https://quarto.org/docs/websites/website-blog.html) |
-| Books | [Quarto Books](https://quarto.org/docs/books/) |
-| Interactivity | [Quarto Interactive Documents](https://quarto.org/docs/interactive/shiny/) |
-| Journal Articles | [Journal Articles](https://quarto.org/docs/journals/index.html) |
-| Dashboards | [Quarto Dashboards](https://quarto.org/docs/dashboards/) |
+| Feature          | Quarto                                                                                                                                                                                                                                                  |
+|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Basic Formats    | [html](https://quarto.org/docs/output-formats/html-basics.html), [pdf](https://quarto.org/docs/output-formats/pdf-basics.html), [docx](https://quarto.org/docs/output-formats/ms-word.html), [typst](https://quarto.org/docs/output-formats/typst.html) |
+| Beamer           | [beamer](https://quarto.org/docs/presentations/beamer.html)                                                                                                                                                                                             |
+| PowerPoint       | [pptx](https://quarto.org/docs/presentations/powerpoint.html)                                                                                                                                                                                           |
+| HTML Slides      | [revealjs](https://quarto.org/docs/presentations/revealjs/)                                                                                                                                                                                             |
+| Advanced Layout  | [Quarto Article Layout](https://quarto.org/docs/authoring/article-layout.html)                                                                                                                                                                          |
+| Cross References | [Quarto Crossrefs](https://quarto.org/docs/authoring/cross-references.html)                                                                                                                                                                             |
+| Websites & Blogs | [Quarto Websites](https://quarto.org/docs/websites/), [Quarto Blogs](https://quarto.org/docs/websites/website-blog.html)                                                                                                                                |
+| Books            | [Quarto Books](https://quarto.org/docs/books/)                                                                                                                                                                                                          |
+| Interactivity    | [Quarto Interactive Documents](https://quarto.org/docs/interactive/shiny/)                                                                                                                                                                              |
+| Journal Articles | [Journal Articles](https://quarto.org/docs/journals/index.html)                                                                                                                                                                                         |
+| Dashboards       | [Quarto Dashboards](https://quarto.org/docs/dashboards/)                                                                                                                                                                                                |
 
 : {tbl-colwidths="\[25,75\]"}
 

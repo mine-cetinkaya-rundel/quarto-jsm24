@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "2-documents-slides/2-documents-slides.html#your-turn",
+    "href": "2-documents-slides/2-documents-slides.html#your-turn",
+    "title": "Documents and slides",
+    "section": "Your turn",
+    "text": "Your turn\n\n\n\nOption 1:  Start the project 2-documents-slides.\n\nOption 2:  Launch the project in 2-documents-slides."
+  },
+  {
     "objectID": "2-documents-slides/2-documents-slides.html#components",
     "href": "2-documents-slides/2-documents-slides.html#components",
     "title": "Documents and slides",
@@ -70,11 +77,11 @@
     "text": "Quarto YAML Intelligence\nRStudio + VSCode provide rich tab-completion - start a word and tab to complete, or Ctrl + space to see all available options."
   },
   {
-    "objectID": "2-documents-slides/2-documents-slides.html#your-turn",
-    "href": "2-documents-slides/2-documents-slides.html#your-turn",
+    "objectID": "2-documents-slides/2-documents-slides.html#your-turn-1",
+    "href": "2-documents-slides/2-documents-slides.html#your-turn-1",
     "title": "Documents and slides",
     "section": "Your turn",
-    "text": "Your turn\n\n\nOpen hello-penguins.qmd in RStudio.\nTry Ctrl + space to see the available YAML options.\nTry out the tab-completion of any options you remember.\nYou can use the HTML reference as needed.\n\n\n\n  \n    −\n    +\n \n 03:00"
+    "text": "Your turn\n\n\n\nOption 1:  Start the project 2-documents-slides.\n\nOption 2:  Launch the project in 2-documents-slides.\n\n\n\n\nOpen hello-penguins.qmd in RStudio.\nTry Ctrl + space to see the available YAML options.\nTry out the tab-completion of any options you remember.\nYou can use the HTML reference as needed.\n\n\n\n  \n    −\n    +\n \n 03:00"
   },
   {
     "objectID": "2-documents-slides/2-documents-slides.html#list-of-valid-yaml-fields",
@@ -119,8 +126,8 @@
     "text": "Quotes\nMarkdown:\n&gt; Let us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do. \n&gt; - Donald Knuth, Literate Programming\n\nOutput:\n\nLet us change our traditional attitude to the construction of programs: Instead of imagining that our main task is to instruct a computer what to do, let us concentrate rather on explaining to human beings what we want a computer to do. - Donald Knuth, Literate Programming\n\n\n\n\n“Literate Programming”, The Computer Journal 27 (1984), p. 97. (Reprinted in Literate Programming, 1992, p. 99.) Literate Programming (1984)"
   },
   {
-    "objectID": "2-documents-slides/2-documents-slides.html#your-turn-1",
-    "href": "2-documents-slides/2-documents-slides.html#your-turn-1",
+    "objectID": "2-documents-slides/2-documents-slides.html#your-turn-2",
+    "href": "2-documents-slides/2-documents-slides.html#your-turn-2",
     "title": "Documents and slides",
     "section": "Your turn",
     "text": "Your turn\n\n\nSkim the previous slides. Share one new that’s new to you with your neighbor.\nOpen markdown-syntax.qmd in RStudio.\nFollow the instructions in the document.\n\n\n\n  \n    −\n    +\n \n 08:00"
@@ -154,8 +161,8 @@
     "text": "More callouts\n\n\n\n\n\n\nWarning\n\n\nCallouts provide a simple way to attract attention, for example, to this warning.\n\n\n\n\n\n\n\n\n\nImportant\n\n\nDanger, callouts will really improve your writing.\n\n\n\n\n\n\n\n\n\nCaution\n\n\nHere is something under construction.\n\n\n\n\n\n\n\n\n\nCaption\n\n\nTip with caption."
   },
   {
-    "objectID": "2-documents-slides/2-documents-slides.html#your-turn-2",
-    "href": "2-documents-slides/2-documents-slides.html#your-turn-2",
+    "objectID": "2-documents-slides/2-documents-slides.html#your-turn-3",
+    "href": "2-documents-slides/2-documents-slides.html#your-turn-3",
     "title": "Documents and slides",
     "section": "Your turn",
     "text": "Your turn\n\n\nOpen callout-boxes.qmd and render the document.\nUsing the visual editor, change the type of the first callouts box and then re-render. Also play with the options to change its appearance.\nAdd a caption to the second callout box.\nMake the third callout box collapsible. Then, switch over to the source editor to inspect the markdown code.\nChange the format to PDF and re-render.\n\n\n\n  \n    −\n    +\n \n 03:00"
@@ -343,8 +350,8 @@
     "text": "Table cross references\nThe presence of the caption (A few penguins) and label (#tbl-penguins) make this table referenceable:\n\n\nMarkdown:\nSee @tbl-penguins for data on a few penguins.\n\n```{r}\n#| label: tbl-penguins\n#| tbl-cap: A few penguins\n\nhead(penguins) |&gt; \n  gt()\n```\n\nOutput:\nSee Table 1 for data on a few penguins.\n\nhead(penguins) |&gt; \n  gt()\n\n\n\nTable 1: A few penguins\n\n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\nAdelie\nTorgersen\n39.1\n18.7\n181\n3750\nmale\n2007\n\n\nAdelie\nTorgersen\n39.5\n17.4\n186\n3800\nfemale\n2007\n\n\nAdelie\nTorgersen\n40.3\n18.0\n195\n3250\nfemale\n2007\n\n\nAdelie\nTorgersen\nNA\nNA\nNA\nNA\nNA\n2007\n\n\nAdelie\nTorgersen\n36.7\n19.3\n193\n3450\nfemale\n2007\n\n\nAdelie\nTorgersen\n39.3\n20.6\n190\n3650\nmale\n2007"
   },
   {
-    "objectID": "2-documents-slides/2-documents-slides.html#your-turn-3",
-    "href": "2-documents-slides/2-documents-slides.html#your-turn-3",
+    "objectID": "2-documents-slides/2-documents-slides.html#your-turn-4",
+    "href": "2-documents-slides/2-documents-slides.html#your-turn-4",
     "title": "Documents and slides",
     "section": "Your turn",
     "text": "Your turn\n\n\nOpen tables-figures.qmd.\nFollow the instructions in the document, then exchange one new thing you’ve learned with your neighbor.\n\n\n\n  \n    −\n    +\n \n 10:00"
@@ -364,8 +371,8 @@
     "text": "Our turn\n\nLet’s build a presentation together from hello-penguins-slides.qmd and showcase the following features of Quarto presentations:\n\nHierarchy, headers, and document outline\nIncremental lists\nColumns\nCode, output location, code highlighting\nLogo and footer\nMaking things fit on a slide\nChalkboard\nPublishing your presentation to Quarto Pub"
   },
   {
-    "objectID": "2-documents-slides/2-documents-slides.html#your-turn-4",
-    "href": "2-documents-slides/2-documents-slides.html#your-turn-4",
+    "objectID": "2-documents-slides/2-documents-slides.html#your-turn-5",
+    "href": "2-documents-slides/2-documents-slides.html#your-turn-5",
     "title": "Documents and slides",
     "section": "Your turn",
     "text": "Your turn\n\nPick up where we left off and\n\nChange the transition style between slides\nChange the slide size\nAdd slide numbers\n\n\n\n  \n    −\n    +\n \n 10:00"
@@ -844,7 +851,7 @@
     "href": "setup.html",
     "title": "Setup instructions",
     "section": "",
-    "text": "Download and install the latest versions of R, RStudio, and Quarto:\n\nR 4.4.1 or above: https://cran.r-project.org\nRStudio 2024.04.2+764 or above: https://posit.co/download/rstudio-desktop\nQuarto 1.5.56: https://quarto.org/docs/get-started\n\nInstall the following packages:\n\n\npkg_list &lt;- c(\n  \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n)\ninstall.packages(pkg_list)\n\n\nDownload exercises.zip at and unzip it on your Desktop or somewhere you can easily locate on your computer.",
+    "text": "Download and install the latest versions of R, RStudio, and Quarto:\n\nR 4.4.1 or above: https://cran.r-project.org\nRStudio 2024.04.2+764 or above: https://posit.co/download/rstudio-desktop\nQuarto 1.5.56: https://quarto.org/docs/get-started\n\nInstall the following packages:\n\npkg_list &lt;- c(\n  \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n)\ninstall.packages(pkg_list)\n\nDownload exercises.zip at and unzip it on your Desktop or somewhere you can easily locate on your computer.",
     "crumbs": [
       "Setup"
     ]

@@ -43,8 +43,6 @@ execute:
 ::: our-turn
 Let's build a website together from all of the documents we've created so far and highlight the following features of Quarto websites:
 
--   **Terminal:** `quarto create project`
-
 -   `_quarto.yml`
 
 -   `index.qmd` / landing page
@@ -55,6 +53,35 @@ Let's build a website together from all of the documents we've created so far an
 
 -   Publishing: `quarto publish`
 :::
+
+## Our turn: Code snippets
+
+::: {.columns}
+::: {.column}
+```{.yaml filename="_quarto.yml"}
+project:
+  type: website
+
+website:
+  title: "default"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+```
+:::
+::: {.column}
+````{.markdown filename="index.qmd"}
+---
+title: "default"
+---
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+````
+:::
+::: 
 
 ## Your turn
 
@@ -161,34 +188,7 @@ Let's build a book together from all of the documents we've created so far and h
 
 :::
 
-## Our turn: Code snippets
 
-::: {.columns}
-::: {.column}
-```{.yaml filename="_quarto.yml"}
-project:
-  type: website
-
-website:
-  title: "default"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-```
-:::
-::: {.column}
-````{.markdown filename="index.qmd"}
----
-title: "default"
----
-
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-````
-:::
-::: 
 
 ## Your turn
 

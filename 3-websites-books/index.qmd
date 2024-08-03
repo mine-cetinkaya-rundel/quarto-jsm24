@@ -11,4 +11,4 @@ title: "Creating websites and books with Quarto"
 ```
 ## Exercises
 
-<a href="https://raw.githubusercontent.com/mine-cetinkaya-rundel/quarto-asa-nebraska/main/exercises/hello-penguins-slides.qmd">{{< fa download >}} `hello-penguins-slides.qmd`</i></a>
+For exercises in this module we'll use all the documents we've created so far.

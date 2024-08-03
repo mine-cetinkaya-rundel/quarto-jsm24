@@ -40,31 +40,30 @@ execute:
 
 ## Our turn
 
-::: task
+::: our-turn
 Let's build a website together from all of the documents we've created so far and highlight the following features of Quarto websites:
+
+-   **Terminal:** `quarto create project`
 
 -   `_quarto.yml`
 
 -   `index.qmd` / landing page
 
--   Navigation
-
--   Freeze
+-   Navigation: `left` and `right` under `navbar`; `contents` under `sidebar`.
 
 -   Themes and dark theme toggle
 
--   Publishing
-
--   An aspect of the workshop webpage that you fancy?
+-   Publishing: `quarto publish`
 :::
 
 ## Your turn
 
-::: task
+::: your-turn
 Pick up where we left off and
 
 -   Add an [about page](https://quarto.org/docs/websites/website-about.html).
--   Add a folder called `posts` and create a few minimal blog post entries. Then, using the [listings feature](https://quarto.org/docs/websites/website-listings.html), create a blog page for your website.
+-   Look at the [`_quarto.yml` for the workshop site](https://github.com/mine-cetinkaya-rundel/quarto-jsm24/blob/main/_quarto.yml). Find something you like and add it to your site.
+
 :::
 
 {{< countdown minutes=15 >}}
@@ -73,22 +72,22 @@ Pick up where we left off and
 
 ## Freeze {.smaller}
 
+::: incremental
 -   The `freeze` option controls when/if computational documents be re-rendered during a global project render:
+    -  ``` {.yaml}
+       execute:
+         freeze: true # never re-render during project render
+       ```
 
-``` yaml
-execute:
-  freeze: true  # never re-render during project render
-```
+    -  ``` yaml
+       execute:
+         freeze: auto  # re-render when source file changes
+       ```
 
-``` yaml
-execute:
-  freeze: auto  # re-render only when source changes
-```
-
-``` yaml
-execute:
-  freeze: false  # always re-render
-```
+    -  ``` yaml
+      execute:
+        freeze: false  # always re-render
+      ```
 
 -   The `freeze` option is typically added to a `_metadata.yml` file within a specific directory, affecting all files in that directory.
 
@@ -96,18 +95,112 @@ execute:
 
 -   You can have it only within specific subdirectories for more complex sites.
 
+:::
+
 ## Freeze vs. cache
 
 -   Cache stores the results of computations for a specific file.
 
 -   Cache invalidation is triggered by changes in chunk source code (or other cache attributes you've defined).
 
--   `cache` can also be set at the chunk level.
-    Consider using the cache for computationally expensive chunks.
+-   `cache` can also be set at the chunk level. Consider using the cache for computationally expensive chunks.
 
 ## Publishing
 
 See <https://quarto.org/docs/publishing> for publishing options other than Quarto Pub.
+
+# Books
+
+## Quarto books
+
+-   Books and websites are very similar in that they associate multiple pages/resources into a connected resource
+
+::: {.columns}
+::: {.column}
+Website
+```{.yaml filename="_quarto.yml"}
+project:
+  type: website
+
+website: 
+  navbar:
+    left:
+      - index.qmd
+      - hello-penguins.qmd
+```
+:::
+::: {.column}
+Book
+```{.yaml filename="_quarto.yml"}
+project:
+  type: book
+
+book: 
+  chapters:
+    - index.qmd
+    - hello-penguins.qmd
+```
+:::
+::: 
+
+## Our turn
+
+::: {.our-turn}
+
+Let's build a book together from all of the documents we've created so far and highlight the following features of Quarto books:
+
+-   `_quarto.yml`
+
+-   `index.qmd` / landing page / change landing page
+
+-   Add a PDF version
+
+-   Cross references
+
+-   Sections
+
+:::
+
+## Our turn: Code snippets
+
+::: {.columns}
+::: {.column}
+```{.yaml filename="_quarto.yml"}
+project:
+  type: website
+
+website:
+  title: "default"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+```
+:::
+::: {.column}
+````{.markdown filename="index.qmd"}
+---
+title: "default"
+---
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+````
+:::
+::: 
+
+## Your turn
+
+::: {.your-turn}
+Pick up where we left off and
+
+-   Give a [title](https://quarto.org/docs/books/book-structure.html#overview) to your book.
+-   Try [dividing the chapters in to Parts](https://quarto.org/docs/books/book-structure.html#parts-appendices) 
+-   Add a numbered figure to chapter, and cross-reference it from another chapter
+:::
+
+{{< countdown 10:00 >}}
 
 # Wrap up
 

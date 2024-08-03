@@ -23,3 +23,12 @@ $input-bg: #242424;
 
 
 /*-- scss:rules --*/
+
+.sidebar a{
+  border-bottom: 1px solid transparent;
+
+  &:hover{
+    color: $link-color;
+    border-bottom: 1px solid $link-color;
+  }
+}

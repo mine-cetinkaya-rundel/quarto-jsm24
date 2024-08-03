@@ -24,6 +24,24 @@ execute:
   echo: true
 ---
 
+::: your-turn
+
+:::: {.columns}
+
+::: {.column}
+**Option 1:**
+{{< fa cloud >}} Start the project `3-websites-books`.
+:::
+
+::: {.column}
+**Option 2:**
+{{< fa folder >}} Launch the project in `3-websites-books`.
+:::
+
+::::
+
+::: 
+
 # Anatomy of a Quarto project
 
 ## Quarto projects

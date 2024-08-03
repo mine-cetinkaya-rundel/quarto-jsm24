@@ -1,0 +1,21 @@
+{
+  "hash": "284104413a7b56d78a4036986248ba71",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Hello, Penguins!\"\nformat: pdf\neditor: visual\n---\n\n\n\n## Data\n\nFor this analysis we'll use the penguins dataset from the palmerpenguins package.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\nlibrary(ggthemes)\nlibrary(palmerpenguins)\nlibrary(gt)\n```\n:::\n\n\n\n## Species\n\nThe figure below is a bar plot of species of penguins.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nggplot(\n  penguins,\n  aes(\n    x = bill_length_mm, y = bill_depth_mm,\n    color = species, shape = species\n  )\n) +\n  geom_point() +\n  scale_color_colorblind() +\n  labs(x = \"Bill length (mm)\", y = \"Bill depth (mm)\") +\n  theme_minimal()\n```\n\n::: {.cell-output-display}\n![](hello-penguins_files/figure-pdf/bill-dims-species-1.pdf){fig-pos='H'}\n:::\n:::\n\n\n\n## Penguins\n\nThe table below shows the first 10 penguins from the dataset.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\npenguins |>\n  slice_head(n = 10) |>\n  select(species, island, bill_length_mm, bill_depth_mm) |>\n  gt()\n```\n\n::: {.cell-output-display}\n\\begin{longtable}{ccrr}\n\\toprule\nspecies & island & bill\\_length\\_mm & bill\\_depth\\_mm \\\\ \n\\midrule\\addlinespace[2.5pt]\nAdelie & Torgersen & 39.1 & 18.7 \\\\ \nAdelie & Torgersen & 39.5 & 17.4 \\\\ \nAdelie & Torgersen & 40.3 & 18.0 \\\\ \nAdelie & Torgersen & NA & NA \\\\ \nAdelie & Torgersen & 36.7 & 19.3 \\\\ \nAdelie & Torgersen & 39.3 & 20.6 \\\\ \nAdelie & Torgersen & 38.9 & 17.8 \\\\ \nAdelie & Torgersen & 39.2 & 19.6 \\\\ \nAdelie & Torgersen & 34.1 & 18.1 \\\\ \nAdelie & Torgersen & 42.0 & 20.2 \\\\ \n\\bottomrule\n\\end{longtable}\n\n:::\n:::\n",
+    "supporting": [
+      "hello-penguins_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "\\usepackage{booktabs}\n\\usepackage{caption}\n\\usepackage{longtable}\n\\usepackage{colortbl}\n\\usepackage{array}\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": null,
+    "postProcess": false
+  }
+}

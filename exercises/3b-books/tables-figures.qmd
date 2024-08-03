@@ -1,0 +1,45 @@
+---
+title: "Tables and figures"
+format: html
+---
+
+1.  Create a 3 row x 2 col table, populate with a column for restaurant + column for cuisine, and then add 3 examples. Then, cross reference it from text.
+
+See @tbl-restaurants for some restaurants I like:
+
+| Restaurant         | Cuisine  |
+|--------------------|----------|
+| Block15            | Pub food |
+| La Rockita         | Mexican  |
+| Queen's Chopsticks | Chinese  |
+
+: Restaurants {#tbl-restaurants}
+
+2.  Include the R logo and the Quarto logo from the `images/` folder as subfigures of a single figure.
+
+::: {#fig-logos layout-ncol=2}
+
+![R Logo](images/r-logo.png)
+
+![Quarto Logo](images/quarto-logo.png)
+
+Some logos
+:::
+
+2.  Add a figure generated from code and cross reference it.
+
+Adelie penguins are the most prevalent in this data (@fig-species).
+
+```{r}
+#| label: fig-species
+#| fig-cap: "Prevalance of three species in the data"
+#| fig-width: 6
+#| fig-asp: 0.618
+
+library(ggplot2)
+library(palmerpenguins)
+
+ggplot(penguins, aes(x = species, fill = species)) +
+  geom_bar(show.legend = FALSE)
+```
+

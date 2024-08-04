@@ -861,14 +861,14 @@
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#while-you-wait-for-the-workshop-to-begin",
     "title": "Setup instructions",
     "section": "While you wait for the workshop to begin…",
-    "text": "While you wait for the workshop to begin…\n\n\nDownload and install the latest versions of R, RStudio, and Quarto:\n\nR 4.4.1 or above: https://cran.r-project.org\nRStudio 2024.04.2+764 or above: https://posit.co/download/rstudio-desktop\nQuarto 1.5.55: https://quarto.org/docs/get-started\n\nInstall the following packages:\n\n\npkg_list &lt;- c(\n  \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n)\ninstall.packages(pkg_list)\n\n[TO DO: Update packages]\n\nDownload exercises.zip at [TO DO: Add link] and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio &gt; File &gt; New Project &gt; Existing Directory and navigate to the unzipped exercises folder and create an RStudio project in there and open it."
+    "text": "While you wait for the workshop to begin…\n\nbit.ly/quarto-jsm24\n\n\n\nDownload and install the latest versions of R, RStudio, and Quarto:\n\nR 4.4.1 or above: https://cran.r-project.org\nRStudio 2024.04.2+764 or above: https://posit.co/download/rstudio-desktop\nQuarto 1.5.56: https://quarto.org/docs/get-started\n\nInstall the following packages:\n\n\npkg_list &lt;- c(\n  \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n)\ninstall.packages(pkg_list)\n\n\nDownload exercises.zip at and unzip it on your Desktop or somewhere you can easily locate on your computer."
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#logistics",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#logistics",
     "title": "Setup instructions",
     "section": "Logistics",
-    "text": "Logistics\n[TO DO: Fill in details]\n\nWiFi: ____\nExits: ____\nRestrooms: ____"
+    "text": "Logistics\n\nWiFi: JSM2024 / Password: abbvie24\nExits: 2 in the back, 1 in the front of the room\nRestrooms: Out the hallway, to the left"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#code-of-conduct",
@@ -906,6 +906,13 @@
     "text": "Workshop structure\n\n\nMy turn\n\nLecture segments\nFeel free to just watch, take notes, browse docs, or tinker around with the code\n\n\n\nOur turn\n\nLecture segments + live coding\n(Optionally) follow along with live coding\n\n\n\n\nYour turn\n\nPractice exercises for you\nWork on your own or with the person next to you"
   },
   {
+    "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#schedule",
+    "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#schedule",
+    "title": "Setup instructions",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\n\n\n\n\nTime\nModule\n\n\n\n\n08:30 - 10:15\nFrom R Markdown to Quarto\n\n\n10:15 - 10:30\nBreak\n\n\n10:30 - 12:30\nCreating computational documents and slides with Quarto\n\n\n12:30 - 14:00\nLunch\n\n\n14:00 - 15:15\nCreating websites and books with Quarto\n\n\n15:15 - 15:30\nBreak\n\n\n15:30 - 17:00\nAuthoring manuscripts with Quarto"
+  },
+  {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#getting-help",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#getting-help",
     "title": "Setup instructions",
@@ -924,7 +931,7 @@
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#checking-in-one-more-time",
     "title": "Setup instructions",
     "section": "Checking in one more time",
-    "text": "Checking in one more time\nHave you completed the following?\n\n\nDownload and install the latest versions of R, RStudio, and Quarto:\n\nR 4.4.1 or above: https://cran.r-project.org\nRStudio 2024.04.2+764 or above: https://posit.co/download/rstudio-desktop\nQuarto 1.5.55: https://quarto.org/docs/get-started\n\nInstall the following packages:\n\n\npkg_list &lt;- c(\n  \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n)\ninstall.packages(pkg_list)\n\n[TO DO: Update packages]\n\nDownload exercises.zip at [TO DO: Add link] and unzip it on your Desktop or somewhere you can easily locate on your computer. Then, go to RStudio &gt; File &gt; New Project &gt; Existing Directory and navigate to the unzipped exercises folder and create an RStudio project in there and open it."
+    "text": "Checking in one more time\nHave you completed the following?\n\n\nDownload and install the latest versions of R, RStudio, and Quarto:\n\nR 4.4.1 or above: https://cran.r-project.org\nRStudio 2024.04.2+764 or above: https://posit.co/download/rstudio-desktop\nQuarto 1.5.56: https://quarto.org/docs/get-started\n\nInstall the following packages:\n\n\npkg_list &lt;- c(\n  \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n)\ninstall.packages(pkg_list)\n\n\nDownload exercises.zip at and unzip it on your Desktop or somewhere you can easily locate on your computer."
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#section",

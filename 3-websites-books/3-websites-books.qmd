@@ -24,6 +24,14 @@ execute:
   echo: true
 ---
 
+## Before we move on...Publishing
+
+```{.yaml filename="Terminal"}
+quarto publish hello-penguins.qmd
+```
+
+## Open the next module
+
 ::: your-turn
 
 :::: {.columns}
@@ -136,7 +144,7 @@ Pick up where we left off and
 
 -   The `freeze` option is typically added to a `_metadata.yml` file within a specific directory, affecting all files in that directory.
 
--   For blogs, set `feeze` in `_metadata.yml` at the root of the `posts` directory.
+-   For blogs, set `freeze` in `_metadata.yml` at the root of the `posts` directory.
 
 -   You can have it only within specific subdirectories for more complex sites.
 
@@ -215,7 +223,7 @@ Pick up where we left off and
 
 -   Give a [title](https://quarto.org/docs/books/book-structure.html#overview) to your book.
 -   Try [dividing the chapters in to Parts](https://quarto.org/docs/books/book-structure.html#parts-appendices) 
--   Add a numbered figure to chapter, and cross-reference it from another chapter
+-   Cross reference a figure (e.g. the one in `tables-figures.qmd`) from another chapter.
 :::
 
 {{< countdown 10:00 >}}

@@ -663,6 +663,20 @@
     ]
   },
   {
+    "objectID": "3-websites-books/3-websites-books.html#before-we-move-onpublishing",
+    "href": "3-websites-books/3-websites-books.html#before-we-move-onpublishing",
+    "title": "Websites and books",
+    "section": "Before we move on…Publishing",
+    "text": "Before we move on…Publishing\n\n\nTerminal\n\nquarto publish hello-penguins.qmd"
+  },
+  {
+    "objectID": "3-websites-books/3-websites-books.html#open-the-next-module",
+    "href": "3-websites-books/3-websites-books.html#open-the-next-module",
+    "title": "Websites and books",
+    "section": "Open the next module",
+    "text": "Open the next module\n\n\n\nOption 1:  Start the project 3-websites-books.\n\nOption 2:  Launch the project in 3-websites-books."
+  },
+  {
     "objectID": "3-websites-books/3-websites-books.html#quarto-projects",
     "href": "3-websites-books/3-websites-books.html#quarto-projects",
     "title": "Websites and books",
@@ -695,7 +709,7 @@
     "href": "3-websites-books/3-websites-books.html#freeze",
     "title": "Websites and books",
     "section": "Freeze",
-    "text": "Freeze\n\n\nThe freeze option controls when/if computational documents be re-rendered during a global project render:\n\n   execute:\n     freeze: true # never re-render during project render\n   execute:\n     freeze: auto  # re-render when source file changes\n  execute:\n    freeze: false  # always re-render\n\nThe freeze option is typically added to a _metadata.yml file within a specific directory, affecting all files in that directory.\nFor blogs, set feeze in _metadata.yml at the root of the posts directory.\nYou can have it only within specific subdirectories for more complex sites."
+    "text": "Freeze\n\n\nThe freeze option controls when/if computational documents be re-rendered during a global project render:\n\n   execute:\n     freeze: true # never re-render during project render\n   execute:\n     freeze: auto  # re-render when source file changes\n  execute:\n    freeze: false  # always re-render\n\nThe freeze option is typically added to a _metadata.yml file within a specific directory, affecting all files in that directory.\nFor blogs, set freeze in _metadata.yml at the root of the posts directory.\nYou can have it only within specific subdirectories for more complex sites."
   },
   {
     "objectID": "3-websites-books/3-websites-books.html#freeze-vs.-cache",
@@ -730,7 +744,7 @@
     "href": "3-websites-books/3-websites-books.html#your-turn-1",
     "title": "Websites and books",
     "section": "Your turn",
-    "text": "Your turn\n\nPick up where we left off and\n\nGive a title to your book.\nTry dividing the chapters in to Parts\nAdd a numbered figure to chapter, and cross-reference it from another chapter\n\n\n\n  \n    −\n    +\n \n 10:00"
+    "text": "Your turn\n\nPick up where we left off and\n\nGive a title to your book.\nTry dividing the chapters in to Parts\nCross reference a figure (e.g. the one in tables-figures.qmd) from another chapter.\n\n\n\n  \n    −\n    +\n \n 10:00"
   },
   {
     "objectID": "3-websites-books/3-websites-books.html#questions",

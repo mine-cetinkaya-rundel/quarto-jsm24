@@ -44,7 +44,7 @@ execute:
 
 -   Exits: 2 in the back, 1 in the front of the room
 
--   Restrooms: Out the hallway, to the left
+-   Restrooms: Out the hallway, to the right
 
 ## Code of Conduct {.smaller}
 
@@ -154,12 +154,7 @@ Please share with the person next to you...
 
 ## Getting help
 
--   During **my turn** and **our turn** segments -- raise your hand
-
--   During **your turn** segments -- also feel free to raise your hand for questions but use the stickies to signal:
-
-    -   Light green: I'd like some help / I'm stuck / I'm lost
-    -   Dark green: I'm done
+Just raise your hand!
 
 # Hello Quarto
 

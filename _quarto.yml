@@ -23,7 +23,7 @@ website:
     align: center
     tools:
       - icon: github
-        href: https://github.com/mine-cetinkaya-rundel/quarto-asa
+        href: https://github.com/mine-cetinkaya-rundel/quarto-jsm24
         text: "GitHub organization"
       - icon: code-square
         href: https://posit.cloud

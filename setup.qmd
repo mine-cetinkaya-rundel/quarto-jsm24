@@ -2,6 +2,12 @@
 title: "Setup instructions"
 ---
 
+**Option 1:** (Cloud - Recommended)
+
+Go to <https://bit.ly/quarto-jsm24-cloud>, create an account, and join the workspace.
+
+**Option 2:** (Local)
+
 -   Download and install the latest versions of R, RStudio, and Quarto:
 
     -   R `4.4.1` or above: <https://cran.r-project.org>

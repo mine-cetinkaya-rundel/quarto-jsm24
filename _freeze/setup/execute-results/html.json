@@ -1,11 +1,9 @@
 {
-  "hash": "be56e9b200cc93256f285aa26a7ee9e2",
+  "hash": "d5328f05f2ff6fa3cf3560c6b96c4fea",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"Setup instructions\"\n---\n\n\n\n\n-   Download and install the latest versions of R, RStudio, and Quarto:\n\n    -   R `4.4.1` or above: <https://cran.r-project.org>\n    -   RStudio `2024.04.2+764` or above: <https://posit.co/download/rstudio-desktop>\n    -   Quarto `1.5.56`: <https://quarto.org/docs/get-started>\n\n-   Install the following packages:\n\n\n\n\n    ::: {.cell}\n    \n    ```{.r .cell-code}\n    pkg_list <- c(\n      \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n    )\n    install.packages(pkg_list)\n    ```\n    :::\n\n\n\n\n-   Download [`exercises.zip`](exercises.zip) at and unzip it on your Desktop or somewhere you can easily locate on your computer.\n",
-    "supporting": [
-      "setup_files"
-    ],
+    "markdown": "---\ntitle: \"Setup instructions\"\n---\n\n\n\n\n**Option 1:** (Cloud - Recommended)\n\nGo to <https://bit.ly/quarto-jsm24-cloud>, create an account, and join the workspace.\n\n**Option 2:** (Local)\n\n-   Download and install the latest versions of R, RStudio, and Quarto:\n\n    -   R `4.4.1` or above: <https://cran.r-project.org>\n    -   RStudio `2024.04.2+764` or above: <https://posit.co/download/rstudio-desktop>\n    -   Quarto `1.5.56`: <https://quarto.org/docs/get-started>\n\n-   Install the following packages:\n\n\n\n\n    ::: {.cell}\n    \n    ```{.r .cell-code}\n    pkg_list <- c(\n      \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n    )\n    install.packages(pkg_list)\n    ```\n    :::\n\n\n\n\n-   Download [`exercises.zip`](exercises.zip) at and unzip it on your Desktop or somewhere you can easily locate on your computer.\n",
+    "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

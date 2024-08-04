@@ -10,13 +10,13 @@ title: "Setup instructions"
 
 -   Install the following packages:
 
-```{r}
-#| eval: false
+    ```{r}
+    #| eval: false
 
-pkg_list <- c(
-  "tidyverse", "gt", "ggthemes", "palmerpenguins", "quarto", "here"
-)
-install.packages(pkg_list)
-```
+    pkg_list <- c(
+      "tidyverse", "gt", "ggthemes", "palmerpenguins", "quarto", "here"
+    )
+    install.packages(pkg_list)
+    ```
 
--   Download `exercises.zip` at and unzip it on your Desktop or somewhere you can easily locate on your computer.
+-   Download [`exercises.zip`](exercises.zip) at and unzip it on your Desktop or somewhere you can easily locate on your computer.

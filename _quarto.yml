@@ -2,6 +2,9 @@ project:
   type: website
   resources:
     - exercises.zip
+  render:
+    - "*.qmd"
+    - "!exercises/"
 
 website:
   page-navigation: true

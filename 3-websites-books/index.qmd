@@ -9,6 +9,3 @@ title: "Creating websites and books with Quarto"
 ```{=html}
 <iframe class="slide-deck" src="3-websites-books.html" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
 ```
-## Exercises
-
-For exercises in this module we'll use all the documents we've created so far.

@@ -24,6 +24,26 @@ execute:
   echo: true
 ---
 
+## Your turn {.smaller}
+
+::: your-turn
+
+:::: {.columns}
+
+::: {.column}
+**Option 1:**
+{{< fa cloud >}} Start the project `2-documents-slides`.
+:::
+
+::: {.column}
+**Option 2:**
+{{< fa folder >}} Launch the project in `2-documents-slides`.
+:::
+
+::::
+
+::: 
+
 # Anatomy of a Quarto document {#quarto-anatomy}
 
 ## Components
@@ -231,7 +251,23 @@ RStudio + VSCode provide rich tab-completion - start a word and tab to complete,
 ![](images/quarto-tab-complete.png){fig-align="center" width="600"}
 
 ## Your turn
+::: your-turn
 
+:::: {.columns}
+
+::: {.column}
+**Option 1:**
+{{< fa cloud >}} Start the project `2-documents-slides`.
+:::
+
+::: {.column}
+**Option 2:**
+{{< fa folder >}} Launch the project in `2-documents-slides`.
+:::
+
+::::
+
+::: 
 ::: {.your-turn}
 -   Open `hello-penguins.qmd` in RStudio.
 -   Try <kbd>`Ctrl + space`</kbd> to see the available YAML options.
@@ -868,26 +904,6 @@ In places like markdown, YAML, or the command line/shell/terminal, you'll need t
 
     -   `"../` = up one directory, `../../` = up two directories, etc.
     -   `/..` or `/` = start from `root` directory of your current computer
-
-## Figures with code
-
-```{r}
-#| echo: fenced
-#| fig-width: 4
-#| fig-align: right
-
-knitr::include_graphics("images/penguins-quarto-ball.png")
-```
-
-## Referencing paths in R code
-
-Use the **here** package to reference the project root, as `here::here()` always starts at the top-level directory of a `.Rproj`:
-
-```{r}
-here::here()
-
-list.files(here::here())
-```
 
 ## Figures from code
 

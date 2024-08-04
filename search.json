@@ -674,7 +674,7 @@
     "href": "3-websites-books/3-websites-books.html#open-the-next-module",
     "title": "Websites and books",
     "section": "Open the next module",
-    "text": "Open the next module\n\n\n\nOption 1:  Start the project 3-websites-books.\n\nOption 2:  Launch the project in 3-websites-books."
+    "text": "Open the next module\n\n\n\nOption 1:  Start the project 3a-websites.\n\nOption 2:  Launch the project in 3a-websites."
   },
   {
     "objectID": "3-websites-books/3-websites-books.html#quarto-projects",
@@ -702,7 +702,7 @@
     "href": "3-websites-books/3-websites-books.html#your-turn",
     "title": "Websites and books",
     "section": "Your turn",
-    "text": "Your turn\n\nPick up where we left off and\n\nAdd an about page.\nLook at the _quarto.yml for the workshop site. Find something you like and add it to your site.\n\n\n\n  \n    −\n    +\n \n 15:00"
+    "text": "Your turn\n\n\n\nOption 1:  Go back to the project 3a-websites-books.\n\nOption 2:  Go back to the project in 3a-websites-books.\n\n\nPick up where we left off and\n\nAdd an about page.\nLook at the _quarto.yml for the workshop site. Find something you like and add it to your site.\n\n\n\n  \n    −\n    +\n \n 15:00"
   },
   {
     "objectID": "3-websites-books/3-websites-books.html#freeze",
@@ -744,7 +744,7 @@
     "href": "3-websites-books/3-websites-books.html#your-turn-1",
     "title": "Websites and books",
     "section": "Your turn",
-    "text": "Your turn\n\nPick up where we left off and\n\nGive a title to your book.\nTry dividing the chapters in to Parts\nCross reference a figure (e.g. the one in tables-figures.qmd) from another chapter.\n\n\n\n  \n    −\n    +\n \n 10:00"
+    "text": "Your turn\n\n\n\nOption 1:  Start the project 3b-books.\n\nOption 2:  Launch the project in 3b-books.\n\n\nPick up where we left off and\n\nGive a title to your book.\nTry dividing the chapters in to Parts\nCross reference a figure (e.g. the one in tables-figures.qmd) from another chapter.\n\n\n\n  \n    −\n    +\n \n 10:00"
   },
   {
     "objectID": "3-websites-books/3-websites-books.html#questions",

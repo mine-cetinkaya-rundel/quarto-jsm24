@@ -851,7 +851,7 @@
     "href": "setup.html",
     "title": "Setup instructions",
     "section": "",
-    "text": "Download and install the latest versions of R, RStudio, and Quarto:\n\nR 4.4.1 or above: https://cran.r-project.org\nRStudio 2024.04.2+764 or above: https://posit.co/download/rstudio-desktop\nQuarto 1.5.56: https://quarto.org/docs/get-started\n\nInstall the following packages:\n\npkg_list &lt;- c(\n  \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n)\ninstall.packages(pkg_list)\n\nDownload exercises.zip at and unzip it on your Desktop or somewhere you can easily locate on your computer.",
+    "text": "Option 1: (Cloud - Recommended)\nGo to https://bit.ly/quarto-jsm24-cloud, create an account, and join the workspace.\nOption 2: (Local)\n\nDownload and install the latest versions of R, RStudio, and Quarto:\n\nR 4.4.1 or above: https://cran.r-project.org\nRStudio 2024.04.2+764 or above: https://posit.co/download/rstudio-desktop\nQuarto 1.5.56: https://quarto.org/docs/get-started\n\nInstall the following packages:\n\npkg_list &lt;- c(\n  \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n)\ninstall.packages(pkg_list)\n\nDownload exercises.zip at and unzip it on your Desktop or somewhere you can easily locate on your computer.",
     "crumbs": [
       "Setup"
     ]

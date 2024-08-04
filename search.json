@@ -861,14 +861,14 @@
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#while-you-wait-for-the-workshop-to-begin",
     "title": "Setup instructions",
     "section": "While you wait for the workshop to begin…",
-    "text": "While you wait for the workshop to begin…\n\nbit.ly/quarto-jsm24\n\n\n\nDownload and install the latest versions of R, RStudio, and Quarto:\n\nR 4.4.1 or above: https://cran.r-project.org\nRStudio 2024.04.2+764 or above: https://posit.co/download/rstudio-desktop\nQuarto 1.5.56: https://quarto.org/docs/get-started\n\nInstall the following packages:\n\n\npkg_list &lt;- c(\n  \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n)\ninstall.packages(pkg_list)\n\n\nDownload exercises.zip at and unzip it on your Desktop or somewhere you can easily locate on your computer."
+    "text": "While you wait for the workshop to begin…\n\nbit.ly/quarto-jsm24\n\n\nOption 1: (Cloud - Recommended)\nGo to https://bit.ly/quarto-jsm24-cloud, create an account, and join the workspace.\nOption 2: (Local)\n\nDownload and install the latest versions of R, RStudio, and Quarto:\n\nR 4.4.1 or above: https://cran.r-project.org\nRStudio 2024.04.2+764 or above: https://posit.co/download/rstudio-desktop\nQuarto 1.5.56: https://quarto.org/docs/get-started\n\nInstall the following packages:\n\npkg_list &lt;- c(\n  \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n)\ninstall.packages(pkg_list)\n\nDownload exercises.zip at and unzip it on your Desktop or somewhere you can easily locate on your computer."
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#logistics",
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#logistics",
     "title": "Setup instructions",
     "section": "Logistics",
-    "text": "Logistics\n\nWiFi: JSM2024 / Password: abbvie24\nExits: 2 in the back, 1 in the front of the room\nRestrooms: Out the hallway, to the left"
+    "text": "Logistics\n\nWiFi: JSM2024 / Password: abbvie24\nExits: 2 in the back, 1 in the front of the room\nRestrooms: Out the hallway, to the right"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#code-of-conduct",
@@ -917,7 +917,7 @@
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#getting-help",
     "title": "Setup instructions",
     "section": "Getting help",
-    "text": "Getting help\n\nDuring my turn and our turn segments – raise your hand\nDuring your turn segments – also feel free to raise your hand for questions but use the stickies to signal:\n\nLight green: I’d like some help / I’m stuck / I’m lost\nDark green: I’m done"
+    "text": "Getting help\nJust raise your hand!"
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#meeting-you-where-you-are",
@@ -931,7 +931,7 @@
     "href": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#checking-in-one-more-time",
     "title": "Setup instructions",
     "section": "Checking in one more time",
-    "text": "Checking in one more time\nHave you completed the following?\n\n\nDownload and install the latest versions of R, RStudio, and Quarto:\n\nR 4.4.1 or above: https://cran.r-project.org\nRStudio 2024.04.2+764 or above: https://posit.co/download/rstudio-desktop\nQuarto 1.5.56: https://quarto.org/docs/get-started\n\nInstall the following packages:\n\n\npkg_list &lt;- c(\n  \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n)\ninstall.packages(pkg_list)\n\n\nDownload exercises.zip at and unzip it on your Desktop or somewhere you can easily locate on your computer."
+    "text": "Checking in one more time\nHave you completed the following?\n\nOption 1: (Cloud - Recommended)\nGo to https://bit.ly/quarto-jsm24-cloud, create an account, and join the workspace.\nOption 2: (Local)\n\nDownload and install the latest versions of R, RStudio, and Quarto:\n\nR 4.4.1 or above: https://cran.r-project.org\nRStudio 2024.04.2+764 or above: https://posit.co/download/rstudio-desktop\nQuarto 1.5.56: https://quarto.org/docs/get-started\n\nInstall the following packages:\n\npkg_list &lt;- c(\n  \"tidyverse\", \"gt\", \"ggthemes\", \"palmerpenguins\", \"quarto\", \"here\"\n)\ninstall.packages(pkg_list)\n\nDownload exercises.zip at and unzip it on your Desktop or somewhere you can easily locate on your computer."
   },
   {
     "objectID": "1-rmarkdown-quarto/1-rmarkdown-quarto.html#section",

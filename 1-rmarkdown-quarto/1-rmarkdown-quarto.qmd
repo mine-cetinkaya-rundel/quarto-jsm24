@@ -28,6 +28,10 @@ execute:
 
 ## While you wait for the workshop to begin... {.smaller}
 
+::: {.large .center-align}
+[bit.ly/quarto-jsm24](https://bit.ly/quarto-jsm24)
+:::
+
 ::: your-turn
 {{< include ../setup.qmd >}}
 :::
@@ -36,13 +40,11 @@ execute:
 
 ## Logistics {.smaller}
 
-**\[TO DO: Fill in details\]**
+-   WiFi: JSM2024 / Password: abbvie24
 
--   WiFi: \_\_\_\_
+-   Exits: 2 in the back, 1 in the front of the room
 
--   Exits: \_\_\_\_
-
--   Restrooms: \_\_\_\_
+-   Restrooms: Out the hallway, to the left
 
 ## Code of Conduct {.smaller}
 
@@ -137,6 +139,18 @@ Please share with the person next to you...
 :::
 :::
 :::
+
+## Schedule
+
+| Time          | Module                                                  |
+|---------------|---------------------------------------------------------|
+| 08:30 - 10:15 | From R Markdown to Quarto                               |
+| 10:15 - 10:30 | Break                                                   |
+| 10:30 - 12:30 | Creating computational documents and slides with Quarto |
+| 12:30 - 14:00 | Lunch                                                   |
+| 14:00 - 15:15 | Creating websites and books with Quarto                 |
+| 15:15 - 15:30 | Break                                                   |
+| 15:30 - 17:00 | Authoring manuscripts with Quarto                       |
 
 ## Getting help
 
@@ -270,28 +284,23 @@ or follow along with `hello-penguins.qmd`.
 ## Your turn {.smaller}
 
 ::: your-turn
-
-:::: {.columns}
-
-::: {.column}
-**Option 1:**
-{{< fa cloud >}} Start the project `1-rmarkdown-quarto`.
+::: columns
+::: column
+**Option 1:** {{< fa cloud >}} Start the project `1-rmarkdown-quarto`.
 :::
 
-::: {.column}
-**Option 2:**
-{{< fa folder >}} Launch the project in `1-rmarkdown-quarto`.
+::: column
+**Option 2:** {{< fa folder >}} Launch the project in `1-rmarkdown-quarto`.
+:::
 :::
 
-::::
+------------------------------------------------------------------------
 
----
-
-- Open `hello-penguins.qmd` in RStudio and with the visual editor.
-- Render the document.
-- Update your name and re-render.
-- Inspect components of the document and make one more update and re-render.
-- Compare notes with neighbors about updates you've made and note any aspects of the document that are not clear after the tour and your first interaction with it.
+-   Open `hello-penguins.qmd` in RStudio and with the visual editor.
+-   Render the document.
+-   Update your name and re-render.
+-   Inspect components of the document and make one more update and re-render.
+-   Compare notes with neighbors about updates you've made and note any aspects of the document that are not clear after the tour and your first interaction with it.
 :::
 
 {{< countdown minutes=5 >}}
@@ -438,22 +447,17 @@ quarto_render("document.qmd", output_format = "pdf")
 ## Your turn {.smaller}
 
 ::: your-turn
-
-:::: {.columns}
-
-::: {.column}
-**Option 1:**
-{{< fa cloud >}} Start the project `1-rmarkdown-quarto`.
+::: columns
+::: column
+**Option 1:** {{< fa cloud >}} Start the project `1-rmarkdown-quarto`.
 :::
 
-::: {.column}
-**Option 2:**
-{{< fa folder >}} Launch the project in `1-rmarkdown-quarto`.
+::: column
+**Option 2:** {{< fa folder >}} Launch the project in `1-rmarkdown-quarto`.
+:::
 :::
 
-::::
-
----
+------------------------------------------------------------------------
 
 -   Open the last .qmd file you were working on in RStudio.
 -   Compare behavior of rendering with
@@ -492,7 +496,7 @@ quarto_render("document.qmd", output_format = "pdf")
 ## Many Quarto formats {.smaller}
 
 | Feature          | Quarto                                                                                                                                                                                                                                                  |
-|------------|-----------------------------------------------------------|
+|----------------|--------------------------------------------------------|
 | Basic Formats    | [html](https://quarto.org/docs/output-formats/html-basics.html), [pdf](https://quarto.org/docs/output-formats/pdf-basics.html), [docx](https://quarto.org/docs/output-formats/ms-word.html), [typst](https://quarto.org/docs/output-formats/typst.html) |
 | Beamer           | [beamer](https://quarto.org/docs/presentations/beamer.html)                                                                                                                                                                                             |
 | PowerPoint       | [pptx](https://quarto.org/docs/presentations/powerpoint.html)                                                                                                                                                                                           |
@@ -510,22 +514,17 @@ quarto_render("document.qmd", output_format = "pdf")
 ## Your turn {.smaller}
 
 ::: your-turn
-
-:::: {.columns}
-
-::: {.column}
-**Option 1:**
-{{< fa cloud >}} Start the project `1-rmarkdown-quarto`.
+::: columns
+::: column
+**Option 1:** {{< fa cloud >}} Start the project `1-rmarkdown-quarto`.
 :::
 
-::: {.column}
-**Option 2:**
-{{< fa folder >}} Launch the project in `1-rmarkdown-quarto`.
+::: column
+**Option 2:** {{< fa folder >}} Launch the project in `1-rmarkdown-quarto`.
+:::
 :::
 
-::::
-
----
+------------------------------------------------------------------------
 
 Go to File \> New File \> Quarto document to create a Quarto document with HTML output.
 Render the document, which will ask you to give it a name -- you can use `my-first-document.qmd`.
